@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail SMTP Setup Guide - LITC Institute</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+        }
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        .step {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .step h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #60a5fa;
+        }
+        .step p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+        .step ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .step li {
+            margin: 10px 0;
+            color: #cbd5e1;
+        }
+        .link-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            margin: 10px 10px 10px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+        }
+        .code-box {
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .code-box code {
+            color: #22d3ee;
+            font-size: 14px;
+        }
+        .warning {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .success {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .info {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .checklist {
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .checklist h3 {
+            color: #a78bfa;
+            margin-bottom: 15px;
+        }
+        .checklist label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .checklist input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📧 Gmail SMTP Setup Guide</h1>
+            <p>Automatic Email Delivery for Course Enrollments</p>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step">
+            <div class="step-number">1</div>
+            <h2>Enable 2-Step Verification</h2>
+            <p>Gmail requires 2-Step Verification before you can create App Passwords.</p>
+            
+            <div class="info">
+                <strong>📍 Important:</strong> This is a one-time setup. Takes about 2 minutes.
+            </div>
+
+            <ol>
+                <li>Click the link below to open Google Security settings</li>
+                <li>Find <strong>"2-Step Verification"</strong> section</li>
+                <li>Click <strong>"Get Started"</strong> or <strong>"Turn On"</strong></li>
+                <li>Follow prompts (usually phone verification)</li>
+                <li>Verify it shows: <strong>"2-Step Verification is on"</strong></li>
+            </ol>
+
+            <a href="https://myaccount.google.com/security" target="_blank" class="link-button">
+                🔒 Open Google Security Settings
+            </a>
+
+            <div class="success">
+                ✅ Once enabled, you'll see a green checkmark next to "2-Step Verification"
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step">
+            <div class="step-number">2</div>
+            <h2>Generate App Password</h2>
+            <p>Create a special password for the LITC website to send emails.</p>
+
+            <div class="warning">
+                ⚠️ <strong>Important:</strong> You can only see this password ONCE. Copy it immediately!
+            </div>
+
+            <ol>
+                <li>Click link below to open App Passwords page</li>
+                <li><strong>Select app:</strong> Choose "Mail"</li>
+                <li><strong>Select device:</strong> Choose "Windows Computer"<br>
+                    Or select "Other" and type: <code>LITC Website</code></li>
+                <li>Click <strong>"Generate"</strong></li>
+                <li><strong>COPY the 16-character password</strong></li>
+            </ol>
+
+            <a href="https://myaccount.google.com/apppasswords" target="_blank" class="link-button">
+                🔑 Generate App Password
+            </a>
+
+            <div class="code-box">
+                <strong>Example password format:</strong><br>
+                <code>abcd efgh ijkl mnop</code>
+            </div>
+
+            <div class="info">
+                💡 <strong>Can't find App Passwords?</strong><br>
+                Make sure 2-Step Verification is enabled first (Step 1)
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step">
+            <div class="step-number">3</div>
+            <h2>Update .env.local File</h2>
+            <p>Add the App Password to your project configuration.</p>
+
+            <ol>
+                <li>Open project folder in VS Code: <code>D:\amit_sir_website</code></li>
+                <li>Find and open file: <code>.env.local</code></li>
+                <li>Find this line:<br>
+                    <div class="code-box">
+                        <code>GMAIL_APP_PASSWORD=your-app-password-here</code>
+                    </div>
+                </li>
+                <li>Replace with your password (remove spaces):<br>
+                    <div class="code-box">
+                        <code>GMAIL_APP_PASSWORD=abcdefghijklmnop</code>
+                    </div>
+                </li>
+                <li><strong>Save the file</strong> (Ctrl+S)</li>
+            </ol>
+
+            <div class="warning">
+                ⚠️ <strong>Remove all spaces</strong> from the password!<br>
+                ❌ Wrong: <code>abcd efgh ijkl mnop</code><br>
+                ✅ Correct: <code>abcdefghijklmnop</code>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step">
+            <div class="step-number">4</div>
+            <h2>Restart Development Server</h2>
+            <p>Server needs to restart to load the new password.</p>
+
+            <div class="warning">
+                ⚠️ <strong>MUST RESTART!</strong> Environment variables only load on server start.
+            </div>
+
+            <ol>
+                <li>Go to VS Code terminal where <code>npm run dev</code> is running</li>
+                <li>Press <strong>Ctrl+C</strong> to stop server</li>
+                <li>Run again:<br>
+                    <div class="code-box">
+                        <code>npm run dev</code>
+                    </div>
+                </li>
+                <li>Wait for server to start</li>
+            </ol>
+
+            <div class="success">
+                ✅ Server will show: "Ready in XXXms"
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step">
+            <div class="step-number">5</div>
+            <h2>Test Email System</h2>
+            <p>Verify emails are being sent successfully.</p>
+
+            <div class="info">
+                📧 Both <strong>student</strong> and <strong>admin</strong> will receive emails automatically!
+            </div>
+
+            <h3 style="color: #60a5fa; margin-top: 20px;">Option 1: Testing Page (Recommended)</h3>
+            <a href="http://localhost:3000/enrollment-test.html" target="_blank" class="link-button">
+                🧪 Open Testing Page
+            </a>
+            <ul>
+                <li>Pre-filled form</li>
+                <li>Instant results</li>
+                <li>Detailed logs</li>
+            </ul>
+
+            <h3 style="color: #60a5fa; margin-top: 20px;">Option 2: Live Website</h3>
+            <ol>
+                <li>Open: <a href="http://localhost:3000" target="_blank" style="color: #60a5fa;">http://localhost:3000</a></li>
+                <li>Click any course "Enroll Now" button</li>
+                <li>Fill form with test email</li>
+                <li>Submit</li>
+            </ol>
+
+            <div class="success">
+                <strong>✅ Expected Results:</strong><br>
+                • Student receives beautiful payment email<br>
+                • Admin receives enrollment notification<br>
+                • Both emails arrive within seconds<br>
+                • Check spam folder if not in inbox
+            </div>
+        </div>
+
+        <!-- Checklist -->
+        <div class="checklist">
+            <h3>📋 Setup Completion Checklist</h3>
+            <label>
+                <input type="checkbox"> 2-Step Verification enabled on Gmail
+            </label>
+            <label>
+                <input type="checkbox"> App Password generated (16 characters)
+            </label>
+            <label>
+                <input type="checkbox"> Password added to .env.local
+            </label>
+            <label>
+                <input type="checkbox"> Spaces removed from password
+            </label>
+            <label>
+                <input type="checkbox"> .env.local file saved
+            </label>
+            <label>
+                <input type="checkbox"> Development server restarted
+            </label>
+            <label>
+                <input type="checkbox"> Test email sent successfully
+            </label>
+            <label>
+                <input type="checkbox"> Student email received
+            </label>
+            <label>
+                <input type="checkbox"> Admin email received
+            </label>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="step">
+            <h2>🔧 Troubleshooting</h2>
+            
+            <h3 style="color: #ef4444; margin-top: 20px;">❌ Error: "Invalid login"</h3>
+            <ul>
+                <li>Verify 2-Step Verification is ON</li>
+                <li>Generate NEW App Password</li>
+                <li>Copy password correctly (no spaces)</li>
+                <li>Restart dev server</li>
+            </ul>
+
+            <h3 style="color: #ef4444; margin-top: 20px;">❌ Email not received</h3>
+            <ul>
+                <li>Check spam/junk folder</li>
+                <li>Check "Promotions" tab (Gmail)</li>
+                <li>Wait 2-3 minutes</li>
+                <li>Verify email address is correct</li>
+            </ul>
+
+            <h3 style="color: #ef4444; margin-top: 20px;">❌ Error: "Missing credentials"</h3>
+            <ul>
+                <li>Ensure .env.local exists</li>
+                <li>Check GMAIL_APP_PASSWORD is set</li>
+                <li>Restart server after updating .env.local</li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="step" style="text-align: center; background: linear-gradient(135deg, #059669, #047857);">
+            <h2>🆘 Need Help?</h2>
+            <p style="color: white; margin-bottom: 20px;">If you're stuck, contact us:</p>
+            <a href="https://wa.me/918225852734" class="link-button">📱 WhatsApp: +91-8225852734</a>
+            <a href="tel:+919425094250" class="link-button">📞 Call: +91-9425094250</a>
+            <a href="mailto:yyradhe751@gmail.com" class="link-button">📧 Email Support</a>
+        </div>
+    </div>
+</body>
+</html>

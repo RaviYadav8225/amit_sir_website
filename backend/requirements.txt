@@ -1,0 +1,7 @@
+# Backend requirements for the project
+fastapi
+uvicorn
+pydantic
+python-jose
+passlib[bcrypt]
+motor
