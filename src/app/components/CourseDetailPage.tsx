@@ -37,6 +37,8 @@ const CourseDetailPage = memo(function CourseDetailPage({ course }: CourseDetail
   const [activeTab, setActiveTab] = useState("overview");
   const [showEnquiry, setShowEnquiry] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [enquiryLoading, setEnquiryLoading] = useState(false);
+  const [enquiryMessage, setEnquiryMessage] = useState("");
   const { addToCart, isInCart } = useCart();
 
   useEffect(() => {
@@ -66,11 +68,48 @@ const CourseDetailPage = memo(function CourseDetailPage({ course }: CourseDetail
     });
   };
 
-  const handleEnquiry = (e: React.FormEvent) => {
+  const handleEnquiry = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle enquiry form submission
-    alert("Enquiry submitted successfully!");
-    setShowEnquiry(false);
+    setEnquiryLoading(true);
+    setEnquiryMessage("");
+    
+    const formData = new FormData(e.target as HTMLFormElement);
+    const enquiryData = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      message: formData.get('message'),
+      course: course.title,
+      courseDuration: course.duration,
+      coursePrice: course.price
+    };
+
+    try {
+      const response = await fetch('/api/course-enquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(enquiryData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setEnquiryMessage("✅ Enquiry submitted successfully! We'll contact you soon.");
+        setTimeout(() => {
+          setShowEnquiry(false);
+          setEnquiryMessage("");
+        }, 3000);
+      } else {
+        setEnquiryMessage("❌ " + (result.error || "Failed to submit enquiry. Please try again."));
+      }
+    } catch (error) {
+      console.error('Enquiry submission error:', error);
+      setEnquiryMessage("❌ Network error. Please check your connection and try again.");
+    } finally {
+      setEnquiryLoading(false);
+    }
   };
 
   return (
@@ -319,40 +358,60 @@ const CourseDetailPage = memo(function CourseDetailPage({ course }: CourseDetail
             <form onSubmit={handleEnquiry} className="space-y-4">
               <div className="transform transition-all duration-300 hover:scale-105">
                 <input 
-                  type="text" 
+                  type="text"
+                  name="name"
                   placeholder="Your Name" 
                   required
-                  className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:scale-105 transition-all duration-300"
+                  disabled={enquiryLoading}
+                  className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:scale-105 transition-all duration-300 disabled:opacity-50"
                 />
               </div>
               <div className="transform transition-all duration-300 hover:scale-105">
                 <input 
-                  type="email" 
+                  type="email"
+                  name="email"
                   placeholder="Email Address" 
                   required
-                  className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:scale-105 transition-all duration-300"
+                  disabled={enquiryLoading}
+                  className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:scale-105 transition-all duration-300 disabled:opacity-50"
                 />
               </div>
               <div className="transform transition-all duration-300 hover:scale-105">
                 <input 
-                  type="tel" 
+                  type="tel"
+                  name="phone"
                   placeholder="Phone Number" 
                   required
-                  className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:scale-105 transition-all duration-300"
+                  disabled={enquiryLoading}
+                  className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:scale-105 transition-all duration-300 disabled:opacity-50"
                 />
               </div>
               <div className="transform transition-all duration-300 hover:scale-105">
-                <textarea 
-                  placeholder="Your Message" 
+                <textarea
+                  name="message"
+                  placeholder="Your Message (Optional)" 
                   rows={4}
-                  className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:scale-105 transition-all duration-300 resize-none"
+                  disabled={enquiryLoading}
+                  className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:scale-105 transition-all duration-300 resize-none disabled:opacity-50"
                 />
               </div>
+              
+              {enquiryMessage && (
+                <div className={`p-4 rounded-xl text-center font-semibold ${
+                  enquiryMessage.startsWith('✅') 
+                    ? 'bg-green-500/20 text-green-300 border border-green-500/30' 
+                    : 'bg-red-500/20 text-red-300 border border-red-500/30'
+                }`}>
+                  {enquiryMessage}
+                </div>
+              )}
+              
               <button 
                 type="submit"
-                className="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white py-4 rounded-xl font-bold hover:from-green-700 hover:to-teal-700 transition-all duration-300 hover:scale-105 transform"
+                disabled={enquiryLoading}
+                className="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white py-4 rounded-xl font-bold hover:from-green-700 hover:to-teal-700 transition-all duration-300 hover:scale-105 transform disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Enquiry
+                {enquiryLoading ? '⏳ Sending...' : '📧 Send Enquiry'}
               </button>
             </form>
           </div>

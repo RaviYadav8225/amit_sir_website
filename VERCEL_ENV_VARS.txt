@@ -1,0 +1,31 @@
+# ============================================
+# VERCEL ENVIRONMENT VARIABLES
+# Copy these EXACTLY to Vercel Dashboard
+# ============================================
+
+# Go to: Vercel Dashboard → Your Project → Settings → Environment Variables
+
+# Email Service - Resend
+RESEND_API_KEY=re_NmSwKmrZ_Jz2RVyEir6pZ6WdmezpJLyZW
+
+# Email Service - Gmail SMTP
+GMAIL_APP_PASSWORD=ayyi swys iawk fswn
+NEXT_PUBLIC_ADMIN_EMAIL=yyradhe751@gmail.com
+
+# EmailJS (if needed)
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_litc
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_consultation
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+
+# Performance
+NEXT_TELEMETRY_DISABLED=1
+GENERATE_SOURCEMAP=false
+NEXT_PRIVATE_STANDALONE=true
+NEXT_PRIVATE_BUILD_WORKER=true
+
+# ============================================
+# IMPORTANT: Add ALL variables for:
+# - Production
+# - Preview (optional)
+# - Development (optional)
+# ============================================
