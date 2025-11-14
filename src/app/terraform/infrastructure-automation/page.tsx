@@ -75,8 +75,8 @@ const terraformData = {
     ],
 
     certification: "HashiCorp Certified: Terraform Associate (003)",
-    price: "₹13,000",
-    originalPrice: "₹22,000",
+    price: "₹15,000",
+    originalPrice: "₹25,000",
     
     features: [
       "Multi-cloud infrastructure automation",

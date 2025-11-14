@@ -100,9 +100,9 @@ export default function ContactUs() {
       icon: '📧',
       title: 'Email Us',
       details: [
-        'info@litcinstitute.com',
-        'admissions@litcinstitute.com',
-        'support@litcinstitute.com'
+        'info@litcindore.com',
+        'admissions@litcindore.com',
+        'support@litcindore.com'
       ],
       color: 'purple'
     },
@@ -122,28 +122,28 @@ export default function ContactUs() {
     {
       name: 'Admissions Office',
       phone: '+91-9522220892',
-      email: 'admissions@litcinstitute.com',
+      email: 'admissions@litcindore.com',
       timing: '9:00 AM - 6:00 PM',
       icon: '🎓'
     },
     {
       name: 'Technical Support',
       phone: '+91-9522220892',
-      email: 'support@litcinstitute.com',
+      email: 'support@litcindore.com',
       timing: '24/7 Available',
       icon: '🔧'
     },
     {
       name: 'Career Counseling',
       phone: '+91-9522220892',
-      email: 'counselor@litcinstitute.com',
+      email: 'counselor@litcindore.com',
       timing: '10:00 AM - 5:00 PM',
       icon: '💼'
     },
     {
       name: 'Corporate Training',
       phone: '+91-9522220892',
-      email: 'corporate@litcinstitute.com',
+      email: 'corporate@litcindore.com',
       timing: '9:00 AM - 6:00 PM',
       icon: '🏢'
     }
@@ -343,14 +343,14 @@ export default function ContactUs() {
               {/* Map Placeholder */}
               <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl h-64 mb-6 flex items-center justify-center border border-white/10 overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.8837446!2d75.8946308!3d22.753419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396303e173f89509%3A0x718ea945f76a48d0!2sInsta%20Dot%20Analytics!5e0!3m2!1sen!2sin!4v1697702400000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.883744!2d75.8946308!3d22.7534141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1bb6aaaaaab%3A0x93df8f935de6925f!2sLITC%20Indore--%20Redhat%20Linux%2CCCNA%2CDevOps%2CAws%20%2CAzure%2CAI%2CCyber%20Security.!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   className="border-0 rounded-2xl"
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="LITC Institute Location - P13-14, Ground Floor, Metro Tower, Vijay Nagar, Indore, MP"
+                  title="LITC Indore - Redhat Linux, CCNA, DevOps, AWS, Azure, AI, Cyber Security Training Center"
                 ></iframe>
                 {/* Fallback content if map doesn't load */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center text-center opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -404,7 +404,7 @@ export default function ContactUs() {
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    const url = 'https://www.google.com/maps/dir//P13-14,+Ground+Floor,+Insta+Dot+Analytics,+Metro+Tower,+Vijay+Nagar,+Scheme+No+54,+Indore,+Madhya+Pradesh+452010/@22.753419,75.8946308,17z/data=!3m1!5s0x396302aaf1322bd9:0xd965efb8f19eb536!4m16!1m7!3m6!1s0x396303e173f89509:0x718ea945f76a48d0!2sInsta+Dot+Analytics!8m2!3d22.7534141!4d75.8972057!16s%2Fg%2F11rn3sxbtd!4m7!1m0!1m5!1m1!1s0x396303e173f89509:0x718ea945f76a48d0!2m2!1d75.8972057!2d22.7534141?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D';
+                    const url = 'https://www.google.com/maps/place/LITC+Indore--+Redhat+Linux,CCNA,DevOps,Aws+,Azure,AI,Cyber+Security./@22.7534141,75.8946308,1185m/data=!3m2!1e3!4b1!4m6!3m5!1s0x487bb1bb6aaaaaab:0x93df8f935de6925f!8m2!3d22.7534141!4d75.8972057!16s%2Fg%2F11cmtrt221?entry=ttu';
                     window.open(url, '_blank', 'noopener,noreferrer');
                   }}
                   className="relative z-20 w-full py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all cursor-pointer touch-manipulation active:scale-95"

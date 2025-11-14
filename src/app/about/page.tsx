@@ -287,12 +287,12 @@ export default function AboutPage() {
             Join thousands of successful professionals who started their journey with LITC Institute
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-colors">
+            <a href="/explore-courses" className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-colors inline-block">
               Explore Courses
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            </a>
+            <a href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-block">
               Contact Us
-            </button>
+            </a>
           </div>
         </div>
       </section>

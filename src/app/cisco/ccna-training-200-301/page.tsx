@@ -113,8 +113,8 @@ const ccnaTrainingData = {
     }
   ],
   certification: "Cisco Certified Network Associate (CCNA)",
-  price: "24,999",
-  originalPrice: "36,999",
+  price: "15,000",
+  originalPrice: "25,000",
   features: [
     "Official Cisco CCNA 200-301 curriculum",
     "Live Cisco lab environment with real equipment",

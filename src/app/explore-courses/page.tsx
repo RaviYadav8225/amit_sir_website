@@ -159,7 +159,7 @@ const coursesData: Course[] = [
     color: "from-red-500 to-red-600",
     urlPath: "/certifications/rhcsa",
     certification: "RHCSA (EX200)",
-    price: "₹20,000",
+    price: "₹15,000",
     rating: 4.8,
     students: "2.1K+",
     features: ["Hands-on Labs", "Real Servers", "Industry Standard", "Job Ready Skills"]
@@ -176,7 +176,7 @@ const coursesData: Course[] = [
     color: "from-red-600 to-pink-600",
     urlPath: "/certifications/rhce",
     certification: "RHCE (EX294)",
-    price: "₹28,000",
+    price: "₹12,000",
     rating: 4.9,
     students: "1.2K+",
     features: ["Advanced Linux", "Automation", "Enterprise Services", "Expert Level"]
@@ -265,7 +265,7 @@ const coursesData: Course[] = [
     color: "from-blue-500 to-cyan-500",
     urlPath: "/cisco/ccna-training-200-301",
     certification: "CCNA (200-301)",
-    price: "₹25,000",
+    price: "₹15,000",
     rating: 4.8,
     students: "2.8K+",
     features: ["Network Fundamentals", "Routing & Switching", "Network Security", "Real Labs"]
@@ -460,7 +460,7 @@ const coursesData: Course[] = [
     color: "from-yellow-500 to-green-500",
     urlPath: "/python/full-stack-development",
     certification: "Python Full Stack",
-    price: "₹30,000",
+    price: "₹25,000",
     rating: 4.8,
     students: "2.5K+",
     features: ["Django/Flask", "Database Design", "API Development", "Deployment"]

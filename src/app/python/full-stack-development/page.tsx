@@ -101,8 +101,8 @@ const fullStackData = {
     }
   ],
   certification: "Python Full Stack Developer Certificate",
-  price: "39,999",
-  originalPrice: "59,999",
+  price: "25,000",
+  originalPrice: "45,000",
   features: [
     "Complete full-stack curriculum",
     "Real-world project portfolio (5+ projects)",

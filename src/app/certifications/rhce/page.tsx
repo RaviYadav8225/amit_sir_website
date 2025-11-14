@@ -79,8 +79,8 @@ const rhceData = {
     }
   ],
   certification: "Red Hat Certified Engineer (RHCE) - ANSIBLE 234",
-  price: "16,000",
-  originalPrice: "28,000",
+  price: "12,000",
+  originalPrice: "20,000",
   features: [
     "Official Red Hat ANSIBLE 234 curriculum",
     "Live Ansible lab environment",

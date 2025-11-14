@@ -89,8 +89,8 @@ const rhcsaData = {
     }
   ],
   certification: "Red Hat Certified System Administrator (RHCSA) - EX200",
-  price: "18,999",
-  originalPrice: "28,999",
+  price: "15,000",
+  originalPrice: "25,000",
   features: [
     "Official Red Hat curriculum",
     "Live virtual machines for practice",
