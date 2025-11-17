@@ -13,12 +13,15 @@ const nextConfig: NextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
-    minimumCacheTTL: 31536000, // 1 year cache for maximum speed
+    minimumCacheTTL: 0, // Disable image caching
     dangerouslyAllowSVG: true,
+    unoptimized: false,
   },
   compress: true,
   poweredByHeader: false,
-  reactStrictMode: false, // Disable for faster rendering
+  reactStrictMode: false,
+  // Disable static optimization to force dynamic rendering
+  output: 'standalone',
   eslint: {
     ignoreDuringBuilds: false,
   },
