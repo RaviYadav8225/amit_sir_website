@@ -30,23 +30,26 @@ const ChatBot = () => {
 
   // Advanced course data with detailed analysis
   const courseDatabase = {
-    "RHCSA Certification": { fee: 25000, duration: 45, demand: "Very High", salary: "₹6-12 LPA", difficulty: "Medium", placement: 95 },
+    "RHCSA Certification": { fee: 15000, duration: 45, demand: "Very High", salary: "₹6-12 LPA", difficulty: "Medium", placement: 95 },
     "AWS Solutions Architect": { fee: 30000, duration: 40, demand: "Extremely High", salary: "₹8-20 LPA", difficulty: "Medium-Hard", placement: 98 },
     "Docker & Kubernetes": { fee: 20000, duration: 30, demand: "Very High", salary: "₹7-15 LPA", difficulty: "Medium", placement: 92 },
-    "Python Full Stack": { fee: 35000, duration: 60, demand: "Extremely High", salary: "₹5-18 LPA", difficulty: "Medium", placement: 96 },
-    "CCNA Networking": { fee: 22000, duration: 50, demand: "High", salary: "₹4-10 LPA", difficulty: "Medium", placement: 88 },
-    "DevOps with Ansible": { fee: 28000, duration: 35, demand: "Very High", salary: "₹8-16 LPA", difficulty: "Medium-Hard", placement: 94 }
+    "Python Full Stack": { fee: 25000, duration: 60, demand: "Extremely High", salary: "₹5-18 LPA", difficulty: "Medium", placement: 96 },
+    "CCNA Networking": { fee: 15000, duration: 50, demand: "High", salary: "₹4-10 LPA", difficulty: "Medium", placement: 88 },
+    "DevOps with Azure": { fee: 40000, duration: 60, demand: "Very High", salary: "₹8-16 LPA", difficulty: "Medium-Hard", placement: 94 },
+    "RHCE Certification": { fee: 12000, duration: 35, demand: "Very High", salary: "₹8-15 LPA", difficulty: "Medium-Hard", placement: 92 },
+    "Terraform": { fee: 15000, duration: 25, demand: "Very High", salary: "₹10-18 LPA", difficulty: "Medium", placement: 90 },
+    "DevOps AWS + AI": { fee: 60000, duration: 50, demand: "Ultra High", salary: "₹12-25 LPA", difficulty: "Hard", placement: 96 }
   };
 
   const faqs: FAQ[] = [
     {
       question: "What courses do you offer?",
-      answer: "We offer comprehensive IT training courses including:\n• RHCSA/RHCE (Red Hat Linux)\n• AWS Cloud Computing\n• Docker & Kubernetes\n• Python Full Stack Development\n• CCNA Networking\n• DevOps with Ansible\n• Digital Marketing\n• C/C++, Java, PHP\n• Hardware & Networking",
+      answer: "We offer comprehensive IT training courses including:\n• RHCSA/RHCE (Red Hat Linux)\n• AWS Cloud Computing\n• Docker & Kubernetes\n• Python Full Stack Development\n• CCNA Networking\n• DevOps with Azure (AZ-400)\n• Terraform Infrastructure as Code\n• DevOps with AWS + AI\n• Digital Marketing\n• C/C++, Java, PHP\n• Hardware & Networking",
       keywords: ["courses", "training", "what do you offer", "programs", "subjects", "learn"]
     },
     {
       question: "What are your course fees?",
-      answer: "Our course fees vary by program:\n• RHCSA Certification: ₹25,000 (45 days)\n• AWS Solutions Architect: ₹30,000 (40 days)\n• Docker & Kubernetes: ₹20,000 (30 days)\n• Python Full Stack: ₹35,000 (60 days)\n• CCNA Certification: ₹22,000 (50 days)\n• DevOps with Ansible: ₹28,000 (35 days)\n\nWe also offer flexible payment options and student discounts!",
+      answer: "Our course fees vary by program:\n• RHCSA Certification: ₹15,000 (45 days)\n• RHCE Certification: ₹12,000 (35 days)\n• AWS Solutions Architect: ₹30,000 (40 days)\n• Docker & Kubernetes: ₹20,000 (30 days)\n• Python Full Stack: ₹25,000 (60 days)\n• CCNA Networking: ₹15,000 (50 days)\n• Terraform: ₹15,000 (25 days)\n• DevOps with Azure: ₹40,000 (60 days)\n• DevOps AWS + AI: ₹60,000 (50 days)\n\nWe also offer flexible payment options and student discounts!",
       keywords: ["fees", "cost", "price", "payment", "money", "charges", "expensive"]
     },
     {

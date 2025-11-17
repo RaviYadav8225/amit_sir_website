@@ -30,7 +30,7 @@ const nextConfig: NextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['react-icons', 'next/link', 'next/image'],
   },
-  // Headers for aggressive caching and performance
+  // Headers for no caching - always fresh content
   async headers() {
     return [
       {
@@ -38,7 +38,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable, stale-while-revalidate=86400',
+            value: 'no-store, no-cache, must-revalidate, proxy-revalidate',
           },
           {
             key: 'X-Content-Type-Options',

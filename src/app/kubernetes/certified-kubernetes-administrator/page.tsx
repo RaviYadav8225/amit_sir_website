@@ -89,8 +89,8 @@ const kubernetesAdminData = {
     }
   ],
   certification: "Certified Kubernetes Administrator (CKA)",
-  price: "21,999",
-  originalPrice: "31,999",
+  price: "15,000",
+  originalPrice: "25,000",
   features: [
     "Official CNCF curriculum",
     "Live Kubernetes cluster access",
