@@ -91,7 +91,6 @@ const awsDevOpsEngineerData = {
   certification: "AWS Certified DevOps Engineer – Professional (DOP-C02)",
   price: "35,000",
   originalPrice: "50,000",
-  originalPrice: "1,00,000",
   features: [
     "Professional-level AWS curriculum",
     "Enterprise-scale hands-on labs",
