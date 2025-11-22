@@ -89,8 +89,8 @@ const awsSolutionsArchitectData = {
     }
   ],
   certification: "AWS Certified Solutions Architect – Associate (SAA-C03)",
-  price: "25,000",
-  originalPrice: "35,000",
+  price: "18,000",
+  originalPrice: "27,000",
   features: [
     "Official AWS curriculum",
     "Hands-on architecture labs",

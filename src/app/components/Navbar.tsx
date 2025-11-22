@@ -103,14 +103,11 @@ export default function Navbar() {
                 label: "AWS Cloud", 
                 icon: "☁️",
                 subItems: [
-                  { href: "/aws/cloud-services", label: "AWS Cloud Services", icon: "🌐" },
                   { href: "/aws/certified-cloud-practitioner", label: "AWS Certified Cloud Practitioner (CLF-C02)", icon: "📋" },
                   { href: "/aws/certified-solutions-architect-associate", label: "AWS Certified Solutions Architect – Associate (SAA-C03)", icon: "🏗️" },
                   { href: "/aws/certified-sysops-administrator-associate", label: "AWS Certified SysOps Administrator – Associate (SOA-C02)", icon: "⚙️" },
                   { href: "/aws/certified-developer-associate", label: "AWS Certified Developer – Associate (DVA-C02)", icon: "💻" },
-                  { href: "/aws/certified-devops-engineer-professional", label: "AWS Certified DevOps Engineer – Professional (DOP-C02)", icon: "🚀" },
-                  { href: "/aws/certified-advanced-networking-specialty", label: "AWS Certified Advanced Networking – Specialty (ANS-C01)", icon: "🌐" },
-                  { href: "/aws/certified-security-specialty", label: "AWS Certified Security – Specialty (SCS-C02)", icon: "🔒" }
+                  { href: "/aws/certified-devops-engineer-professional", label: "AWS Certified DevOps Engineer – Professional (DOP-C02)", icon: "🚀" }
                 ]
               },
               { 
@@ -138,9 +135,7 @@ export default function Navbar() {
                 icon: "🌐",
                 subItems: [
                   { href: "/cisco/ccst-networking", label: "CCST Networking (100-150)", icon: "🌟" },
-                  { href: "/cisco/ccna-training-200-301", label: "CCNA Training (200-301)", icon: "🔧" },
-                  { href: "/cisco/ccnp-training-350-401", label: "CCNP Training (350-401)", icon: "⚙️" },
-                  { href: "/cisco/vmware-datacenter-virtualization", label: "VMware DataCenter Virtualization Training (VCP-DCV)", icon: "🖥️" }
+                  { href: "/cisco/ccna-training-200-301", label: "CCNA Training (200-301)", icon: "🔧" }
                 ]
               },
               { 
@@ -158,8 +153,7 @@ export default function Navbar() {
                 icon: "🐳",
                 subItems: [
                   { href: "/docker/docker-fundamentals", label: "Docker Fundamentals Training (DO101)", icon: "🐳" },
-                  { href: "/docker/docker-certified-associate", label: "Docker Certified Associate (DCA)", icon: "🏅" },
-                  { href: "/docker/containerization-microservices", label: "Containerization & Microservices (DO180)", icon: "📦" }
+                  { href: "/docker/docker-certified-associate", label: "Docker Certified Associate (DCA)", icon: "🏅" }
                 ]
               },
               { 
@@ -167,11 +161,9 @@ export default function Navbar() {
                 label: "Kubernetes", 
                 icon: "⚙️",
                 subItems: [
-                  { href: "/kubernetes/kubernetes-fundamentals", label: "Kubernetes Fundamentals Training (DO180)", icon: "⚙️" },
                   { href: "/kubernetes/certified-kubernetes-administrator", label: "Certified Kubernetes Administrator (CKA)", icon: "🏅" },
-                  { href: "/kubernetes/certified-kubernetes-application-developer", label: "Certified Kubernetes Application Developer (CKAD)", icon: "💻" },
-                  { href: "/kubernetes/certified-kubernetes-security-specialist", label: "Certified Kubernetes Security Specialist (CKS)", icon: "🔒" },
-                  { href: "/kubernetes/openshift-administration", label: "OpenShift Administration for Kubernetes (DO280)", icon: "🚀" }
+                  { href: "/kubernetes/certified-kubernetes-application-developer", label: "Certified Kubernetes Application Developer (CKAD) (online)", icon: "💻" },
+                  { href: "/kubernetes/certified-kubernetes-security-specialist", label: "Certified Kubernetes Security Specialist (CKS)", icon: "🔒" }
                 ]
               },
               { 
@@ -198,10 +190,8 @@ export default function Navbar() {
                   { href: "/devops/jenkins-certified-engineer", label: "Jenkins Certified Engineer (JCE)", icon: "⚙️" },
                   { href: "/devops/gitlab-certified-associate", label: "GitLab Certified Associate (GCA)", icon: "🦊" },
                   { href: "/devops/ansible-automation", label: "Red Hat Certified Specialist in Ansible Automation (EX407)", icon: "🔧" },
-                  { href: "/devops/terraform-associate", label: "HashiCorp Certified: Terraform Associate (003)", icon: "🏗️" },
+                  { href: "/devops/terraform-associate", label: "HashiCorp Certified: Terraform Associate (003)", icon: "🏭️" },
                   { href: "/devops/aws-devops-engineer", label: "AWS Certified DevOps Engineer Professional (DOP-C02)", icon: "☁️" },
-                  { href: "/devops/google-cloud-devops", label: "Google Cloud Professional Cloud DevOps Engineer", icon: "🌐" },
-                  { href: "/kubernetes/certified-kubernetes-administrator", label: "Certified Kubernetes Administrator (CKA)", icon: "☸️" },
                   { href: "/docker/docker-certified-associate", label: "Docker Certified Associate (DCA)", icon: "🐳" }
                 ]
               },
@@ -293,14 +283,11 @@ export default function Navbar() {
                 label: "AWS Cloud", 
                 icon: "☁️",
                 subItems: [
-                  { href: "/aws/cloud-services", label: "AWS Cloud Services", icon: "🌐" },
                   { href: "/aws/certified-cloud-practitioner", label: "AWS Certified Cloud Practitioner", icon: "📋" },
                   { href: "/aws/certified-solutions-architect-associate", label: "AWS Solutions Architect Associate", icon: "🏗️" },
                   { href: "/aws/certified-sysops-administrator-associate", label: "AWS SysOps Administrator", icon: "⚙️" },
                   { href: "/aws/certified-developer-associate", label: "AWS Developer Associate", icon: "💻" },
-                  { href: "/aws/certified-devops-engineer-professional", label: "AWS DevOps Engineer Professional", icon: "🚀" },
-                  { href: "/aws/certified-advanced-networking-specialty", label: "AWS Advanced Networking", icon: "🌐" },
-                  { href: "/aws/certified-security-specialty", label: "AWS Security Specialty", icon: "🔒" }
+                  { href: "/aws/certified-devops-engineer-professional", label: "AWS DevOps Engineer Professional", icon: "🚀" }
                 ]
               },
               { 
@@ -327,9 +314,7 @@ export default function Navbar() {
                 icon: "🌐",
                 subItems: [
                   { href: "/cisco/ccst-networking", label: "CCST Networking", icon: "🌟" },
-                  { href: "/cisco/ccna-training-200-301", label: "CCNA Training", icon: "🔧" },
-                  { href: "/cisco/ccnp-training-350-401", label: "CCNP Training", icon: "⚙️" },
-                  { href: "/cisco/vmware-datacenter-virtualization", label: "VMware VCP-DCV", icon: "🖥️" }
+                  { href: "/cisco/ccna-training-200-301", label: "CCNA Training", icon: "🔧" }
                 ]
               },
               { 
@@ -347,8 +332,7 @@ export default function Navbar() {
                 icon: "🐳",
                 subItems: [
                   { href: "/docker/docker-fundamentals", label: "Docker Fundamentals", icon: "🐳" },
-                  { href: "/docker/docker-certified-associate", label: "Docker Certified Associate", icon: "🏅" },
-                  { href: "/docker/containerization-microservices", label: "Containerization & Microservices", icon: "📦" }
+                  { href: "/docker/docker-certified-associate", label: "Docker Certified Associate", icon: "🏅" }
                 ]
               },
               { 
@@ -356,11 +340,9 @@ export default function Navbar() {
                 label: "Kubernetes", 
                 icon: "⚙️",
                 subItems: [
-                  { href: "/kubernetes/kubernetes-fundamentals", label: "Kubernetes Fundamentals", icon: "⚙️" },
                   { href: "/kubernetes/certified-kubernetes-administrator", label: "CKA", icon: "🏅" },
-                  { href: "/kubernetes/certified-kubernetes-application-developer", label: "CKAD", icon: "💻" },
-                  { href: "/kubernetes/certified-kubernetes-security-specialist", label: "CKS", icon: "🔒" },
-                  { href: "/kubernetes/openshift-administration", label: "OpenShift for Kubernetes", icon: "🚀" }
+                  { href: "/kubernetes/certified-kubernetes-application-developer", label: "CKAD (online)", icon: "💻" },
+                  { href: "/kubernetes/certified-kubernetes-security-specialist", label: "CKS", icon: "🔒" }
                 ]
               },
               { 
@@ -387,9 +369,8 @@ export default function Navbar() {
                   { href: "/devops/jenkins-certified-engineer", label: "Jenkins Certified Engineer", icon: "⚙️" },
                   { href: "/devops/gitlab-certified-associate", label: "GitLab Certified Associate", icon: "🦊" },
                   { href: "/devops/ansible-automation", label: "Ansible Automation", icon: "🔧" },
-                  { href: "/devops/terraform-associate", label: "Terraform Associate", icon: "🏗️" },
-                  { href: "/devops/aws-devops-engineer", label: "AWS DevOps Engineer", icon: "☁️" },
-                  { href: "/devops/google-cloud-devops", label: "Google Cloud DevOps", icon: "🌐" }
+                  { href: "/devops/terraform-associate", label: "Terraform Associate", icon: "🏭️" },
+                  { href: "/devops/aws-devops-engineer", label: "AWS DevOps Engineer", icon: "☁️" }
                 ]
               },
               { 
