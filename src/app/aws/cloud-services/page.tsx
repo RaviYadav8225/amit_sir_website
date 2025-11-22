@@ -89,8 +89,8 @@ const awsCloudServicesData = {
     }
   ],
   certification: "AWS Certified Cloud Practitioner / Solutions Architect Associate Preparation",
-  price: "30,000",
-  originalPrice: "45,000",
+  price: "18,000",
+  originalPrice: "27,000",
   features: [
     "Live instructor-led training",
     "Hands-on labs with real AWS environment",
