@@ -90,13 +90,6 @@ export default function AzureFundamentals() {
                   <span className="text-gray-300">Format:</span>
                   <span className="text-white font-semibold">Online/Center</span>
                 </div>
-                <div className="border-t border-white/20 my-4 pt-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300 font-semibold">Course Fee:</span>
-                    <span className="text-cyan-400 font-bold text-2xl">₹18,000</span>
-                  </div>
-                  <p className="text-gray-400 text-sm mt-2">Includes training, study materials & exam preparation</p>
-                </div>
               </div>
             </div>
           </div>

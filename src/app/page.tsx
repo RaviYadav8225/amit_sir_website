@@ -402,16 +402,16 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               {
-                course: "CI/CD Tools (DevOps)",
-                date: "06th December 2025",
-                time: "09:00 AM - 11:00 PM",
-                schedule: "Weekends (Sat-Sun)",
-                instructor: "DevOps Expert",
-                spots: "Limited Seats",
-                color: "from-blue-500 to-purple-600"
+                course: "RHCSA (Linux Admin)",
+                date: "15th December 2025",
+                time: "08:30 AM - 10:30 AM",
+                schedule: "Weekdays (Mon-Fri)",
+                instructor: "Linux Expert",
+                spots: "10 Seats Left",
+                color: "from-red-500 to-orange-600"
               },
               {
-                course: "Ansible Training (RHCE)",
+                course: "RHCE (Ansible)",
                 date: "13th December 2025",
                 time: "09:00 AM - 11:00 AM",
                 schedule: "Weekends (Sat-Sun)",
@@ -420,40 +420,67 @@ export default function Home() {
                 color: "from-green-500 to-teal-600"
               },
               {
-                course: "Terraform Training (IAC)",
-                date: "13th December 2025",
-                time: "08:00 PM - 10:00 PM",
+                course: "CCNA (Networking)",
+                date: "18th December 2025",
+                time: "08:00 AM - 10:00 AM",
                 schedule: "Weekends (Sat-Sun)",
-                instructor: "Cloud Expert",
+                instructor: "Cisco Expert",
                 spots: "12 Seats Left",
-                color: "from-purple-500 to-pink-600"
+                color: "from-blue-500 to-cyan-600"
               },
               {
-                course: "AWS Cloud Training (SAA-C03)",
+                course: "Azure Cloud",
+                date: "20th December 2025",
+                time: "09:00 AM - 11:00 AM",
+                schedule: "Weekends (Sat-Sun)",
+                instructor: "Azure Expert",
+                spots: "10 Seats Left",
+                color: "from-indigo-500 to-blue-600"
+              },
+              {
+                course: "AWS Cloud",
                 date: "20th December 2025",
                 time: "08:00 AM - 11:00 AM",
                 schedule: "Weekends (Sat-Sun)",
                 instructor: "AWS Expert",
                 spots: "6 Seats Left",
-                color: "from-orange-500 to-red-600"
+                color: "from-orange-500 to-yellow-600"
               },
               {
-                course: "Docker & Kubernetes (CKA)",
+                course: "DevOps",
+                date: "06th December 2025",
+                time: "09:00 AM - 11:00 PM",
+                schedule: "Weekends (Sat-Sun)",
+                instructor: "DevOps Expert",
+                spots: "Limited Seats",
+                color: "from-purple-500 to-pink-600"
+              },
+              {
+                course: "Cybersecurity",
+                date: "22nd December 2025",
+                time: "08:30 PM - 10:30 PM",
+                schedule: "Weekends (Sat-Sun)",
+                instructor: "Security Expert",
+                spots: "8 Seats Left",
+                color: "from-red-500 to-pink-600"
+              },
+              {
+                course: "Docker & Kubernetes",
                 date: "20th December 2025",
                 time: "08:30 AM - 11:00 AM",
                 schedule: "Weekends (Sat-Sun)",
                 instructor: "Kubernetes Expert",
                 spots: "4 Seats Left",
-                color: "from-indigo-500 to-blue-600"
+                color: "from-teal-500 to-blue-600"
               },
               {
-                course: "Linux Training (RHCSA)",
-                date: "22nd December 2025",
-                time: "08:30 AM - 10:30 AM",
+                course: "Hardware & Networking",
+                date: "25th December 2025",
+                time: "09:00 AM - 12:00 PM",
                 schedule: "Weekdays (Mon-Fri)",
-                instructor: "Linux Expert",
-                spots: "10 Seats Left",
-                color: "from-teal-500 to-cyan-600"
+                instructor: "Hardware Expert",
+                spots: "15 Seats Left",
+                color: "from-gray-600 to-slate-700"
               }
             ].map((batch, i) => (
               <div key={i} className="group bg-white/90 backdrop-blur-xl rounded-2xl md:rounded-3xl shadow-xl p-4 md:p-6 hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-white/50">
@@ -742,7 +769,7 @@ export default function Home() {
                   {[
                     { Icon: FaFacebook, link: "https://facebook.com/litcindore", name: "Facebook", color: "hover:text-blue-500" },
                     { Icon: FaInstagram, link: "https://instagram.com/litcindore", name: "Instagram", color: "hover:text-pink-500" },
-                    { Icon: FaLinkedin, link: "https://linkedin.com/company/litc", name: "LinkedIn", color: "hover:text-blue-400" },
+                    { Icon: FaLinkedin, link: "https://www.linkedin.com/company/litcinfotech/", name: "LinkedIn", color: "hover:text-blue-400" },
                     { Icon: FaEnvelope, link: "mailto:info@litcindore.com", name: "Gmail", color: "hover:text-red-500" }
                   ].map((social, i) => (
                     <a
@@ -793,12 +820,12 @@ export default function Home() {
                 </h4>
                 <ul className="space-y-3">
                   {[
-                    { name: "RHCSA Certification", icon: "🔴", link: "/certifications/rhcsa" },
-                    { name: "Docker & Kubernetes", icon: "🐳", link: "/kubernetes/certified-kubernetes-administrator" },
-                    { name: "AWS Cloud", icon: "☁️", link: "/aws/cloud-services" },
-                    { name: "DevOps with Ansible", icon: "⚙️", link: "/devops/ansible-automation" },
-                    { name: "CCNA Networking", icon: "🌐", link: "/cisco/ccna-training-200-301" },
-                    { name: "Python Full Stack", icon: "🐍", link: "/python/full-stack-development" }
+                    { name: "RHCSA Linux Admin", icon: "🔴", link: "/certifications/rhcsa" },
+                    { name: "RHCE (ANSIBLE 234)", icon: "🔴", link: "/certifications/rhce" },
+                    { name: "AWS Solutions Architect", icon: "☁️", link: "/aws/cloud-services" },
+                    { name: "CCNA Network Engineering", icon: "🌐", link: "/cisco/ccna-training-200-301" },
+                    { name: "Azure Administrator", icon: "☁️", link: "/microsoft/az-104" },
+                    { name: "Cybersecurity (Basic + Advanced)", icon: "🔒", link: "/cybersecurity/basic-advanced" }
                   ].map((course, i) => (
                     <li key={i}>
                       <a

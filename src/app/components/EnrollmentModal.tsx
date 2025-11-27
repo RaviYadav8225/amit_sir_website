@@ -196,16 +196,6 @@ Thank you for choosing LITC Institute! 🎓`);
           {courseData && (
             <div className="text-center">
               <p className="text-xl text-white font-bold mb-2">{courseData.name}</p>
-              <div className="flex items-center justify-center gap-4 text-gray-300">
-                <span className="flex items-center gap-1">
-                  <span>💰</span>
-                  <span className="text-2xl font-bold text-green-400">{courseData.price}</span>
-                  <span className="line-through text-gray-500">{courseData.originalPrice}</span>
-                </span>
-                <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                  {courseData.discount}
-                </span>
-              </div>
               <p className="text-gray-400 mt-2">⏰ {courseData.duration} • 📊 {courseData.level}</p>
             </div>
           )}

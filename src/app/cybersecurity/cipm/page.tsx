@@ -338,13 +338,14 @@ export default function CIPMPage() {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href="/register" 
-                  className="bg-white text-violet-600 px-8 py-4 rounded-lg font-semibold hover:bg-violet-50 transition-colors">
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
               Enroll Now - CIPM Training
             </Link>
-            <Link href="/login" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-violet-600 transition-colors">
+            <a href="/pdfs/cipm-syllabus.pdf" 
+               download
+               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Download Syllabus
-            </Link>
+            </a>
           </div>
           <p className="text-violet-200 mt-4 text-sm">
             🎯 Next Batch Starts: February 5th, 2025 | 💯 100% Pass Guarantee | 🔄 Free Retake Policy

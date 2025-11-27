@@ -353,10 +353,11 @@ export default function CCSPPage() {
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Enroll Now - CCSP Training
             </Link>
-            <Link href="/login" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            <a href="/pdfs/ccsp-syllabus.pdf" 
+               download
+               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Download Syllabus
-            </Link>
+            </a>
           </div>
           <p className="text-blue-200 mt-4 text-sm">
             🎯 Next Batch Starts: January 15th, 2025 | 💯 100% Pass Guarantee | 🔄 Free Retake Policy

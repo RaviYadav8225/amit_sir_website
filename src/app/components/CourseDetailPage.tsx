@@ -26,6 +26,8 @@ interface CourseDetail {
   mode: string[];
   code?: string;
   id?: string;
+  pdfUrl?: string;
+  pdfName?: string;
 }
 
 interface CourseDetailPageProps {
@@ -166,13 +168,8 @@ const CourseDetailPage = memo(function CourseDetailPage({ course }: CourseDetail
               isLoaded ? 'translate-x-0 opacity-100 scale-100' : 'translate-x-16 opacity-0 scale-95'
             }`} style={{transitionDelay: '200ms'}}>
               <div className="text-center mb-5 md:mb-6">
-                <div className="flex items-center justify-center gap-2 mb-3 md:mb-4">
-                  {course.originalPrice && (
-                    <span className="text-lg sm:text-xl md:text-2xl text-gray-400 line-through">{course.originalPrice}</span>
-                  )}
-                  <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white animate-pulse">₹{course.price}</span>
-                </div>
-                <p className="text-blue-300 text-sm md:text-base">💡 Next Batch: {course.nextBatch}</p>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">🎓 Course Highlights</h3>
+                <p className="text-blue-300 text-sm md:text-base">Transform Your Career with Industry-Leading Training</p>
               </div>
               
               {/* Features - Compact on mobile */}
@@ -225,7 +222,8 @@ const CourseDetailPage = memo(function CourseDetailPage({ course }: CourseDetail
               { id: "overview", label: "Overview", icon: "📋" },
               { id: "syllabus", label: "Syllabus", icon: "📚" },
               { id: "objectives", label: "Objectives", icon: "🎯" },
-              { id: "instructor", label: "Instructor", icon: "👨‍🏫" }
+              { id: "instructor", label: "Instructor", icon: "👨‍🏫" },
+              { id: "material", label: "Course Material", icon: "📄" }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -340,6 +338,62 @@ const CourseDetailPage = memo(function CourseDetailPage({ course }: CourseDetail
                     Certified instructor with proven track record of student success.
                   </p>
                 </div>
+              </div>
+            )}
+
+            {activeTab === "material" && (
+              <div className={`space-y-4 md:space-y-6 transform transition-all duration-700 ease-out ${
+                activeTab === "material" ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
+              }`}>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">Course Material</h3>
+                
+                {course.pdfUrl ? (
+                  <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 p-8 md:p-12 rounded-xl border border-blue-500/30 transform transition-all duration-500 ease-out md:hover:scale-105">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-4xl md:text-5xl text-white mb-6 animate-bounce">
+                        📄
+                      </div>
+                      <h4 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                        {course.pdfName || "Course Syllabus"}
+                      </h4>
+                      <p className="text-blue-300 text-base md:text-lg mb-6 max-w-2xl">
+                        Download the complete course syllabus with detailed modules, learning objectives, and curriculum breakdown.
+                      </p>
+                      <a
+                        href={course.pdfUrl}
+                        download
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-3"
+                      >
+                        <span className="text-2xl">📥</span>
+                        <span>Download PDF</span>
+                      </a>
+                      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-2xl">
+                        <div className="bg-white/10 p-4 rounded-lg">
+                          <p className="text-blue-300 text-sm font-semibold mb-1">Format</p>
+                          <p className="text-white">PDF Document</p>
+                        </div>
+                        <div className="bg-white/10 p-4 rounded-lg">
+                          <p className="text-blue-300 text-sm font-semibold mb-1">Type</p>
+                          <p className="text-white">Course Syllabus</p>
+                        </div>
+                        <div className="bg-white/10 p-4 rounded-lg">
+                          <p className="text-blue-300 text-sm font-semibold mb-1">Access</p>
+                          <p className="text-white">Free Download</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-white/10 p-8 md:p-12 rounded-xl border border-white/20 text-center">
+                    <div className="text-6xl mb-4">📚</div>
+                    <h4 className="text-xl md:text-2xl font-bold text-white mb-3">Course Material Coming Soon</h4>
+                    <p className="text-gray-300 text-base">
+                      We're preparing comprehensive course materials for you. Check back soon!
+                    </p>
+                  </div>
+                )}
               </div>
             )}
           </div>

@@ -327,13 +327,14 @@ export default function CRISCPage() {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href="/register" 
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                  className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors">
               Enroll Now - CRISC Training
             </Link>
-            <Link href="/login" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+            <a href="/pdfs/crisc-syllabus.pdf" 
+               download
+               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
               Download Syllabus
-            </Link>
+            </a>
           </div>
           <p className="text-purple-200 mt-4 text-sm">
             🎯 Next Batch Starts: January 20th, 2025 | 💯 100% Pass Guarantee | 🔄 Free Retake Policy

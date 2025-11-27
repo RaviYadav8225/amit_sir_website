@@ -23,9 +23,9 @@ interface Course {
   features?: string[];
 }
 
-// All courses data
+// All courses data - Only courses listed in navbar
 const coursesData: Course[] = [
-  // AWS Cloud Courses
+  // AWS Cloud Courses (from navbar)
   {
     id: 1,
     title: "AWS Certified Cloud Practitioner",
@@ -62,6 +62,23 @@ const coursesData: Course[] = [
   },
   {
     id: 3,
+    title: "AWS SysOps Administrator Associate",
+    description: "Deploy, manage, and operate scalable, highly available, and fault-tolerant systems on AWS.",
+    category: "AWS Cloud",
+    level: "Intermediate",
+    duration: "10-12 Weeks",
+    icon: "⚙️",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
+    color: "from-purple-500 to-pink-500",
+    urlPath: "/aws/certified-sysops-administrator-associate",
+    certification: "AWS SOA (SOA-C02)",
+    price: "₹23,000",
+    rating: 4.6,
+    students: "1.5K+",
+    features: ["System Operations", "Monitoring", "Security", "Cost Optimization"]
+  },
+  {
+    id: 4,
     title: "AWS Developer Associate",
     description: "Master AWS application development with Lambda, API Gateway, DynamoDB, and CI/CD pipelines.",
     category: "AWS Cloud",
@@ -76,23 +93,6 @@ const coursesData: Course[] = [
     rating: 4.7,
     students: "1.8K+",
     features: ["Serverless Apps", "DevOps Integration", "Hands-on Coding", "Industry Projects"]
-  },
-  {
-    id: 4,
-    title: "AWS SysOps Administrator",
-    description: "Deploy, manage, and operate scalable, highly available, and fault-tolerant systems on AWS.",
-    category: "AWS Cloud",
-    level: "Intermediate",
-    duration: "10-12 Weeks",
-    icon: "⚙️",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
-    color: "from-purple-500 to-pink-500",
-    urlPath: "/aws/certified-sysops-administrator-associate",
-    certification: "AWS SOA (SOA-C02)",
-    price: "₹23,000",
-    rating: 4.6,
-    students: "1.5K+",
-    features: ["System Operations", "Monitoring", "Security", "Cost Optimization"]
   },
   {
     id: 5,
@@ -112,7 +112,7 @@ const coursesData: Course[] = [
     features: ["Advanced DevOps", "Automation", "Professional Level", "Elite Mentoring"]
   },
 
-  // RedHat Linux Courses
+  // RedHat Linux Courses (from navbar)
   {
     id: 8,
     title: "RHCSA - Red Hat System Administrator",
@@ -183,74 +183,23 @@ const coursesData: Course[] = [
   },
   {
     id: 12,
-    title: "Service Management Through Ansible",
-    description: "Automate IT service management tasks using Red Hat Ansible Automation Platform.",
+    title: "Introduction to Containers, Kubernetes, and OpenShift",
+    description: "Learn containerization fundamentals with Docker, Kubernetes, and Red Hat OpenShift.",
     category: "RedHat Linux",
-    level: "Advanced",
-    duration: "8-10 Weeks",
-    icon: "🔧",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=600&q=80",
-    color: "from-green-500 to-teal-600",
-    urlPath: "/certifications/ansible-rh358",
-    certification: "RH358",
-    price: "₹24,000",
-    rating: 4.8,
-    students: "900+",
-    features: ["Ansible Automation", "Service Management", "Infrastructure as Code", "Automation"]
+    level: "Beginner",
+    duration: "6-8 Weeks",
+    icon: "🐳",
+    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=600&q=80",
+    color: "from-cyan-500 to-blue-600",
+    urlPath: "/openshift/introduction-to-containers-kubernetes-do180",
+    certification: "DO180",
+    price: "₹20,000",
+    rating: 4.7,
+    students: "1.1K+",
+    features: ["Container Basics", "Kubernetes Intro", "OpenShift Platform", "Hands-on Labs"]
   },
   {
     id: 13,
-    title: "RHEL Diagnostics and Troubleshooting",
-    description: "Advanced troubleshooting and diagnostics for Red Hat Enterprise Linux systems.",
-    category: "RedHat Linux",
-    level: "Advanced",
-    duration: "6-8 Weeks",
-    icon: "🔍",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
-    color: "from-orange-500 to-red-600",
-    urlPath: "/certifications/rhel-diagnostics",
-    certification: "RH342",
-    price: "₹20,000",
-    rating: 4.7,
-    students: "550+",
-    features: ["System Diagnostics", "Troubleshooting", "Performance Tuning", "Problem Solving"]
-  },
-  {
-    id: 14,
-    title: "Red Hat Security: Linux in Physical, Virtual, and Cloud",
-    description: "Comprehensive security practices for RHEL across physical, virtual, and cloud environments.",
-    category: "RedHat Linux",
-    level: "Advanced",
-    duration: "10-12 Weeks",
-    icon: "🔒",
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80",
-    color: "from-red-600 to-orange-700",
-    urlPath: "/certifications/rh415",
-    certification: "RH415",
-    price: "₹28,000",
-    rating: 4.9,
-    students: "700+",
-    features: ["Security Hardening", "Compliance", "Cloud Security", "Advanced Security"]
-  },
-  {
-    id: 15,
-    title: "RHCA - Red Hat Certified Architect",
-    description: "Achieve the highest level of Red Hat certification demonstrating expert-level knowledge and skills.",
-    category: "RedHat Linux",
-    level: "Advanced",
-    duration: "16-20 Weeks",
-    icon: "🏛️",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
-    color: "from-red-700 to-purple-800",
-    urlPath: "/certifications/rhca",
-    certification: "RHCA",
-    price: "₹45,000",
-    rating: 5.0,
-    students: "300+",
-    features: ["Expert Level", "Architecture", "Multiple Certifications", "Elite Certification"]
-  },
-  {
-    id: 16,
     title: "Red Hat OpenShift Administration",
     description: "Deploy, manage, and troubleshoot OpenShift Container Platform clusters and applications.",
     category: "RedHat Linux",
@@ -260,137 +209,67 @@ const coursesData: Course[] = [
     image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=600&q=80",
     color: "from-red-500 to-blue-600",
     urlPath: "/openshift/certified-specialist-administration-ex280",
-    certification: "EX280",
+    certification: "DO280/EX280",
     price: "₹30,000",
     rating: 4.8,
     students: "950+",
     features: ["OpenShift", "Container Platform", "Kubernetes", "Cloud Native"]
   },
   {
-    id: 17,
-    title: "Red Hat OpenShift Application Developer",
-    description: "Develop and deploy containerized applications on Red Hat OpenShift Container Platform.",
+    id: 14,
+    title: "Red Hat OpenShift Development",
+    description: "Develop containerized applications using Red Hat OpenShift Container Platform.",
     category: "RedHat Linux",
     level: "Intermediate",
     duration: "8-10 Weeks",
-    icon: "🐳",
+    icon: "💻",
+    image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=600&q=80",
+    color: "from-green-500 to-blue-600",
+    urlPath: "/openshift/red-hat-openshift-development-do188",
+    certification: "DO188",
+    price: "₹24,000",
+    rating: 4.6,
+    students: "750+",
+    features: ["Container Development", "OpenShift", "Application Deployment", "DevOps"]
+  },
+  {
+    id: 15,
+    title: "Red Hat OpenShift Application Developer",
+    description: "Design and deploy containerized applications on Red Hat OpenShift Container Platform.",
+    category: "RedHat Linux",
+    level: "Intermediate",
+    duration: "8-10 Weeks",
+    icon: "🔧",
     image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=600&q=80",
     color: "from-cyan-500 to-blue-700",
     urlPath: "/openshift/certified-application-developer-ex288",
-    certification: "EX288",
+    certification: "DO288/EX288",
     price: "₹26,000",
     rating: 4.7,
     students: "850+",
     features: ["Application Development", "Containers", "OpenShift", "DevOps"]
   },
-  {
-    id: 18,
-    title: "OpenShift Automation and Integration",
-    description: "Automate and integrate OpenShift solutions with enterprise systems and workflows.",
-    category: "RedHat Linux",
-    level: "Advanced",
-    duration: "10-12 Weeks",
-    icon: "⚙️",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=600&q=80",
-    color: "from-indigo-600 to-purple-700",
-    urlPath: "/openshift/certified-specialist-automation-integration-ex380",
-    certification: "EX380",
-    price: "₹32,000",
-    rating: 4.8,
-    students: "600+",
-    features: ["Automation", "Integration", "OpenShift", "Advanced Configuration"]
-  },
 
-  // DevOps Courses
+  // Cisco Courses (from navbar)
   {
-    id: 19,
-    title: "Jenkins Certified Engineer",
-    description: "Master continuous integration and deployment with Jenkins, pipeline as code, and automation.",
-    category: "DevOps",
-    level: "Intermediate",
-    duration: "8-10 Weeks",
-    icon: "⚙️",
-    image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=600&q=80",
-    color: "from-blue-500 to-indigo-500",
-    urlPath: "/devops/jenkins-certified-engineer",
-    certification: "Jenkins CE",
-    price: "₹22,000",
-    rating: 4.7,
-    students: "1.8K+",
-    features: ["CI/CD Pipelines", "Pipeline as Code", "Automation", "DevOps Integration"]
-  },
-  {
-    id: 20,
-    title: "GitLab Certified Associate",
-    description: "Complete GitLab workflow mastery including version control, CI/CD, and project management.",
-    category: "DevOps",
-    level: "Intermediate",
+    id: 16,
+    title: "CCST Networking",
+    description: "Entry-level Cisco certification covering fundamental networking concepts and basic configuration.",
+    category: "Cisco",
+    level: "Beginner",
     duration: "6-8 Weeks",
-    icon: "🦊",
-    image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=600&q=80",
-    color: "from-orange-500 to-red-500",
-    urlPath: "/devops/gitlab-certified-associate",
-    certification: "GitLab GCA",
-    price: "₹19,000",
+    icon: "🌟",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
+    color: "from-green-500 to-blue-500",
+    urlPath: "/cisco/ccst-networking",
+    certification: "CCST Networking (100-150)",
+    price: "₹16,000",
     rating: 4.6,
-    students: "1.3K+",
-    features: ["Version Control", "CI/CD", "Project Management", "Collaboration"]
+    students: "1.9K+",
+    features: ["Networking Basics", "Entry Level", "Foundation Skills", "Career Starter"]
   },
   {
-    id: 21,
-    title: "HashiCorp Certified: Terraform Associate",
-    description: "Infrastructure as Code mastery with HashiCorp Terraform for cloud automation and provisioning.",
-    category: "DevOps",
-    level: "Intermediate",
-    duration: "8-10 Weeks",
-    icon: "🏭️",
-    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=600&q=80",
-    color: "from-purple-500 to-indigo-500",
-    urlPath: "/devops/terraform-associate",
-    certification: "Terraform Associate (003)",
-    price: "₹24,000",
-    rating: 4.8,
-    students: "1.6K+",
-    features: ["Infrastructure as Code", "Multi-Cloud", "Automation", "Best Practices"]
-  },
-  {
-    id: 22,
-    title: "Red Hat Certified Specialist in Ansible Automation",
-    description: "Master configuration management and automation with Red Hat Ansible for enterprise environments.",
-    category: "DevOps",
-    level: "Intermediate",
-    duration: "8-10 Weeks",
-    icon: "🔧",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=600&q=80",
-    color: "from-red-500 to-orange-500",
-    urlPath: "/devops/ansible-automation",
-    certification: "Ansible (EX407)",
-    price: "₹21,000",
-    rating: 4.7,
-    students: "1.4K+",
-    features: ["Configuration Management", "Automation", "Playbooks", "Enterprise Ready"]
-  },
-  {
-    id: 43,
-    title: "AWS Certified DevOps Engineer Professional",
-    description: "Advanced AWS DevOps practices including CI/CD, infrastructure as code, and automation.",
-    category: "DevOps",
-    level: "Advanced",
-    duration: "12-14 Weeks",
-    icon: "☁️",
-    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=600&q=80",
-    color: "from-orange-500 to-red-600",
-    urlPath: "/devops/aws-devops-engineer",
-    certification: "AWS DOP-C02",
-    price: "₹35,000",
-    rating: 4.9,
-    students: "850+",
-    features: ["AWS DevOps", "CI/CD Automation", "Infrastructure as Code", "Professional Level"]
-  },
-
-  // Cisco Courses
-  {
-    id: 23,
+    id: 17,
     title: "CCNA Training 200-301",
     description: "Master networking fundamentals with Cisco CCNA certification covering routing, switching, and security.",
     category: "Cisco",
@@ -407,46 +286,63 @@ const coursesData: Course[] = [
     features: ["Network Fundamentals", "Routing & Switching", "Network Security", "Real Labs"]
   },
   {
-    id: 25,
-    title: "CCST Networking",
-    description: "Entry-level Cisco certification covering fundamental networking concepts and basic configuration.",
+    id: 18,
+    title: "CCNP Training 350-401",
+    description: "Advanced networking certification covering enterprise network core technologies and solutions.",
     category: "Cisco",
-    level: "Beginner",
-    duration: "6-8 Weeks",
-    icon: "🌟",
+    level: "Advanced",
+    duration: "12-14 Weeks",
+    icon: "🎓",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
-    color: "from-green-500 to-blue-500",
-    urlPath: "/cisco/ccst-networking",
-    certification: "CCST Networking (100-150)",
-    price: "₹16,000",
-    rating: 4.6,
-    students: "1.9K+",
-    features: ["Networking Basics", "Entry Level", "Foundation Skills", "Career Starter"]
+    color: "from-indigo-500 to-purple-600",
+    urlPath: "/cisco/ccnp-training-350-401",
+    certification: "CCNP (350-401)",
+    price: "₹30,000",
+    rating: 4.8,
+    students: "1.2K+",
+    features: ["Advanced Networking", "Enterprise Solutions", "Professional Level", "Expert Skills"]
   },
 
-  // Cybersecurity Courses
+  // Python Courses (from navbar)
   {
-    id: 26,
-    title: "CompTIA Security+",
-    description: "Foundation cybersecurity certification covering security concepts, threats, and risk management.",
-    category: "Cybersecurity",
+    id: 19,
+    title: "Python Programming",
+    description: "Master Python fundamentals and advanced concepts with PCEP and PCAP certification preparation.",
+    category: "Python",
     level: "Beginner",
-    duration: "8-10 Weeks",
-    icon: "🛡️",
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80",
-    color: "from-blue-600 to-purple-600",
-    urlPath: "/cybersecurity/security-plus",
-    certification: "Security+ (SY0-601)",
-    price: "₹22,000",
+    duration: "10-12 Weeks",
+    icon: "🐍",
+    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=600&q=80",
+    color: "from-blue-500 to-yellow-500",
+    urlPath: "/python/python-programming",
+    certification: "PCEP/PCAP",
+    price: "₹20,000",
     rating: 4.7,
-    students: "2.2K+",
-    features: ["Security Fundamentals", "Risk Management", "Industry Standard", "Career Foundation"]
+    students: "2.8K+",
+    features: ["Python Basics", "OOP", "Data Structures", "Certification Prep"]
+  },
+  {
+    id: 20,
+    title: "Python Full Stack Development",
+    description: "Complete Python web development with Django, Flask, databases, and deployment.",
+    category: "Python",
+    level: "Intermediate",
+    duration: "12-14 Weeks",
+    icon: "💻",
+    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=600&q=80",
+    color: "from-yellow-500 to-green-500",
+    urlPath: "/python/full-stack-development",
+    certification: "Python Full Stack",
+    price: "₹25,000",
+    rating: 4.8,
+    students: "2.5K+",
+    features: ["Django/Flask", "Database Design", "API Development", "Deployment"]
   },
 
-  // Docker & Kubernetes
+  // Docker Courses (from navbar)
   {
-    id: 42,
-    title: "Docker Fundamentals Training (DO101)",
+    id: 21,
+    title: "Docker Fundamentals Training",
     description: "Learn Docker basics, container creation, image management, and deployment strategies.",
     category: "Docker",
     level: "Beginner",
@@ -462,8 +358,8 @@ const coursesData: Course[] = [
     features: ["Container Basics", "Image Management", "Docker Compose", "Best Practices"]
   },
   {
-    id: 27,
-    title: "Docker Certified Associate (DCA)",
+    id: 22,
+    title: "Docker Certified Associate",
     description: "Master containerization with Docker including orchestration, networking, and security.",
     category: "Docker",
     level: "Intermediate",
@@ -478,9 +374,11 @@ const coursesData: Course[] = [
     students: "1.7K+",
     features: ["Containerization", "Docker Compose", "Swarm Mode", "Container Security"]
   },
+
+  // Kubernetes Courses (from navbar)
   {
-    id: 28,
-    title: "Certified Kubernetes Administrator (CKA)",
+    id: 23,
+    title: "Certified Kubernetes Administrator",
     description: "Comprehensive Kubernetes administration including cluster management, networking, and troubleshooting.",
     category: "Kubernetes",
     level: "Advanced",
@@ -496,8 +394,8 @@ const coursesData: Course[] = [
     features: ["Cluster Management", "Networking", "Storage", "Troubleshooting"]
   },
   {
-    id: 29,
-    title: "Certified Kubernetes Application Developer (CKAD)",
+    id: 24,
+    title: "Certified Kubernetes Application Developer",
     description: "Application development on Kubernetes with focus on deployments, services, and configuration.",
     category: "Kubernetes",
     level: "Intermediate",
@@ -513,8 +411,8 @@ const coursesData: Course[] = [
     features: ["App Development", "Deployments", "Services", "Configuration"]
   },
   {
-    id: 41,
-    title: "Certified Kubernetes Security Specialist (CKS)",
+    id: 25,
+    title: "Certified Kubernetes Security Specialist",
     description: "Advanced Kubernetes security covering cluster hardening, system security, and compliance.",
     category: "Kubernetes",
     level: "Advanced",
@@ -530,10 +428,10 @@ const coursesData: Course[] = [
     features: ["Security Hardening", "System Security", "Compliance", "Threat Detection"]
   },
 
-  // Microsoft Courses
+  // Microsoft Courses (from navbar)
   {
-    id: 30,
-    title: "Azure Fundamentals",
+    id: 26,
+    title: "Microsoft Azure Fundamentals",
     description: "Introduction to Microsoft Azure cloud services, solutions, and management tools.",
     category: "Microsoft",
     level: "Beginner",
@@ -549,8 +447,8 @@ const coursesData: Course[] = [
     features: ["Azure Basics", "Cloud Concepts", "Azure Services", "Pricing Models"]
   },
   {
-    id: 31,
-    title: "Azure Administrator Associate",
+    id: 27,
+    title: "Microsoft Azure Administrator Associate",
     description: "Manage Azure subscriptions, secure identities, administer infrastructure, and configure virtual networking.",
     category: "Microsoft",
     level: "Intermediate",
@@ -566,8 +464,8 @@ const coursesData: Course[] = [
     features: ["Azure Management", "Virtual Networks", "Storage", "Identity Management"]
   },
   {
-    id: 33,
-    title: "Azure Developer Associate",
+    id: 28,
+    title: "Microsoft Azure Developer Associate",
     description: "Design, build, test, and maintain cloud applications and services on Microsoft Azure platform.",
     category: "Microsoft",
     level: "Intermediate",
@@ -583,8 +481,8 @@ const coursesData: Course[] = [
     features: ["Azure Development", "Cloud Apps", "Serverless", "API Development"]
   },
   {
-    id: 34,
-    title: "Azure Data Fundamentals",
+    id: 29,
+    title: "Microsoft Azure Data Fundamentals",
     description: "Foundation knowledge of core data concepts and Azure data services including relational and non-relational data.",
     category: "Microsoft",
     level: "Beginner",
@@ -600,8 +498,8 @@ const coursesData: Course[] = [
     features: ["Data Concepts", "SQL", "NoSQL", "Azure Data Services"]
   },
   {
-    id: 35,
-    title: "Azure Data Engineer Associate",
+    id: 30,
+    title: "Microsoft Azure Data Engineer Associate",
     description: "Design and implement data management, monitoring, security, and privacy using Azure data services.",
     category: "Microsoft",
     level: "Advanced",
@@ -617,8 +515,8 @@ const coursesData: Course[] = [
     features: ["Data Engineering", "ETL", "Data Lakes", "Big Data"]
   },
   {
-    id: 36,
-    title: "Azure AI Fundamentals",
+    id: 31,
+    title: "Microsoft Azure AI Fundamentals",
     description: "Introduction to AI concepts and Azure AI services including machine learning and cognitive services.",
     category: "Microsoft",
     level: "Beginner",
@@ -634,8 +532,8 @@ const coursesData: Course[] = [
     features: ["AI Basics", "Machine Learning", "Cognitive Services", "Azure AI"]
   },
   {
-    id: 37,
-    title: "Azure AI Engineer Associate",
+    id: 32,
+    title: "Microsoft Azure AI Engineer Associate",
     description: "Design and implement AI solutions using Azure Cognitive Services, Machine Learning, and Knowledge Mining.",
     category: "Microsoft",
     level: "Advanced",
@@ -651,7 +549,7 @@ const coursesData: Course[] = [
     features: ["AI Solutions", "Cognitive Services", "ML Models", "Knowledge Mining"]
   },
   {
-    id: 38,
+    id: 33,
     title: "Microsoft 365 Administrator",
     description: "Manage Microsoft 365 identity, compliance, security, and supporting technologies for enterprise environments.",
     category: "Microsoft",
@@ -668,7 +566,7 @@ const coursesData: Course[] = [
     features: ["Microsoft 365", "Desktop Admin", "Security", "Cloud Services"]
   },
   {
-    id: 39,
+    id: 34,
     title: "Microsoft Teams Administrator",
     description: "Configure, deploy, and manage Office 365 workloads for Microsoft Teams that focus on efficient collaboration.",
     category: "Microsoft",
@@ -685,42 +583,63 @@ const coursesData: Course[] = [
     features: ["Teams Admin", "Collaboration", "Office 365", "Communication"]
   },
 
-  // Python Courses
+  // DevOps Courses (from navbar - these are not individual courses but categories)
+  // Note: DevOps courses in navbar are just labels, actual courses would be separate
+
+  // Cybersecurity Courses (from navbar)
   {
-    id: 32,
-    title: "Python Full Stack Development",
-    description: "Complete Python web development with Django, Flask, databases, and deployment.",
-    category: "Python",
-    level: "Intermediate",
-    duration: "12-14 Weeks",
-    icon: "🐍",
-    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=600&q=80",
-    color: "from-yellow-500 to-green-500",
-    urlPath: "/python/full-stack-development",
-    certification: "Python Full Stack",
-    price: "₹25,000",
-    rating: 4.8,
-    students: "2.5K+",
-    features: ["Django/Flask", "Database Design", "API Development", "Deployment"]
+    id: 35,
+    title: "CCST Networking",
+    description: "Entry-level Cisco certification covering fundamental networking concepts and basic configuration for cybersecurity.",
+    category: "Cybersecurity",
+    level: "Beginner",
+    duration: "6-8 Weeks",
+    icon: "🌟",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
+    color: "from-green-500 to-blue-500",
+    urlPath: "/cisco/ccst-networking",
+    certification: "CCST Networking (100-150)",
+    price: "₹16,000",
+    rating: 4.6,
+    students: "1.9K+",
+    features: ["Networking Basics", "Entry Level", "Foundation Skills", "Career Starter"]
   },
   {
-    id: 40,
-    title: "Python Programming",
-    description: "Master Python fundamentals and advanced concepts with PCEP and PCAP certification preparation.",
-    category: "Python",
+    id: 36,
+    title: "CompTIA Security+",
+    description: "Foundation cybersecurity certification covering security concepts, threats, and risk management.",
+    category: "Cybersecurity",
     level: "Beginner",
-    duration: "10-12 Weeks",
-    icon: "🐍",
-    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=600&q=80",
-    color: "from-blue-500 to-yellow-500",
-    urlPath: "/python/python-programming",
-    certification: "PCEP/PCAP",
-    price: "₹20,000",
+    duration: "8-10 Weeks",
+    icon: "🔒",
+    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80",
+    color: "from-blue-600 to-purple-600",
+    urlPath: "/cybersecurity/security-plus",
+    certification: "Security+ (SY0-601)",
+    price: "₹22,000",
     rating: 4.7,
-    students: "2.8K+",
-    features: ["Python Basics", "OOP", "Data Structures", "Certification Prep"]
+    students: "2.2K+",
+    features: ["Security Fundamentals", "Risk Management", "Industry Standard", "Career Foundation"]
+  },
+  {
+    id: 37,
+    title: "Cybersecurity Basic + Advanced",
+    description: "Comprehensive cybersecurity training from fundamentals to advanced security techniques and tools.",
+    category: "Cybersecurity",
+    level: "Intermediate",
+    duration: "12-14 Weeks",
+    icon: "🚫",
+    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80",
+    color: "from-red-600 to-purple-700",
+    urlPath: "/cybersecurity/basic-advanced",
+    certification: "Cybersecurity Professional",
+    price: "₹30,000",
+    rating: 4.8,
+    students: "1.5K+",
+    features: ["Security Basics", "Advanced Techniques", "Ethical Hacking", "Security Tools"]
   }
 ];
+
 
 export default function ExploreCourses() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');

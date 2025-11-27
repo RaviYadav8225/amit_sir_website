@@ -119,23 +119,21 @@ export default function Navbar() {
                   { href: "/certifications/rhce", label: "RHCE (Ansible) - RedHat Certified Engineer (EX294)", icon: "⚙️" },
                   { href: "/certifications/openstack", label: "Open Stack Cloud Administration (EX210)", icon: "☁️" },
                   { href: "/certifications/enterprise-virtualization", label: "Red Hat Enterprise Virtualization (EX318)", icon: "💻" },
-                  { href: "/certifications/ansible-rh358", label: "Service Management Through Ansible (RH358)", icon: "🔧" },
-                  { href: "/certifications/rhel-diagnostics", label: "Red Hat Enterprise Linux Diagnostics and Troubleshooting (RH342)", icon: "🔍" },
-                  { href: "/certifications/rh415", label: "Red Hat Security: Linux in Physical, Virtual, and Cloud (RH415)", icon: "🔒" },
-                  { href: "/certifications/rhca", label: "RHCA - Red Hat Certified Architect", icon: "🏛️" },
-                  { href: "/openshift/certified-specialist-administration-ex280", label: "Red Hat Certified Specialist in OpenShift Administration (EX280)", icon: "🚀" },
-                  { href: "/openshift/certified-application-developer-ex288", label: "Red Hat Certified OpenShift Application Developer (EX288)", icon: "🐳" },
-                  { href: "/openshift/certified-specialist-automation-integration-ex380", label: "Red Hat Certified Specialist in OpenShift Automation and Integration (EX380)", icon: "⚙️" }
+                  { href: "/openshift/introduction-to-containers-kubernetes-do180", label: "Introduction to Containers, Kubernetes, and Red Hat OpenShift (DO180)", icon: "🐳" },
+                  { href: "/openshift/certified-specialist-administration-ex280", label: "Red Hat Certified Specialist in OpenShift Administration (DO280/EX280)", icon: "🚀" },
+                  { href: "/openshift/red-hat-openshift-development-do188", label: "Red Hat OpenShift Development I: Introduction to Containers (DO188)", icon: "💻" },
+                  { href: "/openshift/certified-application-developer-ex288", label: "Red Hat Certified OpenShift Application Developer (DO288/EX288)", icon: "🔧" }
                 ]
               },
 
               { 
                 href: "/courses/cisco-ccna", 
-                label: "Cisco CCNA", 
+                label: "Cisco", 
                 icon: "🌐",
                 subItems: [
                   { href: "/cisco/ccst-networking", label: "CCST Networking (100-150)", icon: "🌟" },
-                  { href: "/cisco/ccna-training-200-301", label: "CCNA Training (200-301)", icon: "🔧" }
+                  { href: "/cisco/ccna-training-200-301", label: "CCNA Training (200-301)", icon: "🔧" },
+                  { href: "/cisco/ccnp-training-350-401", label: "CCNP (350-401) (Online)", icon: "🎓" }
                 ]
               },
               { 
@@ -162,7 +160,7 @@ export default function Navbar() {
                 icon: "⚙️",
                 subItems: [
                   { href: "/kubernetes/certified-kubernetes-administrator", label: "Certified Kubernetes Administrator (CKA)", icon: "🏅" },
-                  { href: "/kubernetes/certified-kubernetes-application-developer", label: "Certified Kubernetes Application Developer (CKAD) (online)", icon: "💻" },
+                  { href: "/kubernetes/certified-kubernetes-application-developer", label: "Certified Kubernetes Application Developer (CKAD)", icon: "💻" },
                   { href: "/kubernetes/certified-kubernetes-security-specialist", label: "Certified Kubernetes Security Specialist (CKS)", icon: "🔒" }
                 ]
               },
@@ -184,15 +182,13 @@ export default function Navbar() {
               },
               { 
                 href: "/courses/devops", 
-                label: "DevOps (Online)", 
+                label: "DevOps", 
                 icon: "🚀",
                 subItems: [
-                  { href: "/devops/jenkins-certified-engineer", label: "Jenkins Certified Engineer (JCE)", icon: "⚙️" },
-                  { href: "/devops/gitlab-certified-associate", label: "GitLab Certified Associate (GCA)", icon: "🦊" },
-                  { href: "/devops/ansible-automation", label: "Red Hat Certified Specialist in Ansible Automation (EX407)", icon: "🔧" },
-                  { href: "/devops/terraform-associate", label: "HashiCorp Certified: Terraform Associate (003)", icon: "🏭️" },
-                  { href: "/devops/aws-devops-engineer", label: "AWS Certified DevOps Engineer Professional (DOP-C02)", icon: "☁️" },
-                  { href: "/docker/docker-certified-associate", label: "Docker Certified Associate (DCA)", icon: "🐳" }
+                  { href: "/devops/devops-only", label: "DevOps Only", icon: "🚀" },
+                  { href: "/devops/devops-with-aws", label: "DevOps with AWS", icon: "☁️" },
+                  { href: "/devops/devops-with-azure", label: "DevOps with Azure", icon: "🔷" },
+                  { href: "/devops/devops-with-aws-ai", label: "DevOps with AWS and AI", icon: "🤖" }
                 ]
               },
               { 
@@ -200,7 +196,9 @@ export default function Navbar() {
                 label: "Cybersecurity (Online)", 
                 icon: "🔒",
                 subItems: [
-                  { href: "/cisco/ccst-networking", label: "CCST Networking (100-150)", icon: "🌟" }
+                  { href: "/cisco/ccst-networking", label: "CCST Networking (100-150)", icon: "🌟" },
+                  { href: "/cybersecurity/security-plus", label: "CompTIA Security+", icon: "🔒" },
+                  { href: "/cybersecurity/basic-advanced", label: "Cybersecurity (Basic + Advanced)", icon: "🚫" }
                 ]
               },
             ]}
@@ -216,7 +214,7 @@ export default function Navbar() {
             ]}
           />
           
-          <NavLink href="/gallery" label="Gallery" />
+          <NavLink href="/Exam-Voucher" label="Exam-Voucher" />
           <NavLink href="/contact" label="Contact Us" />
         </div>
 
@@ -299,22 +297,20 @@ export default function Navbar() {
                   { href: "/certifications/rhce", label: "RHCE - Ansible (EX294)", icon: "⚙️" },
                   { href: "/certifications/openstack", label: "Open Stack Cloud (EX210)", icon: "☁️" },
                   { href: "/certifications/enterprise-virtualization", label: "Enterprise Virtualization (EX318)", icon: "💻" },
-                  { href: "/certifications/ansible-rh358", label: "Ansible Service Management (RH358)", icon: "🔧" },
-                  { href: "/certifications/rhel-diagnostics", label: "RHEL Diagnostics (RH342)", icon: "🔍" },
-                  { href: "/certifications/rh415", label: "Red Hat Security (RH415)", icon: "🔒" },
-                  { href: "/certifications/rhca", label: "RHCA - Red Hat Certified Architect", icon: "🏛️" },
-                  { href: "/openshift/certified-specialist-administration-ex280", label: "OpenShift Administration (EX280)", icon: "🚀" },
-                  { href: "/openshift/certified-application-developer-ex288", label: "OpenShift Developer (EX288)", icon: "🐳" },
-                  { href: "/openshift/certified-specialist-automation-integration-ex380", label: "OpenShift Automation (EX380)", icon: "⚙️" }
+                  { href: "/openshift/introduction-to-containers-kubernetes-do180", label: "Containers & Kubernetes (DO180)", icon: "🐳" },
+                  { href: "/openshift/certified-specialist-administration-ex280", label: "OpenShift Admin (DO280/EX280)", icon: "🚀" },
+                  { href: "/openshift/red-hat-openshift-development-do188", label: "OpenShift Development (DO188)", icon: "💻" },
+                  { href: "/openshift/certified-application-developer-ex288", label: "OpenShift Developer (DO288/EX288)", icon: "🔧" }
                 ]
               },
               { 
                 href: "/courses/cisco-ccna", 
-                label: "Cisco CCNA", 
+                label: "Cisco", 
                 icon: "🌐",
                 subItems: [
                   { href: "/cisco/ccst-networking", label: "CCST Networking", icon: "🌟" },
-                  { href: "/cisco/ccna-training-200-301", label: "CCNA Training", icon: "🔧" }
+                  { href: "/cisco/ccna-training-200-301", label: "CCNA Training", icon: "🔧" },
+                  { href: "/cisco/ccnp-training-350-401", label: "CCNP (Online)", icon: "🎓" }
                 ]
               },
               { 
@@ -366,11 +362,10 @@ export default function Navbar() {
                 label: "DevOps", 
                 icon: "🚀",
                 subItems: [
-                  { href: "/devops/jenkins-certified-engineer", label: "Jenkins Certified Engineer", icon: "⚙️" },
-                  { href: "/devops/gitlab-certified-associate", label: "GitLab Certified Associate", icon: "🦊" },
-                  { href: "/devops/ansible-automation", label: "Ansible Automation", icon: "🔧" },
-                  { href: "/devops/terraform-associate", label: "Terraform Associate", icon: "🏭️" },
-                  { href: "/devops/aws-devops-engineer", label: "AWS DevOps Engineer", icon: "☁️" }
+                  { href: "/devops/devops-only", label: "DevOps Only", icon: "🚀" },
+                  { href: "/devops/devops-with-aws", label: "DevOps with AWS", icon: "☁️" },
+                  { href: "/devops/devops-with-azure", label: "DevOps with Azure", icon: "🔷" },
+                  { href: "/devops/devops-with-aws-ai", label: "DevOps with AWS and AI", icon: "🤖" }
                 ]
               },
               { 
@@ -378,7 +373,9 @@ export default function Navbar() {
                 label: "Cybersecurity", 
                 icon: "🔒",
                 subItems: [
-                  { href: "/cisco/ccst-networking", label: "CCST Networking", icon: "🌟" }
+                  { href: "/cisco/ccst-networking", label: "CCST Networking", icon: "🌟" },
+                  { href: "/cybersecurity/security-plus", label: "CompTIA Security+", icon: "🔒" },
+                  { href: "/cybersecurity/basic-advanced", label: "Cybersecurity (Basic + Advanced)", icon: "🚫" }
                 ]
               },
             ]}

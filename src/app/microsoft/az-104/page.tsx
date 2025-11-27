@@ -90,13 +90,6 @@ export default function AzureAdministrator() {
                   <span className="text-gray-300">Renewal:</span>
                   <span className="text-white font-semibold">Annual (Free)</span>
                 </div>
-                <div className="border-t border-white/20 my-4 pt-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300 font-semibold">Course Fee:</span>
-                    <span className="text-purple-400 font-bold text-2xl">₹25,000</span>
-                  </div>
-                  <p className="text-gray-400 text-sm mt-2">Includes training, hands-on labs & exam preparation</p>
-                </div>
               </div>
             </div>
           </div>
