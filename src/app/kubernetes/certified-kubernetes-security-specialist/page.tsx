@@ -27,9 +27,9 @@ export default function CertifiedKubernetesSecuritySpecialist() {
             <a href="tel:+91-9522220892" className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-xl">
               📞 Enroll Now: +91-9522220892
             </a>
-            <Link href="/contact" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300">
-              Get Exam Guide
-            </Link>
+            <a href="/pdfs/cks-syllabus.pdf" download className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300">
+              Download Syllabus
+            </a>
           </div>
         </div>
       </div>

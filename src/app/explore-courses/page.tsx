@@ -464,23 +464,6 @@ const coursesData: Course[] = [
     features: ["Azure Management", "Virtual Networks", "Storage", "Identity Management"]
   },
   {
-    id: 28,
-    title: "Microsoft Azure Developer Associate",
-    description: "Design, build, test, and maintain cloud applications and services on Microsoft Azure platform.",
-    category: "Microsoft",
-    level: "Intermediate",
-    duration: "10-12 Weeks",
-    icon: "💻",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
-    color: "from-green-500 to-blue-600",
-    urlPath: "/microsoft/az-204",
-    certification: "AZ-204",
-    price: "₹26,000",
-    rating: 4.7,
-    students: "1.2K+",
-    features: ["Azure Development", "Cloud Apps", "Serverless", "API Development"]
-  },
-  {
     id: 29,
     title: "Microsoft Azure Data Fundamentals",
     description: "Foundation knowledge of core data concepts and Azure data services including relational and non-relational data.",
@@ -549,40 +532,6 @@ const coursesData: Course[] = [
     features: ["AI Solutions", "Cognitive Services", "ML Models", "Knowledge Mining"]
   },
   {
-    id: 33,
-    title: "Microsoft 365 Fundamentals",
-    description: "Learn foundational knowledge of cloud services and how they are provided with Microsoft 365. Perfect for beginners.",
-    category: "Microsoft",
-    level: "Intermediate",
-    duration: "10-12 Weeks",
-    icon: "🖥️",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
-    color: "from-blue-500 to-green-600",
-    urlPath: "/microsoft/ms-365",
-    certification: "MS-900 Fundamentals",
-    price: "₹27,000",
-    rating: 4.7,
-    students: "1.1K+",
-    features: ["Microsoft 365", "Desktop Admin", "Security", "Cloud Services"]
-  },
-  {
-    id: 34,
-    title: "Microsoft Teams Administrator",
-    description: "Configure, deploy, and manage Office 365 workloads for Microsoft Teams that focus on efficient collaboration.",
-    category: "Microsoft",
-    level: "Intermediate",
-    duration: "8-10 Weeks",
-    icon: "👥",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
-    color: "from-purple-500 to-blue-600",
-    urlPath: "/microsoft/ms-700",
-    certification: "MS-700",
-    price: "₹24,000",
-    rating: 4.6,
-    students: "950+",
-    features: ["Teams Admin", "Collaboration", "Office 365", "Communication"]
-  },
-  {
     id: 35,
     title: "Microsoft Power Platform Fundamentals",
     description: "Learn to build low-code/no-code solutions with Power Apps, Power Automate, Power BI, and Power Virtual Agents.",
@@ -614,6 +563,23 @@ const coursesData: Course[] = [
     students: "1.3K+",
     features: ["Data Modeling", "DAX", "Visualizations", "Power Query"]
   },
+  {
+    id: 33,
+    title: "Microsoft 365 Fundamentals",
+    description: "Learn foundational knowledge of cloud services and how they are provided with Microsoft 365. Perfect for beginners.",
+    category: "Microsoft",
+    level: "Intermediate",
+    duration: "10-12 Weeks",
+    icon: "🖥️",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+    color: "from-blue-500 to-green-600",
+    urlPath: "/microsoft/ms-365",
+    certification: "MS-900 Fundamentals",
+    price: "₹27,000",
+    rating: 4.7,
+    students: "1.1K+",
+    features: ["Microsoft 365", "Desktop Admin", "Security", "Cloud Services"]
+  },
 
   // DevOps Courses (from navbar - these are not individual courses but categories)
   // Note: DevOps courses in navbar are just labels, actual courses would be separate
@@ -635,23 +601,6 @@ const coursesData: Course[] = [
     rating: 4.6,
     students: "1.9K+",
     features: ["Cybersecurity Basics", "Entry Level", "Foundation Skills", "Career Starter"]
-  },
-  {
-    id: 36,
-    title: "CompTIA Security+",
-    description: "Foundation cybersecurity certification covering security concepts, threats, and risk management.",
-    category: "Cybersecurity",
-    level: "Beginner",
-    duration: "8-10 Weeks",
-    icon: "🔒",
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80",
-    color: "from-blue-600 to-purple-600",
-    urlPath: "/cybersecurity/security-plus",
-    certification: "Security+ (SY0-601)",
-    price: "₹22,000",
-    rating: 4.7,
-    students: "2.2K+",
-    features: ["Security Fundamentals", "Risk Management", "Industry Standard", "Career Foundation"]
   },
   {
     id: 37,
