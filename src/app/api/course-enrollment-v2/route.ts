@@ -38,7 +38,7 @@ Our team will contact you within 24 hours to discuss:
 📤 SEND PAYMENT PROOF
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WhatsApp: +91-8225852734
-Email: yyradhe751@gmail.com
+Email: litcindore@gmail.com
 
 ⚠️ IMPORTANT: Send screenshot within 24 hours.
 Confirmation in 1-2 hours after verification.
@@ -48,7 +48,7 @@ Confirmation in 1-2 hours after verification.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Call: +91-9425094250
 WhatsApp: +91-8225852734
-Email: yyradhe751@gmail.com
+Email: litcindore@gmail.com
 
 Thank you!
 LITC Institute
@@ -72,7 +72,7 @@ ACTION REQUIRED:
 - Send confirmation email
 - Add to WhatsApp group
 
-Contact channels: WhatsApp (8225852734) or Email (yyradhe751@gmail.com)
+Contact channels: WhatsApp (8225852734) or Email (litcindore@gmail.com)
     `.trim();
 
     console.log('📧 Attempting to send emails...');
@@ -91,10 +91,10 @@ Contact channels: WhatsApp (8225852734) or Email (yyradhe751@gmail.com)
       // Student email - sent from admin account with _replyto set to student
       const studentEmailPayload = {
         _subject: `Payment Required - ${enrollmentData.course?.name}`,
-        _replyto: 'yyradhe751@gmail.com',
+        _replyto: 'litcindore@gmail.com',
         _template: 'box',
         _captcha: 'false',
-        _cc: 'yyradhe751@gmail.com', // Admin gets copy
+        _cc: 'litcindore@gmail.com', // Admin gets copy
         
         // Email content fields
         'Enrollment ID': enrollmentData.enrollmentId,
@@ -113,7 +113,7 @@ Contact channels: WhatsApp (8225852734) or Email (yyradhe751@gmail.com)
         
         // Contact details  
         'WhatsApp': '+91-8225852734',
-        'Email Contact': 'yyradhe751@gmail.com',
+        'Email Contact': 'litcindore@gmail.com',
         'Phone': '+91-9425094250'
       };
 
@@ -142,7 +142,7 @@ Contact channels: WhatsApp (8225852734) or Email (yyradhe751@gmail.com)
       // Admin notification email
       console.log('📤 Sending admin notification...');
       
-      const adminRes = await fetch('https://formsubmit.co/ajax/yyradhe751@gmail.com', {
+      const adminRes = await fetch('https://formsubmit.co/ajax/litcindore@gmail.com', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -196,7 +196,7 @@ Contact channels: WhatsApp (8225852734) or Email (yyradhe751@gmail.com)
       contactInfo: {
         whatsapp: '+91-8225852734',
         phone: '+91-9425094250',
-        email: 'yyradhe751@gmail.com'
+        email: 'litcindore@gmail.com'
       },
       instructions: [
         'Our team will contact you within 24 hours',
@@ -216,7 +216,7 @@ Contact channels: WhatsApp (8225852734) or Email (yyradhe751@gmail.com)
         contact: {
           phone: '+91-9425094250',
           whatsapp: '+91-8225852734',
-          email: 'yyradhe751@gmail.com'
+          email: 'litcindore@gmail.com'
         }
       },
       { status: 500 }

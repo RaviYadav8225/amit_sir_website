@@ -59,7 +59,7 @@ LITC Website System
       template_id: 'template_9h1qkmi', // Free template
       user_id: 'user_4JaIFWG8s1K6eYtP2PfQH', // Free public key
       template_params: {
-        to_email: 'yyradhe751@gmail.com',
+        to_email: 'litcindore@gmail.com',
         from_name: formData.fullName,
         message: emailContent,
         subject: `🎓 New Consultation Request from ${formData.fullName}`,
@@ -86,12 +86,12 @@ LITC Website System
     console.log('📧 EmailJS Response Status:', emailResponse.status);
     
     if (emailResponse.ok) {
-      console.log('✅ Email sent successfully to yyradhe751@gmail.com');
+      console.log('✅ Email sent successfully to litcindore@gmail.com');
       return NextResponse.json({
         success: true,
         message: 'Email sent successfully',
         emailSent: true,
-        recipient: 'yyradhe751@gmail.com'
+        recipient: 'litcindore@gmail.com'
       });
     } else {
       const errorText = await emailResponse.text();
@@ -103,7 +103,7 @@ LITC Website System
     console.error('❌ Email API Error:', error);
     
     // Fallback: Save to console for manual processing
-    console.log('📝 MANUAL EMAIL CONTENT FOR yyradhe751@gmail.com:');
+    console.log('📝 MANUAL EMAIL CONTENT FOR litcindore@gmail.com:');
     console.log('='.repeat(50));
     console.log('='.repeat(50));
     

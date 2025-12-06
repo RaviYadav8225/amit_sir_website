@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
 
     // Prepare email data for different email services
     const emailData = {
-      to: 'yyradhe751@gmail.com',
+      to: 'litcindore@gmail.com',
       subject: `🎓 URGENT: New Consultation Request from ${formData.fullName}`,
       html: `
         <!DOCTYPE html>
@@ -120,7 +120,7 @@ Contact: ${formData.phone} | ${formData.email}
             template_id: 'template_9h1qkmi', 
             user_id: 'user_4JaIFWG8s1K6eYtP2PfQH',
             template_params: {
-              to_email: 'yyradhe751@gmail.com',
+              to_email: 'litcindore@gmail.com',
               from_name: formData.fullName,
               message: emailData.html,
               subject: emailData.subject
@@ -133,11 +133,11 @@ Contact: ${formData.phone} | ${formData.email}
       // Service 2: Formsubmit.co (Backup)
       async () => {
         const formData = new FormData();
-        formData.append('email', 'yyradhe751@gmail.com');
+        formData.append('email', 'litcindore@gmail.com');
         formData.append('subject', emailData.subject);
         formData.append('message', emailData.text);
         
-        const response = await fetch('https://formsubmit.co/yyradhe751@gmail.com', {
+        const response = await fetch('https://formsubmit.co/litcindore@gmail.com', {
           method: 'POST',
           body: formData
         });
@@ -155,7 +155,7 @@ Contact: ${formData.phone} | ${formData.email}
             success: true,
             service: result.service,
             message: 'Email sent successfully',
-            recipient: 'yyradhe751@gmail.com'
+            recipient: 'litcindore@gmail.com'
           });
         }
       } catch (error) {
@@ -175,7 +175,7 @@ Contact: ${formData.phone} | ${formData.email}
     return NextResponse.json({
       success: false,
       message: 'All email services failed, content logged for manual processing',
-      recipient: 'yyradhe751@gmail.com',
+      recipient: 'litcindore@gmail.com',
       manualProcessing: true
     });
 

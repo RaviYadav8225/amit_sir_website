@@ -550,8 +550,8 @@ const coursesData: Course[] = [
   },
   {
     id: 33,
-    title: "Microsoft 365 Administrator",
-    description: "Manage Microsoft 365 identity, compliance, security, and supporting technologies for enterprise environments.",
+    title: "Microsoft 365 Fundamentals",
+    description: "Learn foundational knowledge of cloud services and how they are provided with Microsoft 365. Perfect for beginners.",
     category: "Microsoft",
     level: "Intermediate",
     duration: "10-12 Weeks",
@@ -559,7 +559,7 @@ const coursesData: Course[] = [
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
     color: "from-blue-500 to-green-600",
     urlPath: "/microsoft/ms-365",
-    certification: "MD-100/101",
+    certification: "MS-900 Fundamentals",
     price: "₹27,000",
     rating: 4.7,
     students: "1.1K+",
@@ -582,6 +582,38 @@ const coursesData: Course[] = [
     students: "950+",
     features: ["Teams Admin", "Collaboration", "Office 365", "Communication"]
   },
+  {
+    id: 35,
+    title: "Microsoft Power Platform Fundamentals",
+    description: "Learn to build low-code/no-code solutions with Power Apps, Power Automate, Power BI, and Power Virtual Agents.",
+    category: "Microsoft",
+    level: "Beginner",
+    duration: "6-8 Weeks",
+    icon: "⚡",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+    color: "from-purple-500 to-pink-600",
+    urlPath: "/microsoft/pl-900",
+    certification: "PL-900 Fundamentals",
+    rating: 4.8,
+    students: "1.1K+",
+    features: ["Power Apps", "Power Automate", "Power BI", "Low-Code Development"]
+  },
+  {
+    id: 36,
+    title: "Microsoft Power BI Data Analyst",
+    description: "Master data analytics and visualization with Power BI. Learn data transformation, modeling, DAX, and interactive dashboard creation.",
+    category: "Microsoft",
+    level: "Intermediate",
+    duration: "8-10 Weeks",
+    icon: "📊",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+    color: "from-yellow-500 to-orange-600",
+    urlPath: "/microsoft/pl-300",
+    certification: "PL-300 Associate",
+    rating: 4.9,
+    students: "1.3K+",
+    features: ["Data Modeling", "DAX", "Visualizations", "Power Query"]
+  },
 
   // DevOps Courses (from navbar - these are not individual courses but categories)
   // Note: DevOps courses in navbar are just labels, actual courses would be separate
@@ -589,20 +621,20 @@ const coursesData: Course[] = [
   // Cybersecurity Courses (from navbar)
   {
     id: 35,
-    title: "CCST Networking",
-    description: "Entry-level Cisco certification covering fundamental networking concepts and basic configuration for cybersecurity.",
+    title: "CCST Cybersecurity",
+    description: "Entry-level Cisco certification covering fundamental cybersecurity concepts and basic security practices.",
     category: "Cybersecurity",
     level: "Beginner",
     duration: "6-8 Weeks",
     icon: "🌟",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
     color: "from-green-500 to-blue-500",
-    urlPath: "/cisco/ccst-networking",
-    certification: "CCST Networking (100-150)",
+    urlPath: "/cisco/ccst-cybersecurity",
+    certification: "CCST Cybersecurity (100-150)",
     price: "₹16,000",
     rating: 4.6,
     students: "1.9K+",
-    features: ["Networking Basics", "Entry Level", "Foundation Skills", "Career Starter"]
+    features: ["Cybersecurity Basics", "Entry Level", "Foundation Skills", "Career Starter"]
   },
   {
     id: 36,

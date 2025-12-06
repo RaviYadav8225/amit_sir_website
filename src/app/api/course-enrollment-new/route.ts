@@ -45,7 +45,7 @@ export async function POST(request: Request) {
 <h3>📞 Need Help?</h3>
 <p>Call: <strong>+91-9425094250</strong></p>
 <p>WhatsApp: <strong>+91-8225852734</strong></p>
-<p>Email: <strong>yyradhe751@gmail.com</strong></p>
+<p>Email: <strong>litcindore@gmail.com</strong></p>
 
 <p>Thank you for choosing LITC Institute! 🚀</p>
     `;
@@ -111,7 +111,7 @@ export async function POST(request: Request) {
 <p>💬 WhatsApp: <a href="https://wa.me/${enrollmentData.phone.replace(/[^0-9]/g, '')}">Send Message</a></p>
     `;
 
-    const adminResponse = await fetch('https://formsubmit.co/ajax/yyradhe751@gmail.com', {
+    const adminResponse = await fetch('https://formsubmit.co/ajax/litcindore@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -152,7 +152,7 @@ export async function POST(request: Request) {
       },
       contact: {
         whatsapp: '+91-8225852734',
-        email: 'yyradhe751@gmail.com',
+        email: 'litcindore@gmail.com',
         phone: '+91-9425094250'
       }
     });
@@ -167,7 +167,7 @@ export async function POST(request: Request) {
         contact: {
           phone: '+91-9425094250',
           whatsapp: '+91-8225852734',
-          email: 'yyradhe751@gmail.com'
+          email: 'litcindore@gmail.com'
         }
       },
       { status: 500 }

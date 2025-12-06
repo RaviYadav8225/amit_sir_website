@@ -152,9 +152,9 @@ export async function POST(request: Request) {
                     </div>
 
                     <div style="margin: 15px 0;">
-                      <a href="mailto:yyradhe751@gmail.com?subject=Payment%20Proof%20-%20${enrollmentData.enrollmentId}&body=Hi,%0A%0AI%20have%20completed%20the%20payment%20for%20${encodeURIComponent(enrollmentData.course?.name || '')}.%0A%0AEnrollment%20ID:%20${enrollmentData.enrollmentId}%0AName:%20${enrollmentData.name}%0AAmount:%20₹${finalPrice.toLocaleString('en-IN')}%0A%0APlease%20find%20the%20payment%20screenshot%20attached.%0A%0AThank%20you!" 
+                      <a href="mailto:litcindore@gmail.com?subject=Payment%20Proof%20-%20${enrollmentData.enrollmentId}&body=Hi,%0A%0AI%20have%20completed%20the%20payment%20for%20${encodeURIComponent(enrollmentData.course?.name || '')}.%0A%0AEnrollment%20ID:%20${enrollmentData.enrollmentId}%0AName:%20${enrollmentData.name}%0AAmount:%20₹${finalPrice.toLocaleString('en-IN')}%0A%0APlease%20find%20the%20payment%20screenshot%20attached.%0A%0AThank%20you!" 
                          style="display: inline-block; background: #FF5722; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; margin: 5px; font-weight: bold;">
-                        � Email: yyradhe751@gmail.com
+                        � Email: litcindore@gmail.com
                       </a>
                     </div>
                   </div>
@@ -181,7 +181,7 @@ export async function POST(request: Request) {
                 <h3 style="color: #2196F3; margin-top: 0;">📋 Next Steps</h3>
                 <ol style="margin: 15px 0; padding-left: 20px;">
                   <li style="margin: 10px 0;"><strong>Complete Payment:</strong> Scan the UPI QR code above and complete your payment</li>
-                  <li style="margin: 10px 0;"><strong>Send Payment Proof:</strong> Take screenshot and send via WhatsApp (8225852734) or Email (yyradhe751@gmail.com)</li>
+                  <li style="margin: 10px 0;"><strong>Send Payment Proof:</strong> Take screenshot and send via WhatsApp (8225852734) or Email (litcindore@gmail.com)</li>
                   <li style="margin: 10px 0;"><strong>Get Confirmation:</strong> You'll receive enrollment confirmation within 2 hours after payment verification</li>
                   <li style="margin: 10px 0;"><strong>Join WhatsApp Group:</strong> Get updates, notes, and connect with batchmates</li>
                   <li style="margin: 10px 0;"><strong>Attend Orientation:</strong> Meet your trainer and learn about the course structure</li>
@@ -352,7 +352,7 @@ export async function POST(request: Request) {
               <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin: 25px 0;">
                 <h3 style="color: #1976d2; margin-top: 0;">✅ Action Items:</h3>
                 <ul style="margin: 10px 0; padding-left: 20px;">
-                  <li style="margin: 8px 0;"><strong>Wait for Payment Screenshot:</strong> Student will send payment proof via WhatsApp (8225852734) or Email (yyradhe751@gmail.com)</li>
+                  <li style="margin: 8px 0;"><strong>Wait for Payment Screenshot:</strong> Student will send payment proof via WhatsApp (8225852734) or Email (litcindore@gmail.com)</li>
                   <li style="margin: 8px 0;"><strong>Verify Payment:</strong> Check UPI transaction details and amount (₹${finalPrice.toLocaleString('en-IN')})</li>
                   <li style="margin: 8px 0;"><strong>Send Confirmation:</strong> After verification, send confirmation email to student</li>
                   <li style="margin: 8px 0;"><strong>Add to WhatsApp Group:</strong> Add student to batch WhatsApp group</li>
@@ -371,7 +371,7 @@ export async function POST(request: Request) {
                   <li style="margin: 8px 0;">🏦 Bank: Union Bank Of India - 0942</li>
                   <li style="margin: 8px 0;">📤 Student instructed to send payment screenshot</li>
                   <li style="margin: 8px 0;">💬 WhatsApp: +91 8225852734</li>
-                  <li style="margin: 8px 0;">📧 Email: yyradhe751@gmail.com</li>
+                  <li style="margin: 8px 0;">📧 Email: litcindore@gmail.com</li>
                 </ul>
               </div>
 
@@ -402,7 +402,7 @@ export async function POST(request: Request) {
 
     const adminEmail = await resend.emails.send({
       from: 'LITC Enrollment System <onboarding@resend.dev>',
-      to: 'yyradhe751@gmail.com',
+      to: 'litcindore@gmail.com',
       subject: `🚨 New Enrollment: ${enrollmentData.name} - ${enrollmentData.course?.name}`,
       html: adminEmailHtml,
     });

@@ -176,7 +176,9 @@ export default function Navbar() {
                   { href: "/microsoft/dp-203", label: "Microsoft Azure Data Engineer Associate (DP-203)", icon: "🔧" },
                   { href: "/microsoft/ai-900", label: "Microsoft Azure AI Fundamentals (AI-900)", icon: "🤖" },
                   { href: "/microsoft/ai-102", label: "Microsoft Azure AI Engineer Associate (AI-102)", icon: "🧠" },
-                  { href: "/microsoft/ms-365", label: "Microsoft 365 Certified: Modern Desktop Administrator Associate (MD-100/101)", icon: "🖥️" },
+                  { href: "/microsoft/ms-365", label: "Microsoft 365 Fundamentals (MS-900)", icon: "📚" },
+                  { href: "/microsoft/pl-900", label: "Microsoft Power Platform Fundamentals (PL-900)", icon: "⚡" },
+                  { href: "/microsoft/pl-300", label: "Microsoft Power BI Data Analyst (PL-300)", icon: "📊" },
                   { href: "/microsoft/ms-700", label: "Microsoft Teams Administrator Associate (MS-700)", icon: "👥" }
                 ]
               },
@@ -196,7 +198,7 @@ export default function Navbar() {
                 label: "Cybersecurity (Online)", 
                 icon: "🔒",
                 subItems: [
-                  { href: "/cisco/ccst-networking", label: "CCST Networking (100-150)", icon: "🌟" },
+                  { href: "/cisco/ccst-cybersecurity", label: "CCST Cybersecurity (100-150)", icon: "🌟" },
                   { href: "/cybersecurity/security-plus", label: "CompTIA Security+", icon: "🔒" },
                   { href: "/cybersecurity/basic-advanced", label: "Cybersecurity (Basic + Advanced)", icon: "🚫" }
                 ]
@@ -353,7 +355,9 @@ export default function Navbar() {
                   { href: "/microsoft/dp-203", label: "Azure Data Engineer", icon: "🔧" },
                   { href: "/microsoft/ai-900", label: "Azure AI Fundamentals", icon: "🤖" },
                   { href: "/microsoft/ai-102", label: "Azure AI Engineer", icon: "🧠" },
-                  { href: "/microsoft/ms-365", label: "Microsoft 365 Administrator", icon: "🖥️" },
+                  { href: "/microsoft/ms-365", label: "Microsoft 365 Fundamentals", icon: "📚" },
+                  { href: "/microsoft/pl-900", label: "Power Platform Fundamentals", icon: "⚡" },
+                  { href: "/microsoft/pl-300", label: "Power BI Data Analyst", icon: "📊" },
                   { href: "/microsoft/ms-700", label: "Teams Administrator", icon: "👥" }
                 ]
               },
@@ -373,7 +377,7 @@ export default function Navbar() {
                 label: "Cybersecurity", 
                 icon: "🔒",
                 subItems: [
-                  { href: "/cisco/ccst-networking", label: "CCST Networking", icon: "🌟" },
+                  { href: "/cisco/ccst-cybersecurity", label: "CCST Cybersecurity", icon: "🌟" },
                   { href: "/cybersecurity/security-plus", label: "CompTIA Security+", icon: "🔒" },
                   { href: "/cybersecurity/basic-advanced", label: "Cybersecurity (Basic + Advanced)", icon: "🚫" }
                 ]

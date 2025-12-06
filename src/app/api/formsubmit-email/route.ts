@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 /**
  * FORMSUBMIT EMAIL SERVICE
  * Direct integration with FormSubmit.co for guaranteed email delivery
- * Sends to: yyradhe751@gmail.com
+ * Sends to: litcindore@gmail.com
  */
 
 export async function POST(request: NextRequest) {
@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     console.log('👤 Student:', formData.fullName);
     console.log('📱 Phone:', formData.phone);
-    console.log('📧 Sending to: yyradhe751@gmail.com');
+    console.log('📧 Sending to: litcindore@gmail.com');
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
 
     // Prepare email content
@@ -73,7 +73,7 @@ Contact within 24 hours for best conversion!
     console.log('📤 Sending email via FormSubmit.co...\n');
 
     // Send via FormSubmit.co - Direct POST (no AJAX)
-    const formSubmitResponse = await fetch('https://formsubmit.co/yyradhe751@gmail.com', {
+    const formSubmitResponse = await fetch('https://formsubmit.co/litcindore@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ Contact within 24 hours for best conversion!
     // FormSubmit returns 200 status on success
     if (formSubmitResponse.ok || formSubmitResponse.status === 200) {
       console.log('\n✅ ✅ ✅ EMAIL SENT SUCCESSFULLY! ✅ ✅ ✅');
-      console.log('📧 Delivered to: yyradhe751@gmail.com');
+      console.log('📧 Delivered to: litcindore@gmail.com');
       console.log('👤 From student:', formData.fullName);
       console.log('📱 Contact:', formData.phone);
       console.log('🆔 Request ID:', formData.requestId);
@@ -120,7 +120,7 @@ Contact within 24 hours for best conversion!
       // Also log complete email content as backup
       console.log('\n📧 EMAIL CONTENT SENT:');
       console.log('━'.repeat(80));
-      console.log('TO:', 'yyradhe751@gmail.com');
+      console.log('TO:', 'litcindore@gmail.com');
       console.log('SUBJECT:', emailSubject);
       console.log('━'.repeat(80));
       console.log(emailMessage);
@@ -130,7 +130,7 @@ Contact within 24 hours for best conversion!
         success: true,
         message: 'Email sent successfully via FormSubmit',
         service: 'FormSubmit.co',
-        recipient: 'yyradhe751@gmail.com',
+        recipient: 'litcindore@gmail.com',
         studentName: formData.fullName,
         studentPhone: formData.phone,
         studentEmail: formData.email,
@@ -146,7 +146,7 @@ Contact within 24 hours for best conversion!
       // Still log email content for manual processing
       console.log('📧 EMAIL CONTENT (For Manual Processing):');
       console.log('━'.repeat(80));
-      console.log('TO:', 'yyradhe751@gmail.com');
+      console.log('TO:', 'litcindore@gmail.com');
       console.log('FROM:', formData.email);
       console.log('PHONE:', formData.phone);
       console.log('━'.repeat(80));

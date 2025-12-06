@@ -90,7 +90,9 @@ const awsCloudPractitionerData = {
   ],
   instructor: "AWS Certified Solutions Architect",
   nextBatch: "22nd October 2025",
-  mode: ["Online", "Self-paced"]
+  mode: ["Online", "Self-paced"],
+  pdfUrl: "/pdfs/aws-cloud-practitioner-clf-c02-syllabus.pdf",
+  pdfName: "AWS Cloud Practitioner CLF-C02 Syllabus"
 };
 
 export default function AWSCloudPractitionerPage() {

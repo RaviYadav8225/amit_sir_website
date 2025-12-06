@@ -8,32 +8,28 @@ export default function Microsoft365() {
       <div className="relative pt-32 pb-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-6 py-2 mb-6">
-            <span className="text-blue-300 text-sm font-semibold">🔧 Associate Level</span>
+            <span className="text-blue-300 text-sm font-semibold">📚 Fundamentals Level</span>
           </div>
           
           <h1 className="text-4xl lg:text-6xl font-black text-white mb-6">
             Microsoft 365
-            <span className="block text-blue-300">Modern Desktop</span>
+            <span className="block text-blue-300">Fundamentals</span>
             <span className="block text-3xl lg:text-4xl text-purple-300 font-bold mt-2">
-              (MS-365)
+              (MS-900)
             </span>
           </h1>
           
           <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Microsoft 365 Modern Desktop Administrator Associate
+            Your Gateway to Microsoft 365 Cloud Services
           </p>
-          
-          <div className="bg-yellow-500/20 border border-yellow-400/30 rounded-xl p-4 mb-8 max-w-2xl mx-auto">
-            <p className="text-yellow-300 font-semibold">💡 Note: This represents various M365 administrator role-based certifications</p>
-          </div>
           
           <div className="flex flex-wrap justify-center gap-4">
             <a href="tel:+91-9522220892" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-xl">
               📞 Enroll Now: +91-9522220892
             </a>
-            <Link href="/contact" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300">
-              Get Course Details
-            </Link>
+            <a href="/pdfs/ms-900-syllabus.pdf" download className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300">
+              Download Syllabus
+            </a>
           </div>
         </div>
       </div>
@@ -98,11 +94,11 @@ export default function Microsoft365() {
         </div>
       </div>
 
-      {/* MD-102 Focus - Modern Desktop */}
+      {/* MS-900 Course Overview */}
       <div className="py-20 px-4 bg-black/20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-black text-white mb-12 text-center">MD-102: Endpoint Administrator</h2>
-          <p className="text-center text-gray-400 mb-12">Microsoft 365 Certified: Modern Desktop Administrator Associate</p>
+          <h2 className="text-4xl font-black text-white mb-12 text-center">MS-900: Microsoft 365 Fundamentals</h2>
+          <p className="text-center text-gray-400 mb-12">Foundation knowledge of cloud services and Microsoft 365</p>
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* Skills Measured */}
@@ -111,37 +107,33 @@ export default function Microsoft365() {
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Deploy and update operating systems (25-30%)</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">Describe cloud concepts (10-15%)</h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Plan and implement Windows client deployment</span>
+                      <span>Cloud computing and its benefits</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Manage Windows updates</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-purple-400 mt-1">▸</span>
-                      <span>Plan and implement endpoint protection</span>
+                      <span>Cloud service types (IaaS, PaaS, SaaS)</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Manage identity and compliance (20-25%)</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">Describe Microsoft 365 apps (45-50%)</h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Manage device authentication</span>
+                      <span>Microsoft 365 productivity solutions</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Implement compliance policies</span>
+                      <span>Collaboration capabilities</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Manage device compliance</span>
+                      <span>Endpoint modernization</span>
                     </li>
                   </ul>
                 </div>
@@ -153,33 +145,33 @@ export default function Microsoft365() {
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Manage, maintain, and protect devices (35-40%)</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">Describe security and compliance (25-30%)</h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Manage device enrollment into Intune</span>
+                      <span>Identity and access management</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Configure Microsoft Intune</span>
+                      <span>Threat protection</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Manage device profiles</span>
+                      <span>Compliance management</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Manage applications (10-15%)</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">Describe pricing and support (10-15%)</h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Deploy and update applications</span>
+                      <span>Microsoft 365 pricing</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Plan and implement app protection</span>
+                      <span>Support offerings</span>
                     </li>
                   </ul>
                 </div>
@@ -346,8 +338,8 @@ export default function Microsoft365() {
       {/* CTA Section */}
       <div className="py-20 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-black text-white mb-6">Master Microsoft 365 Administration!</h2>
-          <p className="text-xl text-gray-300 mb-8">Become a certified Microsoft 365 Modern Desktop Administrator</p>
+          <h2 className="text-4xl font-black text-white mb-6">Start Your Microsoft 365 Journey!</h2>
+          <p className="text-xl text-gray-300 mb-8">Build your foundation in Microsoft 365 cloud services</p>
           
           <div className="flex flex-wrap justify-center gap-4">
             <a href="tel:+91-9522220892" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-xl">

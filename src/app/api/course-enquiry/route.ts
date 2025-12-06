@@ -87,7 +87,7 @@ export async function POST(request: Request) {
             <div class="footer">
               <p style="margin: 5px 0; font-size: 18px; font-weight: bold;">LITC - Learners IT Consultancy</p>
               <p style="margin: 5px 0; font-size: 14px;">Leading IT Training & Certification Institute</p>
-              <p style="margin: 5px 0; font-size: 12px;">📞 +91-9522220892 | 📧 yyradhe751@gmail.com</p>
+              <p style="margin: 5px 0; font-size: 12px;">📞 +91-9522220892 | 📧 litcindore@gmail.com</p>
             </div>
           </div>
         </body>
@@ -148,7 +148,7 @@ export async function POST(request: Request) {
               <p style="margin: 5px 0; font-size: 18px; font-weight: bold;">LITC - Learners IT Consultancy</p>
               <p style="margin: 5px 0; font-size: 14px;">Your Gateway to IT Excellence Since 2010</p>
               <p style="margin: 5px 0; font-size: 12px;">📍 Indore, Madhya Pradesh</p>
-              <p style="margin: 5px 0; font-size: 12px;">📞 +91-9522220892 | 📧 yyradhe751@gmail.com</p>
+              <p style="margin: 5px 0; font-size: 12px;">📞 +91-9522220892 | 📧 litcindore@gmail.com</p>
             </div>
           </div>
         </body>
@@ -158,7 +158,7 @@ export async function POST(request: Request) {
     // Send admin notification
     const adminEmail = await resend.emails.send({
       from: 'LITC Institute <onboarding@resend.dev>',
-      to: process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'yyradhe751@gmail.com',
+      to: process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'litcindore@gmail.com',
       subject: `🎓 New Course Enquiry: ${course} - ${name}`,
       html: adminEmailHtml,
     });

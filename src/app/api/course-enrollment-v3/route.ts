@@ -59,7 +59,7 @@ Referral: ${enrollmentData.referralSource}
 
 3. Ask student to send payment screenshot to:
    WhatsApp: +91-8225852734
-   Email: yyradhe751@gmail.com
+   Email: litcindore@gmail.com
 
 4. After payment verification:
    - Send confirmation email
@@ -92,7 +92,7 @@ STEPS:
 
 SEND PAYMENT PROOF:
 WhatsApp: +91-8225852734
-Email: yyradhe751@gmail.com
+Email: litcindore@gmail.com
 
 You will receive confirmation within 2 hours.
 
@@ -109,7 +109,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN', { t
     console.log('📧 Sending admin notification email...');
 
     // Send to admin using FormSubmit (verified)
-    const adminResponse = await fetch('https://formsubmit.co/ajax/yyradhe751@gmail.com', {
+    const adminResponse = await fetch('https://formsubmit.co/ajax/litcindore@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -169,7 +169,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN', { t
         'For immediate assistance, contact:',
         '  WhatsApp: +91-8225852734',
         '  Phone: +91-9425094250',
-        '  Email: yyradhe751@gmail.com'
+        '  Email: litcindore@gmail.com'
       ],
       paymentInfo: {
         upiId: 'yravi8804@axl',
@@ -180,7 +180,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN', { t
       contact: {
         whatsapp: '+91-8225852734',
         phone: '+91-9425094250',
-        email: 'yyradhe751@gmail.com'
+        email: 'litcindore@gmail.com'
       }
     });
 
@@ -195,7 +195,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN', { t
         contact: {
           phone: '+91-9425094250',
           whatsapp: '+91-8225852734',
-          email: 'yyradhe751@gmail.com'
+          email: 'litcindore@gmail.com'
         }
       },
       { status: 500 }

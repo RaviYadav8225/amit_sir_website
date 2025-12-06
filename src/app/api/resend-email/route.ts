@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
     const { formData } = await request.json();
     
     console.log('\n' + '━'.repeat(100));
-    console.log('📧 RESEND EMAIL SERVICE - SENDING TO: yyradhe751@gmail.com');
+    console.log('📧 RESEND EMAIL SERVICE - SENDING TO: litcindore@gmail.com');
     console.log('━'.repeat(100));
     console.log('👤 Student:', formData.fullName);
     console.log('📱 Phone:', formData.phone);
@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
 
     <div class="footer">
       <p style="margin: 5px 0;">Automated notification from LITC Infotech Website</p>
-      <p style="margin: 5px 0; opacity: 0.8;">📧 yyradhe751@gmail.com | 📱 +918225852734</p>
+      <p style="margin: 5px 0; opacity: 0.8;">📧 litcindore@gmail.com | 📱 +918225852734</p>
     </div>
   </div>
 </body>
@@ -165,7 +165,7 @@ Automated notification from LITC Infotech Website
     try {
       const data = await resend.emails.send({
         from: 'LITC Infotech <onboarding@resend.dev>', // Temporary - will change after domain verification
-        to: ['yyradhe751@gmail.com'],
+        to: ['litcindore@gmail.com'],
         subject: `🎓 New Inquiry: ${formData.fullName} - ${formData.interestedCourses[0] || 'Course Interest'}`,
         html: emailHtml,
         text: emailText,
@@ -173,17 +173,17 @@ Automated notification from LITC Infotech Website
 
       console.log('✅ ✅ ✅ EMAIL SENT SUCCESSFULLY VIA RESEND! ✅ ✅ ✅');
       console.log('📧 Email Data:', data);
-      console.log('📮 Delivered to: yyradhe751@gmail.com');
+      console.log('📮 Delivered to: litcindore@gmail.com');
       console.log('👤 Student:', formData.fullName);
       console.log('📱 Contact:', formData.phone);
       console.log('━'.repeat(100) + '\n');
 
       return NextResponse.json({
         success: true,
-        message: 'Email sent successfully to yyradhe751@gmail.com',
+        message: 'Email sent successfully to litcindore@gmail.com',
         service: 'Resend',
         emailData: data,
-        recipient: 'yyradhe751@gmail.com',
+        recipient: 'litcindore@gmail.com',
         studentInfo: {
           name: formData.fullName,
           phone: formData.phone,
@@ -198,7 +198,7 @@ Automated notification from LITC Infotech Website
       // Log email content as backup
       console.log('\n📧 EMAIL CONTENT (For Manual Processing):');
       console.log('━'.repeat(100));
-      console.log('TO: yyradhe751@gmail.com');
+      console.log('TO: litcindore@gmail.com');
       console.log('SUBJECT:', `New Inquiry: ${formData.fullName}`);
       console.log('━'.repeat(100));
       console.log(emailText);

@@ -65,7 +65,7 @@ After payment, send screenshot to:
 📱 WhatsApp: +91-8225852734
    (Click to send: https://wa.me/918225852734)
 
-📧 Email: yyradhe751@gmail.com
+📧 Email: litcindore@gmail.com
 
 ⚠️ IMPORTANT:
 - Send payment proof within 24 hours
@@ -78,7 +78,7 @@ NEED HELP?
 
 📞 Call: +91-9425094250
 📱 WhatsApp: +91-8225852734
-📧 Email: yyradhe751@gmail.com
+📧 Email: litcindore@gmail.com
 
 Thank you for choosing LITC Institute!
 We look forward to your learning journey with us.
@@ -130,7 +130,7 @@ ACTION REQUIRED
 
 Payment will be received via:
 - WhatsApp: +91-8225852734
-- Email: yyradhe751@gmail.com
+- Email: litcindore@gmail.com
 
 Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN')}
     `.trim();
@@ -156,7 +156,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN')}
           email: enrollmentData.email,
           subject: `Payment Required - ${enrollmentData.course?.name} | Enrollment ID: ${enrollmentData.enrollmentId}`,
           message: studentEmailBody,
-          _replyto: 'yyradhe751@gmail.com',
+          _replyto: 'litcindore@gmail.com',
           enrollmentId: enrollmentData.enrollmentId
         })
       });
@@ -174,7 +174,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN')}
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email: 'yyradhe751@gmail.com',
+          email: 'litcindore@gmail.com',
           subject: `🚨 New Enrollment: ${enrollmentData.name} | ${enrollmentData.enrollmentId}`,
           message: adminEmailBody,
           enrollmentId: enrollmentData.enrollmentId
@@ -195,7 +195,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN')}
       try {
         console.log('📧 Method 2: Trying FormSubmit for admin...');
         
-        const adminFormSubmit = await fetch('https://formsubmit.co/ajax/yyradhe751@gmail.com', {
+        const adminFormSubmit = await fetch('https://formsubmit.co/ajax/litcindore@gmail.com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -238,7 +238,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN')}
         bank: 'Union Bank Of India - 0942',
         amount: `₹${finalPrice.toLocaleString('en-IN')}`,
         whatsapp: '+91-8225852734',
-        email: 'yyradhe751@gmail.com',
+        email: 'litcindore@gmail.com',
         phone: '+91-9425094250'
       }
     });
@@ -254,7 +254,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN')}
         contact: {
           phone: '+91-9425094250',
           whatsapp: '+91-8225852734',
-          email: 'yyradhe751@gmail.com'
+          email: 'litcindore@gmail.com'
         }
       },
       { status: 500 }

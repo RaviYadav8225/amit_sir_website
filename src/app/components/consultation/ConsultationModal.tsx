@@ -100,7 +100,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
       // 1. Send email - Log complete details to server console
       try {
         console.log('━'.repeat(80));
-        console.log('📧 SENDING EMAIL TO: yyradhe751@gmail.com');
+        console.log('📧 SENDING EMAIL TO: litcindore@gmail.com');
         console.log('👤 Student:', submissionData.fullName);
         console.log('📱 Phone:', submissionData.phone);
         console.log('━'.repeat(80));
@@ -116,7 +116,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
         
         const emailResult = await emailResponse.json();
         console.log('📧 Resend API Response:', emailResult);
-        console.log('💡 If successful, email will be in: yyradhe751@gmail.com');
+        console.log('💡 If successful, email will be in: litcindore@gmail.com');
         
         // ALWAYS call direct email service to log content in terminal
         console.log('� Logging email content to server terminal...');
@@ -135,7 +135,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
         if (emailResult.success) {
           emailSent = true;
           console.log('✅ ✅ ✅ EMAIL SENT SUCCESSFULLY! ✅ ✅ ✅');
-          console.log('📧 Email delivered to: yyradhe751@gmail.com');
+          console.log('📧 Email delivered to: litcindore@gmail.com');
           console.log('👤 Student:', submissionData.fullName);
           console.log('📱 Contact:', submissionData.phone);
         } else {
@@ -190,8 +190,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
 🎓 New Consultation Request from ${submissionData.fullName}
 
-📧 TO: yyradhe751@gmail.com
-📝 DETAILS:
+📧 TO: litcindore@gmail.com
+📋 DETAILS:
 • Name: ${submissionData.fullName}
 • Phone: ${submissionData.phone}
 • Email: ${submissionData.email}

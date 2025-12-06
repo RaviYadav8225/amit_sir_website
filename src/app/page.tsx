@@ -796,18 +796,18 @@ export default function Home() {
                     { name: "About Us", link: "/about" },
                     { name: "All Courses", link: "/explore-courses" },
                     { name: "Certifications", link: "/explore-courses" },
-                    { name: "Gallery", link: "/explore-courses" },
+                    { name: "Exam Voucher", link: "/explore-courses" },
                     { name: "Success Stories", link: "#testimonials" },
                     { name: "Contact Us", link: "/contact" }
                   ].map((item, i) => (
                     <li key={i}>
-                      <a
+                      <Link
                         href={item.link}
                         className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center gap-2 group"
                       >
                         <span className="w-1.5 h-1.5 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

@@ -4,7 +4,7 @@ import CourseDetailPage from "../../components/CourseDetailPage";
 const cybersecurityCourseData = {
   title: "Cybersecurity (Basic + Advanced)",
   description: "Master cybersecurity fundamentals and advanced techniques with comprehensive training in ethical hacking, network security, and threat analysis. Learn industry-standard security tools and methodologies to protect systems and networks from cyber threats.",
-  duration: "45 Days",
+  duration: "70 Days",
   level: "Intermediate",
   prerequisites: [
     "Basic understanding of networking concepts",
@@ -104,7 +104,9 @@ const cybersecurityCourseData = {
   ],
   instructor: "Certified Security Professional (CEH/CISSP)",
   nextBatch: "Starting Soon",
-  mode: ["Online", "Live Classes"]
+  mode: ["Online", "Live Classes"],
+  pdfUrl: "/pdfs/cybersecurity-basic-advanced-syllabus.pdf",
+  pdfName: "Cybersecurity Basic + Advanced Syllabus"
 };
 
 export default function CybersecurityBasicAdvancedPage() {

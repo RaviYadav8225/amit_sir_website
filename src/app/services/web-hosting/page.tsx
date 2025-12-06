@@ -287,7 +287,7 @@ export default function WebHosting() {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="text-3xl mb-4">📧</div>
               <h3 className="text-xl font-bold text-white mb-2">Email Support</h3>
-              <p className="text-gray-300">support@litcindore.com</p>
+              <p className="text-gray-300">info@litcindore.com</p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="text-3xl mb-4">💬</div>

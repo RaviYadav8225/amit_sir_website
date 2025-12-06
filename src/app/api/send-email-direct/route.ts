@@ -99,14 +99,14 @@ ${formData.specificQuestions || 'No specific questions provided'}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 This is an automated notification from LITC Infotech Website.
-For support, contact: +918225852734 | yyradhe751@gmail.com
+For support, contact: +918225852734 | litcindore@gmail.com
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     `.trim();
 
     // Log complete email content to console
     console.log('\n' + '━'.repeat(100));
-    console.log('📧 EMAIL CONTENT FOR: yyradhe751@gmail.com');
+    console.log('📧 EMAIL CONTENT FOR: litcindore@gmail.com');
     console.log('━'.repeat(100));
     console.log('SUBJECT:', emailSubject);
     console.log('━'.repeat(100));
@@ -117,7 +117,7 @@ For support, contact: +918225852734 | yyradhe751@gmail.com
     console.log('━'.repeat(100) + '\n');
 
     // Create mailto link
-    const mailtoLink = `mailto:yyradhe751@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:litcindore@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
     // Also create a simple text summary for quick reference
     const quickSummary = `
@@ -145,7 +145,7 @@ For support, contact: +918225852734 | yyradhe751@gmail.com
       success: true,
       message: 'Email content generated and logged',
       service: 'Direct/Console Logging',
-      recipient: 'yyradhe751@gmail.com',
+      recipient: 'litcindore@gmail.com',
       mailtoLink: mailtoLink,
       studentInfo: {
         name: formData.fullName,

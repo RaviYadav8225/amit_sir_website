@@ -102,7 +102,9 @@ const awsSolutionsArchitectData = {
   ],
   instructor: "AWS Certified Solutions Architect Professional",
   nextBatch: "8th November 2025",
-  mode: ["Online", "Weekend Batches"]
+  mode: ["Online", "Weekend Batches"],
+  pdfUrl: "/pdfs/aws-solutions-architect-associate-saa-c03-syllabus.pdf",
+  pdfName: "AWS Solutions Architect Associate SAA-C03 Syllabus"
 };
 
 export default function AWSSolutionsArchitectPage() {

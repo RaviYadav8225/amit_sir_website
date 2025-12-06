@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// INSTANT EMAIL SERVICE - Sends emails immediately to yyradhe751@gmail.com
+// INSTANT EMAIL SERVICE - Sends emails immediately to litcindore@gmail.com
 export async function POST(request: NextRequest) {
   try {
     const { formData } = await request.json();
     
-    console.log('📧 INSTANT EMAIL SERVICE - Processing inquiry for yyradhe751@gmail.com');
+    console.log('📧 INSTANT EMAIL SERVICE - Processing inquiry for litcindore@gmail.com');
     console.log('👤 Student:', formData.fullName);
     
     // Prepare professional email content
@@ -69,7 +69,7 @@ This is an automated inquiry from LITC Website
     // Method 1: FormSubmit.co - Instant email delivery
     console.log('📤 Attempting FormSubmit.co...');
     try {
-      const formSubmitResponse = await fetch(`https://formsubmit.co/ajax/yyradhe751@gmail.com`, {
+      const formSubmitResponse = await fetch(`https://formsubmit.co/ajax/litcindore@gmail.com`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -93,14 +93,14 @@ This is an automated inquiry from LITC Website
       
       if (formSubmitResponse.ok && formSubmitResult.success) {
         console.log('✅ EMAIL SENT SUCCESSFULLY via FormSubmit!');
-        console.log('📧 Delivered to: yyradhe751@gmail.com');
+        console.log('📧 Delivered to: litcindore@gmail.com');
         console.log('👤 From student:', formData.fullName);
         
         return NextResponse.json({
           success: true,
-          message: 'Email sent successfully to yyradhe751@gmail.com',
+          message: 'Email sent successfully to litcindore@gmail.com',
           service: 'FormSubmit.co',
-          recipient: 'yyradhe751@gmail.com',
+          recipient: 'litcindore@gmail.com',
           studentName: formData.fullName,
           studentPhone: formData.phone,
           requestId: formData.requestId
@@ -125,7 +125,7 @@ This is an automated inquiry from LITC Website
           access_key: 'YOUR_WEB3FORMS_KEY', // Free at web3forms.com
           subject: emailSubject,
           from_name: `LITC System - ${formData.fullName}`,
-          email: 'yyradhe751@gmail.com',
+          email: 'litcindore@gmail.com',
           message: emailBody,
           student_phone: formData.phone,
           student_email: formData.email
@@ -138,9 +138,9 @@ This is an automated inquiry from LITC Website
         console.log('✅ EMAIL SENT via Web3Forms!');
         return NextResponse.json({
           success: true,
-          message: 'Email sent successfully to yyradhe751@gmail.com',
+          message: 'Email sent successfully to litcindore@gmail.com',
           service: 'Web3Forms',
-          recipient: 'yyradhe751@gmail.com'
+          recipient: 'litcindore@gmail.com'
         });
       }
     } catch (web3Error) {
@@ -154,7 +154,7 @@ This is an automated inquiry from LITC Website
     console.log('\n' + '━'.repeat(80));
     console.log('📧 EMAIL CONTENT FOR MANUAL DELIVERY');
     console.log('━'.repeat(80));
-    console.log('TO: yyradhe751@gmail.com');
+    console.log('TO: litcindore@gmail.com');
     console.log('SUBJECT:', emailSubject);
     console.log('━'.repeat(80));
     console.log(emailBody);
@@ -168,9 +168,9 @@ This is an automated inquiry from LITC Website
       success: true,
       message: 'Email logged and prepared for delivery',
       service: 'Manual/Console',
-      recipient: 'yyradhe751@gmail.com',
+      recipient: 'litcindore@gmail.com',
       emailContent: {
-        to: 'yyradhe751@gmail.com',
+        to: 'litcindore@gmail.com',
         subject: emailSubject,
         body: emailBody
       },

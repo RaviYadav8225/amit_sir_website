@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     const formData = await request.json();
     
     console.log('\n' + '━'.repeat(100));
-    console.log('📧 CONTACT FORM MESSAGE - Sending to: yyradhe751@gmail.com');
+    console.log('📧 CONTACT FORM MESSAGE - Sending to: litcindore@gmail.com');
     console.log('━'.repeat(100));
     console.log('👤 Name:', formData.name);
     console.log('📱 Phone:', formData.phone);
@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
 
     <div class="footer">
       <p style="margin: 5px 0;">Automated message from LITC Infotech Website</p>
-      <p style="margin: 5px 0; opacity: 0.8;">📧 yyradhe751@gmail.com | 📱 +918225852734</p>
+      <p style="margin: 5px 0; opacity: 0.8;">📧 litcindore@gmail.com | 📱 +918225852734</p>
     </div>
   </div>
 </body>
@@ -142,7 +142,7 @@ ${formData.message}
     try {
       const data = await resend.emails.send({
         from: 'LITC Infotech Contact <onboarding@resend.dev>',
-        to: ['yyradhe751@gmail.com'],
+        to: ['litcindore@gmail.com'],
         subject: `📧 ${formData.service.replace(/-/g, ' ').toUpperCase()}: ${formData.subject} - ${formData.name}`,
         html: emailHtml,
         text: emailText,
@@ -150,7 +150,7 @@ ${formData.message}
 
       console.log('✅ ✅ ✅ CONTACT MESSAGE SENT TO INBOX! ✅ ✅ ✅');
       console.log('📧 Email Data:', data);
-      console.log('📮 Delivered to: yyradhe751@gmail.com');
+      console.log('📮 Delivered to: litcindore@gmail.com');
       console.log('👤 From:', formData.name);
       console.log('📱 Contact:', formData.phone);
       console.log('━'.repeat(100) + '\n');
@@ -159,7 +159,7 @@ ${formData.message}
         success: true,
         message: 'Contact message sent successfully',
         service: 'Resend',
-        recipient: 'yyradhe751@gmail.com',
+        recipient: 'litcindore@gmail.com',
         requestId: formData.requestId
       });
 

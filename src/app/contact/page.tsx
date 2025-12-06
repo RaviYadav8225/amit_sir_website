@@ -33,7 +33,7 @@ export default function ContactUs() {
     setIsSubmitting(true);
     
     try {
-      console.log('📧 Sending contact form message to yyradhe751@gmail.com...');
+      console.log('📧 Sending contact form message to litcindore@gmail.com...');
       
       // Send to Resend API
       const response = await fetch('/api/contact-message', {
@@ -51,11 +51,11 @@ export default function ContactUs() {
       const result = await response.json();
       
       if (result.success) {
-        console.log('✅ Message sent successfully to yyradhe751@gmail.com');
+        console.log('✅ Message sent successfully to litcindore@gmail.com');
         alert(`✅ Thank you ${formData.name}! Your message has been sent successfully.\n\n📧 We've received your ${formData.service} inquiry and will respond within 24 hours.\n\n📱 For urgent matters, call: +91-9522220892`);
       } else {
         console.log('⚠️ Message delivery issue:', result);
-        alert(`⚠️ There was an issue sending your message.\n\n📞 Please call us directly: +91-9522220892\n📧 Or email: yyradhe751@gmail.com`);
+        alert(`⚠️ There was an issue sending your message.\n\n📞 Please call us directly: +91-9522220892\n📧 Or email: litcindore@gmail.com`);
       }
       
       // Reset form
@@ -70,7 +70,7 @@ export default function ContactUs() {
       
     } catch (error) {
       console.error('❌ Contact form error:', error);
-      alert(`❌ Unable to send message online.\n\n📞 Please contact us directly:\nPhone: +91-9522220892\nEmail: yyradhe751@gmail.com`);
+      alert(`❌ Unable to send message online.\n\n📞 Please contact us directly:\nPhone: +91-9522220892\nEmail: litcindore@gmail.com`);
     } finally {
       setIsSubmitting(false);
     }
@@ -101,8 +101,7 @@ export default function ContactUs() {
       title: 'Email Us',
       details: [
         'info@litcindore.com',
-        'admissions@litcindore.com',
-        'support@litcindore.com'
+        'litcindore@gmail.com'
       ],
       color: 'purple'
     },
@@ -122,28 +121,28 @@ export default function ContactUs() {
     {
       name: 'Admissions Office',
       phone: '+91-9522220892',
-      email: 'admissions@litcindore.com',
+      email: 'info@litcindore.com',
       timing: '9:00 AM - 6:00 PM',
       icon: '🎓'
     },
     {
       name: 'Technical Support',
       phone: '+91-9522220892',
-      email: 'support@litcindore.com',
+      email: 'litcindore@gmail.com',
       timing: '24/7 Available',
       icon: '🔧'
     },
     {
       name: 'Career Counseling',
       phone: '+91-9522220892',
-      email: 'counselor@litcindore.com',
+      email: 'info@litcindore.com',
       timing: '10:00 AM - 5:00 PM',
       icon: '💼'
     },
     {
       name: 'Corporate Training',
       phone: '+91-9522220892',
-      email: 'corporate@litcindore.com',
+      email: 'litcindore@gmail.com',
       timing: '9:00 AM - 6:00 PM',
       icon: '🏢'
     }

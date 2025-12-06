@@ -276,7 +276,7 @@ export async function POST(request: Request) {
     // Send notification to admin
     const adminEmail = await resend.emails.send({
       from: 'LITC Booking System <onboarding@resend.dev>',
-      to: 'yyradhe751@gmail.com',
+      to: 'litcindore@gmail.com',
       subject: `🚨 New Campus Visit: ${visitData.name} - ${visitData.visitDate}`,
       html: adminEmailHtml,
     });

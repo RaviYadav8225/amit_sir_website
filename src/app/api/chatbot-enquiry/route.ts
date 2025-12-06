@@ -9,12 +9,12 @@ export async function POST(request: NextRequest) {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'yyradhe751@gmail.com',
+        user: process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'litcindore@gmail.com',
         pass: (process.env.GMAIL_APP_PASSWORD || 'uqtswthkutaxskmg').replace(/\s/g, '')
       }
     });
 
-    const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'yyradhe751@gmail.com';
+    const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'litcindore@gmail.com';
 
     // Email content for admin
     const adminMailOptions = {

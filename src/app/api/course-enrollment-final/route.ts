@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'yyradhe751@gmail.com', // Your Gmail
+        user: 'litcindore@gmail.com', // Your Gmail
         pass: process.env.GMAIL_APP_PASSWORD || 'your-app-password-here' // Gmail App Password
       }
     });
@@ -72,7 +72,7 @@ export async function POST(request: Request) {
       <h3>📞 Need Help?</h3>
       <p><strong>Call:</strong> +91-9425094250</p>
       <p><strong>WhatsApp:</strong> +91-8225852734</p>
-      <p><strong>Email:</strong> yyradhe751@gmail.com</p>
+      <p><strong>Email:</strong> litcindore@gmail.com</p>
     </div>
   </div>
 
@@ -148,7 +148,7 @@ export async function POST(request: Request) {
       <p><strong>Payment will be received via:</strong></p>
       <ul>
         <li>WhatsApp: +91-8225852734</li>
-        <li>Email: yyradhe751@gmail.com</li>
+        <li>Email: litcindore@gmail.com</li>
       </ul>
     </div>
 
@@ -169,11 +169,11 @@ export async function POST(request: Request) {
       console.log('📧 Sending email to student:', enrollmentData.email);
       
       await transporter.sendMail({
-        from: '"LITC Institute" <yyradhe751@gmail.com>',
+        from: '"LITC Institute" <litcindore@gmail.com>',
         to: enrollmentData.email,
         subject: `Enrollment Confirmation - ${enrollmentData.course?.name} | ID: ${enrollmentData.enrollmentId}`,
         html: studentEmailHTML,
-        replyTo: 'yyradhe751@gmail.com'
+        replyTo: 'litcindore@gmail.com'
       });
 
       results.student = true;
@@ -189,8 +189,8 @@ export async function POST(request: Request) {
       console.log('📧 Sending email to admin...');
       
       await transporter.sendMail({
-        from: '"LITC Enrollment System" <yyradhe751@gmail.com>',
-        to: 'yyradhe751@gmail.com',
+        from: '"LITC Enrollment System" <litcindore@gmail.com>',
+        to: 'litcindore@gmail.com',
         subject: `🚨 New Enrollment: ${enrollmentData.name} | ${enrollmentData.enrollmentId}`,
         html: adminEmailHTML
       });
@@ -219,7 +219,7 @@ export async function POST(request: Request) {
       contact: {
         whatsapp: '+91-8225852734',
         phone: '+91-9425094250',
-        email: 'yyradhe751@gmail.com'
+        email: 'litcindore@gmail.com'
       }
     });
 
@@ -234,7 +234,7 @@ export async function POST(request: Request) {
         contact: {
           phone: '+91-9425094250',
           whatsapp: '+91-8225852734',
-          email: 'yyradhe751@gmail.com'
+          email: 'litcindore@gmail.com'
         }
       },
       { status: 500 }
