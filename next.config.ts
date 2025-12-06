@@ -17,23 +17,17 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     unoptimized: false,
   },
-  // Disable all static optimization
   output: 'standalone',
   compress: true,
   poweredByHeader: false,
   reactStrictMode: false,
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Experimental features for better performance
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['react-icons', 'next/link', 'next/image'],
   },
-  // Headers for complete cache disable
   async headers() {
     return [
       {
