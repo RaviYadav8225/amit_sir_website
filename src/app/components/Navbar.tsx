@@ -42,7 +42,7 @@ export default function Navbar() {
       </div>
 
       <nav
-        className={`w-full fixed top-3 left-1/2 transform -translate-x-1/2 z-40 transition-all duration-700 ease-out max-w-[95%] xl:max-w-[1400px] mx-auto rounded-3xl ${
+        className={`w-full fixed top-3 left-1/2 transform -translate-x-1/2 z-40 transition-all duration-700 ease-out max-w-[98%] xl:max-w-[1600px] mx-auto rounded-3xl ${
           navBg
             ? "bg-gradient-to-r from-gray-900/95 via-blue-900/95 to-purple-900/95 backdrop-blur-2xl shadow-2xl border border-white/30"
             : "bg-gradient-to-r from-gray-900/80 via-blue-900/80 to-purple-900/80 backdrop-blur-xl shadow-xl border border-white/20"
@@ -90,7 +90,7 @@ export default function Navbar() {
 
         {/* Desktop Nav Links */}
                   {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden xl:flex items-center gap-1">
           <NavLink href="/" label="Home" />
           <NavLink href="/about" label="About Us" />
           
@@ -125,7 +125,6 @@ export default function Navbar() {
                   { href: "/openshift/certified-application-developer-ex288", label: "Red Hat Certified OpenShift Application Developer (DO288/EX288)", icon: "🔧" }
                 ]
               },
-
               { 
                 href: "/courses/cisco-ccna", 
                 label: "Cisco", 
@@ -137,12 +136,29 @@ export default function Navbar() {
                 ]
               },
               { 
-                href: "/courses/python", 
-                label: "Python", 
-                icon: "🐍",
+                href: "/courses/microsoft", 
+                label: "Microsoft", 
+                icon: "🪟",
                 subItems: [
-                  { href: "/python/python-programming", label: "Python Programming (PCEP/PCAP)", icon: "🐍" },
-                  { href: "/python/full-stack-development", label: "Python Full Stack Development (Django/Flask)", icon: "💻" }
+                  { href: "/microsoft/az-900", label: "Microsoft Azure Fundamentals (AZ-900)", icon: "☁️" },
+                  { href: "/microsoft/az-104", label: "Microsoft Azure Administrator Associate (AZ-104)", icon: "⚙️" },
+                  { href: "/microsoft/dp-900", label: "Microsoft Azure Data Fundamentals (DP-900)", icon: "📊" },
+                  { href: "/microsoft/dp-203", label: "Microsoft Azure Data Engineer Associate (DP-203)", icon: "🔧" },
+                  { href: "/microsoft/ai-900", label: "Microsoft Azure AI Fundamentals (AI-900)", icon: "🤖" },
+                  { href: "/microsoft/ai-102", label: "Microsoft Azure AI Engineer Associate (AI-102)", icon: "🧠" },
+                  { href: "/microsoft/pl-900", label: "Microsoft Power Platform Fundamentals (PL-900)", icon: "⚡" },
+                  { href: "/microsoft/pl-300", label: "Microsoft Power BI Data Analyst (PL-300)", icon: "📊" },
+                  { href: "/microsoft/ms-365", label: "Microsoft 365 Fundamentals (MS-900)", icon: "📚" }
+                ]
+              },
+              { 
+                href: "/courses/devops", 
+                label: "DevOps", 
+                icon: "🚀",
+                subItems: [
+                  { href: "/devops/devops-only", label: "DevOps Only", icon: "🚀" },
+                  { href: "/devops/devops-with-azure", label: "DevOps with Azure", icon: "🔷" },
+                  { href: "/devops/devops-with-aws-ai", label: "DevOps with AWS and AI", icon: "🤖" }
                 ]
               },
               { 
@@ -165,39 +181,22 @@ export default function Navbar() {
                 ]
               },
               { 
-                href: "/courses/microsoft", 
-                label: "Microsoft (Online)", 
-                icon: "🪟",
-                subItems: [
-                  { href: "/microsoft/az-900", label: "Microsoft Azure Fundamentals (AZ-900)", icon: "☁️" },
-                  { href: "/microsoft/az-104", label: "Microsoft Azure Administrator Associate (AZ-104)", icon: "⚙️" },
-                  { href: "/microsoft/dp-900", label: "Microsoft Azure Data Fundamentals (DP-900)", icon: "📊" },
-                  { href: "/microsoft/dp-203", label: "Microsoft Azure Data Engineer Associate (DP-203)", icon: "🔧" },
-                  { href: "/microsoft/ai-900", label: "Microsoft Azure AI Fundamentals (AI-900)", icon: "🤖" },
-                  { href: "/microsoft/ai-102", label: "Microsoft Azure AI Engineer Associate (AI-102)", icon: "🧠" },
-                  { href: "/microsoft/pl-900", label: "Microsoft Power Platform Fundamentals (PL-900)", icon: "⚡" },
-                  { href: "/microsoft/pl-300", label: "Microsoft Power BI Data Analyst (PL-300)", icon: "📊" },
-                  { href: "/microsoft/ms-365", label: "Microsoft 365 Fundamentals (MS-900)", icon: "📚" }
-                ]
-              },
-              { 
-                href: "/courses/devops", 
-                label: "DevOps", 
-                icon: "🚀",
-                subItems: [
-                  { href: "/devops/devops-only", label: "DevOps Only", icon: "🚀" },
-                  { href: "/devops/devops-with-aws", label: "DevOps with AWS", icon: "☁️" },
-                  { href: "/devops/devops-with-azure", label: "DevOps with Azure", icon: "🔷" },
-                  { href: "/devops/devops-with-aws-ai", label: "DevOps with AWS and AI", icon: "🤖" }
-                ]
-              },
-              { 
                 href: "/courses/cybersecurity", 
-                label: "Cybersecurity (Online)", 
+                label: "Cybersecurity", 
                 icon: "🔒",
                 subItems: [
                   { href: "/cisco/ccst-cybersecurity", label: "CCST Cybersecurity (100-150)", icon: "🌟" },
                   { href: "/cybersecurity/basic-advanced", label: "Cybersecurity (Basic + Advanced)", icon: "🚫" }
+                ]
+              },
+              { 
+                href: "/courses/software-development", 
+                label: "Software Development", 
+                icon: "💻",
+                subItems: [
+                  { href: "/python/python-programming", label: "Python Programming (PCEP/PCAP)", icon: "🐍" },
+                  { href: "/python/full-stack-development", label: "Python Full Stack Development (Django/Flask)", icon: "💻" },
+                  { href: "/hardware-networking", label: "Computer Hardware & Networking", icon: "🖥️" }
                 ]
               },
             ]}
@@ -214,6 +213,7 @@ export default function Navbar() {
           />
           
           <NavLink href="/Exam-Voucher" label="Exam-Voucher" />
+          <NavLink href="/study-material" label="Study Material" />
           <NavLink href="/contact" label="Contact Us" />
         </div>
 
@@ -251,7 +251,7 @@ export default function Navbar() {
           {/* Enhanced Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1 group bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-110"
+            className="xl:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1 group bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-110"
             aria-label="Toggle mobile menu"
           >
             <span className={`w-5 h-0.5 bg-white transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
@@ -262,7 +262,7 @@ export default function Navbar() {
       </div>
 
       {/* Enhanced Mobile Menu */}
-      <div className={`lg:hidden transition-all duration-500 ease-out ${
+      <div className={`xl:hidden transition-all duration-500 ease-out ${
         mobileMenuOpen 
           ? 'max-h-[80vh] opacity-100 pb-6 overflow-y-auto' 
           : 'max-h-0 opacity-0 overflow-hidden'
@@ -313,12 +313,29 @@ export default function Navbar() {
                 ]
               },
               { 
-                href: "/courses/python", 
-                label: "Python", 
-                icon: "🐍",
+                href: "/courses/microsoft", 
+                label: "Microsoft", 
+                icon: "🪟",
                 subItems: [
-                  { href: "/python/python-programming", label: "Python Programming", icon: "🐍" },
-                  { href: "/python/full-stack-development", label: "Python Full Stack", icon: "💻" }
+                  { href: "/microsoft/az-900", label: "Azure Fundamentals", icon: "☁️" },
+                  { href: "/microsoft/az-104", label: "Azure Administrator", icon: "⚙️" },
+                  { href: "/microsoft/dp-900", label: "Azure Data Fundamentals", icon: "📊" },
+                  { href: "/microsoft/dp-203", label: "Azure Data Engineer", icon: "🔧" },
+                  { href: "/microsoft/ai-900", label: "Azure AI Fundamentals", icon: "🤖" },
+                  { href: "/microsoft/ai-102", label: "Azure AI Engineer", icon: "🧠" },
+                  { href: "/microsoft/pl-900", label: "Power Platform Fundamentals", icon: "⚡" },
+                  { href: "/microsoft/pl-300", label: "Power BI Data Analyst", icon: "📊" },
+                  { href: "/microsoft/ms-365", label: "Microsoft 365 Fundamentals", icon: "📚" }
+                ]
+              },
+              { 
+                href: "/courses/devops", 
+                label: "DevOps", 
+                icon: "🚀",
+                subItems: [
+                  { href: "/devops/devops-only", label: "DevOps Only", icon: "🚀" },
+                  { href: "/devops/devops-with-azure", label: "DevOps with Azure", icon: "🔷" },
+                  { href: "/devops/devops-with-aws-ai", label: "DevOps with AWS and AI", icon: "🤖" }
                 ]
               },
               { 
@@ -341,39 +358,22 @@ export default function Navbar() {
                 ]
               },
               { 
-                href: "/courses/microsoft", 
-                label: "Microsoft", 
-                icon: "🪟",
-                subItems: [
-                  { href: "/microsoft/az-900", label: "Azure Fundamentals", icon: "☁️" },
-                  { href: "/microsoft/az-104", label: "Azure Administrator", icon: "⚙️" },
-                  { href: "/microsoft/dp-900", label: "Azure Data Fundamentals", icon: "📊" },
-                  { href: "/microsoft/dp-203", label: "Azure Data Engineer", icon: "🔧" },
-                  { href: "/microsoft/ai-900", label: "Azure AI Fundamentals", icon: "🤖" },
-                  { href: "/microsoft/ai-102", label: "Azure AI Engineer", icon: "🧠" },
-                  { href: "/microsoft/pl-900", label: "Power Platform Fundamentals", icon: "⚡" },
-                  { href: "/microsoft/pl-300", label: "Power BI Data Analyst", icon: "📊" },
-                  { href: "/microsoft/ms-365", label: "Microsoft 365 Fundamentals", icon: "📚" }
-                ]
-              },
-              { 
-                href: "/courses/devops", 
-                label: "DevOps", 
-                icon: "🚀",
-                subItems: [
-                  { href: "/devops/devops-only", label: "DevOps Only", icon: "🚀" },
-                  { href: "/devops/devops-with-aws", label: "DevOps with AWS", icon: "☁️" },
-                  { href: "/devops/devops-with-azure", label: "DevOps with Azure", icon: "🔷" },
-                  { href: "/devops/devops-with-aws-ai", label: "DevOps with AWS and AI", icon: "🤖" }
-                ]
-              },
-              { 
                 href: "/courses/cybersecurity", 
                 label: "Cybersecurity", 
                 icon: "🔒",
                 subItems: [
                   { href: "/cisco/ccst-cybersecurity", label: "CCST Cybersecurity", icon: "🌟" },
                   { href: "/cybersecurity/basic-advanced", label: "Cybersecurity (Basic + Advanced)", icon: "🚫" }
+                ]
+              },
+              { 
+                href: "/courses/software-development", 
+                label: "Software Development", 
+                icon: "💻",
+                subItems: [
+                  { href: "/python/python-programming", label: "Python Programming", icon: "🐍" },
+                  { href: "/python/full-stack-development", label: "Python Full Stack", icon: "💻" },
+                  { href: "/hardware-networking", label: "Hardware & Networking", icon: "🖥️" }
                 ]
               },
             ]}
@@ -392,6 +392,8 @@ export default function Navbar() {
           />
           
           <MobileNavLink href="/gallery" label="Gallery" onClick={() => setMobileMenuOpen(false)} />
+          <MobileNavLink href="/Exam-Voucher" label="Exam-Voucher" onClick={() => setMobileMenuOpen(false)} />
+          <MobileNavLink href="/study-material" label="Study Material" onClick={() => setMobileMenuOpen(false)} />
           <MobileNavLink href="/contact" label="Contact Us" onClick={() => setMobileMenuOpen(false)} />
           
           <div className="pt-4 border-t border-white/20">

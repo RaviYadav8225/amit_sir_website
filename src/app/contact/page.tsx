@@ -83,7 +83,12 @@ export default function ContactUs() {
       details: [
         'LITC Institute',
         'P13-14, Ground Floor, Metro Tower',
-        'Vijay Nagar, Indore, MP - 452010'
+        'Vijay Nagar, Indore, MP - 452010',
+        '',
+        '&',
+        'G5, 10/102, Shri Balaji Center Building',
+        'Station Road, Shastri Ward, Ward Number-11',
+        'Rau, Indore, MP - 453331'
       ],
       color: 'blue'
     },
@@ -368,10 +373,17 @@ export default function ContactUs() {
                   <div>
                     <h4 className="text-white font-semibold">Address</h4>
                     <p className="text-gray-300 text-sm">
+                      <strong>Main Office:</strong><br />
                       LITC Institute<br />
                       P13-14, Ground Floor, Metro Tower<br />
                       Vijay Nagar, Scheme No 54<br />
                       Indore, Madhya Pradesh - 452010
+                    </p>
+                    <p className="text-gray-300 text-sm mt-3">
+                      <strong>Second Office:</strong><br />
+                      G5, 10/102, Shri Balaji Center Building<br />
+                      Station Road, Shastri Ward, Ward Number-11<br />
+                      Rau, Indore, MP - 453331
                     </p>
                   </div>
                 </div>
@@ -381,7 +393,9 @@ export default function ContactUs() {
                   <div>
                     <h4 className="text-white font-semibold">Directions</h4>
                     <p className="text-gray-300 text-sm">
-                      Located at P13-14, Ground Floor, Metro Tower in Vijay Nagar, Scheme No 54. Easily accessible by public transport and taxi services.
+                      <strong>Main Office:</strong> P13-14, Ground Floor, Metro Tower in Vijay Nagar, Scheme No 54.<br />
+                      <strong>Second Office:</strong> G5, 10/102, Shri Balaji Center, Station Road, Rau.<br />
+                      Both locations are easily accessible by public transport and taxi services.
                     </p>
                   </div>
                 </div>

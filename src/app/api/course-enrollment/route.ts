@@ -224,7 +224,8 @@ export async function POST(request: Request) {
             <div class="footer">
               <h3 style="margin: 0 0 15px 0;">🎓 LITC Institute</h3>
               <p style="margin: 5px 0; font-size: 14px;">Leading IT Training & Certification Center</p>
-              <p style="margin: 15px 0 5px 0; font-size: 14px;">📍 P13-14, Metro Tower, Vijay Nagar, Indore, MP - 452010</p>
+              <p style="margin: 15px 0 5px 0; font-size: 14px;">📍 Main Office: P13-14, Metro Tower, Vijay Nagar, Indore, MP - 452010</p>
+              <p style="margin: 5px 0; font-size: 14px;">📍 Second Office: G5, 10/102, Shri Balaji Center, Station Road, Rau, Indore, MP - 453331</p>
               <p style="margin: 5px 0; font-size: 14px;">📞 +91-9425094250 | 📧 info@litcinstitute.com</p>
               <p style="margin: 20px 0 0 0; font-size: 12px; color: #aaa;">Thank you for choosing LITC Institute. Let's build your future together! 🚀</p>
             </div>

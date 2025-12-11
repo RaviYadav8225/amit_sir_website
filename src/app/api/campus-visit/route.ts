@@ -102,10 +102,15 @@ export async function POST(request: Request) {
               </div>
 
               <div class="campus-info">
-                <h3 style="color: #1976d2; margin-top: 0;">📍 Campus Location</h3>
-                <p><strong>LITC Institute</strong><br>
-                P13-14, Ground Floor, Metro Tower<br>
+                <h3 style="color: #1976d2; margin-top: 0;">📍 Campus Locations</h3>
+                <p><strong>Main Office:</strong><br>
+                LITC Institute, P13-14, Ground Floor, Metro Tower<br>
                 Vijay Nagar, Indore, Madhya Pradesh - 452010</p>
+                
+                <p><strong>Second Office:</strong><br>
+                G5, 10/102, Shri Balaji Center Building<br>
+                Station Road, Shastri Ward, Ward Number-11<br>
+                Rau, Indore, MP - 453331</p>
                 
                 <p><strong>🕒 Working Hours:</strong> Monday - Saturday, 9:00 AM - 7:00 PM<br>
                 <strong>🅿️ Parking:</strong> Free parking available<br>

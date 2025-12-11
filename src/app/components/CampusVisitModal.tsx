@@ -77,7 +77,7 @@ export default function CampusVisitModal({ isOpen, onClose }: CampusVisitModalPr
 
       if (result.success) {
         console.log('✅ Campus visit booked successfully!');
-        alert(`✅ Campus Visit Booked Successfully!\n\n📅 Date: ${formData.visitDate}\n⏰ Time: ${formData.timeSlot}\n\n📧 Confirmation email sent to: ${formData.email}\n📱 We'll call you on: ${formData.phone}\n\n📍 Address: LITC Institute, P13-14, Ground Floor, Metro Tower, Vijay Nagar, Indore\n\n🅿️ Free parking available\n☕ Refreshments will be provided\n\nSee you soon!`);
+        alert(`✅ Campus Visit Booked Successfully!\n\n📅 Date: ${formData.visitDate}\n⏰ Time: ${formData.timeSlot}\n\n📧 Confirmation email sent to: ${formData.email}\n📱 We'll call you on: ${formData.phone}\n\n📍 Main Office: LITC Institute, P13-14, Metro Tower, Vijay Nagar, Indore\n📍 & : G5, 10/102, Shri Balaji Center, Station Road, Rau, Indore\n\n🅿️ Free parking available\n☕ Refreshments will be provided\n\nSee you soon!`);
         
         // Reset form and close modal
         setFormData({
@@ -294,7 +294,8 @@ export default function CampusVisitModal({ isOpen, onClose }: CampusVisitModalPr
               <span>📍</span> Campus Information
             </h4>
             <div className="space-y-2 text-gray-300 text-sm">
-              <p><strong>Address:</strong> LITC Institute, P13-14, Ground Floor, Metro Tower, Vijay Nagar, Indore, MP - 452010</p>
+              <p><strong>Main Office:</strong> LITC Institute, P13-14, Ground Floor, Metro Tower, Vijay Nagar, Indore, MP - 452010</p>
+              <p><strong>&:</strong> G5, 10/102, Shri Balaji Center Building, Station Road, Rau, Indore, MP - 453331</p>
               <p><strong>Timing:</strong> Monday - Saturday, 9:00 AM - 7:00 PM</p>
               <p><strong>Parking:</strong> Free parking available</p>
               <p><strong>Facilities:</strong> AC Labs, Library, Cafeteria, Recreation Area</p>

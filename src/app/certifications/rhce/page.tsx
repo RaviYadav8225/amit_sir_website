@@ -2,7 +2,7 @@
 import CourseDetailPage from "../../components/CourseDetailPage";
 
 const rhceData = {
-  title: "RHCE (ANSIBLE 234) - RedHat Certified Engineer",
+  title: "RHCE (ANSIBLE 294) - RedHat Certified Engineer",
   description: "Master Red Hat Ansible automation with our comprehensive RHCE (ANSIBLE 234) certification program. Learn advanced automation techniques, enterprise configuration management, and orchestration workflows using Ansible and Red Hat Enterprise Linux.",
   duration: "35 Days", 
   level: "Advanced",
@@ -18,15 +18,15 @@ const rhceData = {
     "Design and deploy complex automation workflows",
     "Manage enterprise-scale infrastructure with Ansible",
     "Troubleshoot and optimize automation scripts",
-    "Pass the RHCE (ANSIBLE 234) certification exam"
+    "Pass the RHCE (ANSIBLE 294) certification exam"
   ],
   modules: [
     {
-      title: "Ansible Fundamentals & ANSIBLE 234 Prep",
+      title: "Ansible Fundamentals & ANSIBLE 294 Prep",
       duration: "1 Week",
       topics: [
         "Ansible architecture and components",
-        "ANSIBLE 234 exam objectives overview",
+        "ANSIBLE 294 exam objectives overview",
         "Inventory management and configuration",
         "Ad-hoc commands and modules",
         "Playbook creation and structure",
@@ -67,7 +67,7 @@ const rhceData = {
       ]
     },
     {
-      title: "ANSIBLE 234 Exam Preparation",
+      title: "ANSIBLE 294 Exam Preparation",
       duration: "1 Week",
       topics: [
         "Performance-based exam scenarios",
@@ -78,15 +78,15 @@ const rhceData = {
       ]
     }
   ],
-  certification: "Red Hat Certified Engineer (RHCE) - ANSIBLE 234",
+  certification: "Red Hat Certified Engineer (RHCE) - ANSIBLE 294",
   price: "15,000",
   originalPrice: "25,000",
   features: [
-    "Official Red Hat ANSIBLE 234 curriculum",
+    "Official Red Hat ANSIBLE 294 curriculum",
     "Live Ansible lab environment",
     "Performance-based exam preparation", 
     "Real-world automation projects",
-    "ANSIBLE 234 exam voucher included",
+    "ANSIBLE 294 exam voucher included",
     "Red Hat certified instructor",
     "35-day intensive training program",
     "Career advancement support"
@@ -94,8 +94,8 @@ const rhceData = {
   instructor: "Red Hat Certified Architect (RHCA)",
   nextBatch: "18th November 2025",
   mode: ["Online", "Classroom"],
-  pdfUrl: "/pdfs/rhce-ex294-syllabus.pdf",
-  pdfName: "RHCE EX-294 Syllabus"
+  pdfUrl: "/pdfs/RHCE (ansible) -RH294.pdf",
+  pdfName: "RHCE (Ansible) RH294 Syllabus"
 };
 
 export default function RHCEPage() {
