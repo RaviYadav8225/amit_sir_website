@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 234" width="240" height="234">
+  <rect width="240" height="234" fill="#FF0000"/>
+  <polygon points="120,0 240,234 0,234" fill="#FFFFFF"/>
+  <text x="120" y="190" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#FF0000" text-anchor="middle">Adobe</text>
+</svg>
