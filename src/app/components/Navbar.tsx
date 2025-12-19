@@ -196,7 +196,9 @@ export default function Navbar() {
                 subItems: [
                   { href: "/python/python-programming", label: "Python Programming (PCEP/PCAP)", icon: "🐍" },
                   { href: "/python/full-stack-development", label: "Python Full Stack Development (Django/Flask)", icon: "💻" },
-                  { href: "/hardware-networking", label: "Computer Hardware & Networking", icon: "🖥️" }
+                  { href: "/hardware-networking", label: "Computer Hardware & Networking", icon: "🖥️" },
+                  { href: "/courses/agentic-ai", label: "Agentic AI Course", icon: "🤖" },
+                  { href: "/courses/ai-for-leaders", label: "AI for Leaders", icon: "🎯" }
                 ]
               },
             ]}
@@ -373,7 +375,9 @@ export default function Navbar() {
                 subItems: [
                   { href: "/python/python-programming", label: "Python Programming", icon: "🐍" },
                   { href: "/python/full-stack-development", label: "Python Full Stack", icon: "💻" },
-                  { href: "/hardware-networking", label: "Hardware & Networking", icon: "🖥️" }
+                  { href: "/hardware-networking", label: "Hardware & Networking", icon: "🖥️" },
+                  { href: "/pdfs/Agentic AI new course catalog.pdf", label: "Agentic AI Course", icon: "🤖" },
+                  { href: "/pdfs/AI for Leader.pdf", label: "AI for Leaders", icon: "🎯" }
                 ]
               },
             ]}

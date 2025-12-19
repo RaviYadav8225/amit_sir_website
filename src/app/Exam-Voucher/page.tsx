@@ -9,9 +9,12 @@ import MetaLogo from '../components/MetaLogo';
 import UnityLogo from '../components/UnityLogo';
 import AdobeLogo from '../components/AdobeLogo';
 import AutodeskLogo from '../components/AutodeskLogo';
+import IC3Logo from '../components/IC3Logo';
+import TallyLogo from '../components/TallyLogo';
+import PMILogo from '../components/PMILogo';
+import PearsonLogo from '../components/PearsonLogo';
 import MicrosoftLogo from '../components/MicrosoftLogo';
 import CiscoLogo from '../components/CiscoLogo';
-import CompTIALogo from '../components/CompTIALogo';
 
 interface Certification {
   id: number;
@@ -26,13 +29,13 @@ export default function ExamVoucherPage() {
   const topCompanies = [
     { 
       name: "IBM", 
-      text: "IBM",
+      text: "",
       logo: "IBMLogo",
       color: "from-blue-600 to-blue-800" 
     },
     { 
       name: "QuickBooks", 
-      text: "intuit quickbooks",
+      text: "",
       logo: "QuickBooksLogo",
       color: "from-green-500 to-green-700" 
     },
@@ -44,13 +47,13 @@ export default function ExamVoucherPage() {
     },
     { 
       name: "IC3", 
-      text: "IC3",
-      logo: "📊",
+      text: "",
+      logo: "IC3Logo",
       color: "from-green-600 to-teal-600" 
     },
     { 
       name: "Unity", 
-      text: "unity",
+      text: "",
       logo: "UnityLogo",
       color: "from-gray-700 to-black" 
     },
@@ -62,7 +65,7 @@ export default function ExamVoucherPage() {
     },
     { 
       name: "Autodesk", 
-      text: "AUTODESK",
+      text: "",
       logo: "AutodeskLogo",
       color: "from-blue-500 to-cyan-600" 
     },
@@ -74,27 +77,21 @@ export default function ExamVoucherPage() {
     },
     { 
       name: "Cisco", 
-      text: "cisco",
+      text: "",
       logo: "CiscoLogo",
       color: "from-blue-600 to-cyan-500" 
     },
     { 
       name: "Tally", 
-      text: "Tally",
-      logo: "📈",
+      text: "",
+      logo: "TallyLogo",
       color: "from-red-500 to-orange-600" 
     },
     { 
       name: "PMI", 
-      text: "PMI",
-      logo: "📋",
+      text: "",
+      logo: "PMILogo",
       color: "from-orange-500 to-red-600" 
-    },
-    { 
-      name: "CompTIA", 
-      text: "CompTIA",
-      logo: "CompTIALogo",
-      color: "from-red-600 to-orange-600" 
     },
     { 
       name: "Apple", 
@@ -103,9 +100,9 @@ export default function ExamVoucherPage() {
       color: "from-gray-700 to-black" 
     },
     { 
-      name: "Pearson", 
-      text: "Pearson",
-      logo: "💻",
+      name: "Pearson VUE", 
+      text: "",
+      logo: "PearsonLogo",
       color: "from-purple-600 to-indigo-700" 
     }
   ];
@@ -131,7 +128,7 @@ export default function ExamVoucherPage() {
       id: 3,
       name: "PMI Project Management Ready™",
       company: "PMI",
-      icon: "📊",
+      icon: "PMILogo",
       color: "from-orange-500 to-red-600",
       path: "/certifications"
     },
@@ -139,7 +136,7 @@ export default function ExamVoucherPage() {
       id: 4,
       name: "Information Technology Specialist",
       company: "Pearson",
-      icon: "💻",
+      icon: "PearsonLogo",
       color: "from-purple-600 to-indigo-700",
       path: "/certifications"
     },
@@ -155,7 +152,7 @@ export default function ExamVoucherPage() {
       id: 6,
       name: "Tally Certifications",
       company: "Tally",
-      icon: "📈",
+      icon: "TallyLogo",
       color: "from-red-500 to-orange-600",
       path: "/certifications"
     },
@@ -206,6 +203,22 @@ export default function ExamVoucherPage() {
       icon: "CiscoLogo",
       color: "from-blue-600 to-cyan-500",
       path: "/cisco"
+    },
+    {
+      id: 13,
+      name: "Agentic AI Course",
+      company: "Software Development",
+      icon: "🤖",
+      color: "from-purple-600 to-pink-600",
+      path: "/pdfs/Agentic AI new course catalog.pdf"
+    },
+    {
+      id: 14,
+      name: "AI for Leaders",
+      company: "Software Development",
+      icon: "🎯",
+      color: "from-indigo-600 to-purple-600",
+      path: "/pdfs/AI for Leader.pdf"
     }
   ];
 
@@ -237,16 +250,19 @@ export default function ExamVoucherPage() {
                 <div className="flex items-center animate-scroll-horizontal hover:pause-animation gap-12 md:gap-16">
                   {/* First set of logos */}
                   {topCompanies.map((company, index) => {
-                    const LogoComponent = company.logo === 'IBMLogo' ? <IBMLogo size={50} /> :
-                                        company.logo === 'QuickBooksLogo' ? <QuickBooksLogo size={50} /> :
+                    const LogoComponent = company.logo === 'IBMLogo' ? <IBMLogo size={140} /> :
+                                        company.logo === 'QuickBooksLogo' ? <QuickBooksLogo size={160} /> :
                                         company.logo === 'MetaLogo' ? <MetaLogo size={50} /> :
-                                        company.logo === 'UnityLogo' ? <UnityLogo size={50} /> :
+                                        company.logo === 'IC3Logo' ? <IC3Logo size={140} /> :
+                                        company.logo === 'UnityLogo' ? <UnityLogo size={160} /> :
                                         company.logo === 'AdobeLogo' ? <AdobeLogo size={50} /> :
-                                        company.logo === 'AutodeskLogo' ? <AutodeskLogo size={50} /> :
+                                        company.logo === 'AutodeskLogo' ? <AutodeskLogo size={190} /> :
                                         company.logo === 'MicrosoftLogo' ? <MicrosoftLogo size={50} /> :
-                                        company.logo === 'CiscoLogo' ? <CiscoLogo size={50} /> :
-                                        company.logo === 'CompTIALogo' ? <CompTIALogo size={50} /> :
-                                        company.logo === 'AppleLogo' ? <AppleLogo size={50} /> : null;
+                                        company.logo === 'CiscoLogo' ? <CiscoLogo size={170} /> :
+                                        company.logo === 'TallyLogo' ? <TallyLogo size={170} /> :
+                                        company.logo === 'PMILogo' ? <PMILogo size={160} /> :
+                                        company.logo === 'AppleLogo' ? <AppleLogo size={50} /> :
+                                        company.logo === 'PearsonLogo' ? <PearsonLogo size={140} /> : null;
                     
                     return (
                       <div 
@@ -266,16 +282,19 @@ export default function ExamVoucherPage() {
                   })}
                   {/* Duplicate set for seamless loop */}
                   {topCompanies.map((company, index) => {
-                    const LogoComponent = company.logo === 'IBMLogo' ? <IBMLogo size={50} /> :
-                                        company.logo === 'QuickBooksLogo' ? <QuickBooksLogo size={50} /> :
+                    const LogoComponent = company.logo === 'IBMLogo' ? <IBMLogo size={140} /> :
+                                        company.logo === 'QuickBooksLogo' ? <QuickBooksLogo size={160} /> :
                                         company.logo === 'MetaLogo' ? <MetaLogo size={50} /> :
-                                        company.logo === 'UnityLogo' ? <UnityLogo size={50} /> :
+                                        company.logo === 'IC3Logo' ? <IC3Logo size={140} /> :
+                                        company.logo === 'UnityLogo' ? <UnityLogo size={160} /> :
                                         company.logo === 'AdobeLogo' ? <AdobeLogo size={50} /> :
-                                        company.logo === 'AutodeskLogo' ? <AutodeskLogo size={50} /> :
+                                        company.logo === 'AutodeskLogo' ? <AutodeskLogo size={70} /> :
                                         company.logo === 'MicrosoftLogo' ? <MicrosoftLogo size={50} /> :
-                                        company.logo === 'CiscoLogo' ? <CiscoLogo size={50} /> :
-                                        company.logo === 'CompTIALogo' ? <CompTIALogo size={50} /> :
-                                        company.logo === 'AppleLogo' ? <AppleLogo size={50} /> : null;
+                                        company.logo === 'CiscoLogo' ? <CiscoLogo size={170} /> :
+                                        company.logo === 'TallyLogo' ? <TallyLogo size={170} /> :
+                                        company.logo === 'PMILogo' ? <PMILogo size={140} /> :
+                                        company.logo === 'AppleLogo' ? <AppleLogo size={50} /> :
+                                        company.logo === 'PearsonLogo' ? <PearsonLogo size={140} /> : null;
                     
                     return (
                       <div 
@@ -295,16 +314,19 @@ export default function ExamVoucherPage() {
                   })}
                   {/* Third set for extra smoothness */}
                   {topCompanies.map((company, index) => {
-                    const LogoComponent = company.logo === 'IBMLogo' ? <IBMLogo size={50} /> :
-                                        company.logo === 'QuickBooksLogo' ? <QuickBooksLogo size={50} /> :
+                    const LogoComponent = company.logo === 'IBMLogo' ? <IBMLogo size={120} /> :
+                                        company.logo === 'QuickBooksLogo' ? <QuickBooksLogo size={140} /> :
                                         company.logo === 'MetaLogo' ? <MetaLogo size={50} /> :
-                                        company.logo === 'UnityLogo' ? <UnityLogo size={50} /> :
+                                        company.logo === 'IC3Logo' ? <IC3Logo size={120} /> :
+                                        company.logo === 'UnityLogo' ? <UnityLogo size={140} /> :
                                         company.logo === 'AdobeLogo' ? <AdobeLogo size={50} /> :
-                                        company.logo === 'AutodeskLogo' ? <AutodeskLogo size={50} /> :
+                                        company.logo === 'AutodeskLogo' ? <AutodeskLogo size={70} /> :
                                         company.logo === 'MicrosoftLogo' ? <MicrosoftLogo size={50} /> :
-                                        company.logo === 'CiscoLogo' ? <CiscoLogo size={50} /> :
-                                        company.logo === 'CompTIALogo' ? <CompTIALogo size={50} /> :
-                                        company.logo === 'AppleLogo' ? <AppleLogo size={50} /> : null;
+                                        company.logo === 'CiscoLogo' ? <CiscoLogo size={150} /> :
+                                        company.logo === 'TallyLogo' ? <TallyLogo size={150} /> :
+                                        company.logo === 'PMILogo' ? <PMILogo size={140} /> :
+                                        company.logo === 'AppleLogo' ? <AppleLogo size={50} /> :
+                                        company.logo === 'PearsonLogo' ? <PearsonLogo size={140} /> : null;
                     
                     return (
                       <div 
@@ -346,7 +368,10 @@ export default function ExamVoucherPage() {
                                            cert.icon === 'AutodeskLogo' ? <AutodeskLogo size={64} /> :
                                            cert.icon === 'UnityLogo' ? <UnityLogo size={64} /> :
                                            cert.icon === 'AdobeLogo' ? <AdobeLogo size={64} /> :
-                                           cert.icon === 'CiscoLogo' ? <CiscoLogo size={64} /> : null;
+                                           cert.icon === 'CiscoLogo' ? <CiscoLogo size={64} /> :
+                                           cert.icon === 'TallyLogo' ? <TallyLogo size={64} /> :
+                                           cert.icon === 'PMILogo' ? <PMILogo size={64} /> :
+                                           cert.icon === 'PearsonLogo' ? <PearsonLogo size={64} /> : null;
                   
                   return (
                     <Link
