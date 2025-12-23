@@ -257,7 +257,7 @@ export default function MicrosoftCertifiedFundamentalsPage() {
                   <h3 className="font-semibold text-gray-900 mb-2 text-sm">
                     Microsoft Security, Compliance, and Identity Fundamentals SC-900 LearnKey
                   </h3>
-                  <p className="text-2xl font-bold text-gray-800">₹1,199</p>
+                  <p className="text-2xl font-bold text-gray-800">₹3,600+GST</p>
                 </div>
                 <div className="flex gap-2">
                   <button className="flex-1 bg-blue-800 text-white py-2 px-3 rounded text-sm font-medium hover:bg-blue-900 transition-colors">
@@ -287,7 +287,7 @@ export default function MicrosoftCertifiedFundamentalsPage() {
                   <h3 className="font-semibold text-gray-900 mb-2 text-sm">
                     Microsoft 365 Fundamentals (MS – 900) LearnKey
                   </h3>
-                  <p className="text-2xl font-bold text-gray-800">₹1,149</p>
+                  <p className="text-2xl font-bold text-gray-800">₹3,600+GST</p>
                 </div>
                 <div className="flex gap-2">
                   <button className="flex-1 bg-blue-800 text-white py-2 px-3 rounded text-sm font-medium hover:bg-blue-900 transition-colors">
@@ -317,7 +317,7 @@ export default function MicrosoftCertifiedFundamentalsPage() {
                   <h3 className="font-semibold text-gray-900 mb-2 text-sm">
                     Microsoft Azure AI Fundamentals (AI – 900) LearnKey
                   </h3>
-                  <p className="text-2xl font-bold text-gray-800">₹1,149</p>
+                  <p className="text-2xl font-bold text-gray-800">₹3,600+GST</p>
                 </div>
                 <div className="flex gap-2">
                   <button className="flex-1 bg-blue-800 text-white py-2 px-3 rounded text-sm font-medium hover:bg-blue-900 transition-colors">
@@ -347,7 +347,7 @@ export default function MicrosoftCertifiedFundamentalsPage() {
                   <h3 className="font-semibold text-gray-900 mb-2 text-sm">
                     Microsoft Azure Fundamentals (AZ – 900) LearnKey
                   </h3>
-                  <p className="text-2xl font-bold text-gray-800">₹1,149</p>
+                  <p className="text-2xl font-bold text-gray-800">₹3,600+GST</p>
                 </div>
                 <div className="flex gap-2">
                   <button className="flex-1 bg-blue-800 text-white py-2 px-3 rounded text-sm font-medium hover:bg-blue-900 transition-colors">
@@ -377,7 +377,7 @@ export default function MicrosoftCertifiedFundamentalsPage() {
                   <h3 className="font-semibold text-gray-900 mb-2 text-sm">
                     Microsoft Azure Data Fundamentals (DP – 900) LearnKey
                   </h3>
-                  <p className="text-2xl font-bold text-gray-800">₹1,149</p>
+                  <p className="text-2xl font-bold text-gray-800">₹3,600+GST</p>
                 </div>
                 <div className="flex gap-2">
                   <button className="flex-1 bg-blue-800 text-white py-2 px-3 rounded text-sm font-medium hover:bg-blue-900 transition-colors">
