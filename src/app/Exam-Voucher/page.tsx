@@ -138,7 +138,7 @@ export default function ExamVoucherPage() {
       company: "Pearson",
       icon: "PearsonLogo",
       color: "from-purple-600 to-indigo-700",
-      path: "/certifications"
+      path: "/information-technology-specialist"
     },
     {
       id: 5,
@@ -186,7 +186,7 @@ export default function ExamVoucherPage() {
       company: "Adobe",
       icon: "AdobeLogo",
       color: "from-red-600 to-pink-600",
-      path: "/certifications"
+      path: "/adobe-certified-professional"
     },
     {
       id: 11,
