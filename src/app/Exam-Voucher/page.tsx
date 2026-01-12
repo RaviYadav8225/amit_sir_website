@@ -170,7 +170,7 @@ export default function ExamVoucherPage() {
       company: "Autodesk",
       icon: "AutodeskLogo",
       color: "from-blue-500 to-cyan-600",
-      path: "/certifications"
+      path: "/autodesk-certified-user"
     },
     {
       id: 9,
