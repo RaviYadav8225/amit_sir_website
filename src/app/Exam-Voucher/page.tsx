@@ -130,7 +130,7 @@ export default function ExamVoucherPage() {
       company: "PMI",
       icon: "PMILogo",
       color: "from-orange-500 to-red-600",
-      path: "/certifications"
+      path: "/pmi"
     },
     {
       id: 4,
@@ -154,7 +154,7 @@ export default function ExamVoucherPage() {
       company: "Tally",
       icon: "TallyLogo",
       color: "from-red-500 to-orange-600",
-      path: "/certifications"
+      path: "/Exam-Voucher/tally-certification"
     },
     {
       id: 7,
@@ -178,7 +178,7 @@ export default function ExamVoucherPage() {
       company: "Unity",
       icon: "UnityLogo",
       color: "from-gray-700 to-black",
-      path: "/certifications"
+      path: "/Exam-Voucher/unity"
     },
     {
       id: 10,
