@@ -404,7 +404,7 @@ export default function Home() {
             {[
               {
                 course: "RHCSA (Linux Admin)",
-                date: "15th December 2025",
+                date: "3rd March 2026",
                 time: "08:30 AM - 10:30 AM",
                 schedule: "Weekdays (Mon-Fri)",
                 instructor: "Linux Expert",
@@ -413,7 +413,7 @@ export default function Home() {
               },
               {
                 course: "RHCE (Ansible)",
-                date: "13th December 2025",
+                date: "7th March 2026",
                 time: "09:00 AM - 11:00 AM",
                 schedule: "Weekends (Sat-Sun)",
                 instructor: "Ansible Expert",
@@ -422,7 +422,7 @@ export default function Home() {
               },
               {
                 course: "CCNA (Networking)",
-                date: "18th December 2025",
+                date: "10th March 2026",
                 time: "08:00 AM - 10:00 AM",
                 schedule: "Weekends (Sat-Sun)",
                 instructor: "Cisco Expert",
@@ -431,7 +431,7 @@ export default function Home() {
               },
               {
                 course: "Azure Cloud",
-                date: "20th December 2025",
+                date: "14th March 2026",
                 time: "09:00 AM - 11:00 AM",
                 schedule: "Weekends (Sat-Sun)",
                 instructor: "Azure Expert",
@@ -440,7 +440,7 @@ export default function Home() {
               },
               {
                 course: "AWS Cloud",
-                date: "20th December 2025",
+                date: "15th March 2026",
                 time: "08:00 AM - 11:00 AM",
                 schedule: "Weekends (Sat-Sun)",
                 instructor: "AWS Expert",
@@ -449,7 +449,7 @@ export default function Home() {
               },
               {
                 course: "DevOps",
-                date: "06th December 2025",
+                date: "1st March 2026",
                 time: "09:00 AM - 11:00 PM",
                 schedule: "Weekends (Sat-Sun)",
                 instructor: "DevOps Expert",
@@ -458,7 +458,7 @@ export default function Home() {
               },
               {
                 course: "Cybersecurity",
-                date: "22nd December 2025",
+                date: "21st March 2026",
                 time: "08:30 PM - 10:30 PM",
                 schedule: "Weekends (Sat-Sun)",
                 instructor: "Security Expert",
@@ -467,7 +467,7 @@ export default function Home() {
               },
               {
                 course: "Docker & Kubernetes",
-                date: "20th December 2025",
+                date: "16th March 2026",
                 time: "08:30 AM - 11:00 AM",
                 schedule: "Weekends (Sat-Sun)",
                 instructor: "Kubernetes Expert",
@@ -476,7 +476,7 @@ export default function Home() {
               },
               {
                 course: "Hardware & Networking",
-                date: "25th December 2025",
+                date: "24th March 2026",
                 time: "09:00 AM - 12:00 PM",
                 schedule: "Weekdays (Mon-Fri)",
                 instructor: "Hardware Expert",
