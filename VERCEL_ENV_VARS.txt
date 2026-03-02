@@ -10,7 +10,7 @@ RESEND_API_KEY=re_NmSwKmrZ_Jz2RVyEir6pZ6WdmezpJLyZW
 
 # Email Service - Gmail SMTP
 GMAIL_APP_PASSWORD=ayyi swys iawk fswn
-NEXT_PUBLIC_ADMIN_EMAIL=yyradhe751@gmail.com
+NEXT_PUBLIC_ADMIN_EMAIL=litcindore@gmail.com
 
 # EmailJS (if needed)
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_litc

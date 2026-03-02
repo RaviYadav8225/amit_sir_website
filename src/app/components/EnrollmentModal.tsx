@@ -80,7 +80,7 @@ Please guide me with the enrollment process and payment options.
 
 Thank you! 🙏`;
 
-    const whatsappUrl = `https://wa.me/918225852734?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919522220892?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     onClose();
   };
@@ -125,8 +125,8 @@ Thank you! 🙏`;
 3. Pay ₹${courseData?.price || 'Course Fee'}
 4. Take screenshot of payment confirmation
 5. Send screenshot via:
-   📱 WhatsApp: 8225852734
-   📧 Email: yyradhe751@gmail.com
+   📱 WhatsApp: 9522220892
+   📧 Email: litcindore@gmail.com
 
 ⏰ Confirmation:
 You will receive enrollment confirmation within 2 hours after payment verification.
@@ -151,11 +151,11 @@ Thank you for choosing LITC Institute! 🎓`);
         onClose();
       } else {
         console.error('❌ Enrollment failed:', result);
-        alert(`⚠️ Unable to process enrollment online.\n\n📞 Please contact us directly:\nPhone: +91-9522220892\nWhatsApp: +91-8225852734\nEmail: yyradhe751@gmail.com`);
+        alert(`⚠️ Unable to process enrollment online.\n\n📞 Please contact us directly:\nPhone: +91-9522220892\nWhatsApp: +91-9522220892\nEmail: litcindore@gmail.com`);
       }
     } catch (error) {
       console.error('❌ Enrollment error:', error);
-      alert(`❌ Enrollment failed.\n\n📞 Please reach out to us:\nPhone: +91-9522220892\nWhatsApp: +91-8225852734`);
+      alert(`❌ Enrollment failed.\n\n📞 Please reach out to us:\nPhone: +91-9522220892\nWhatsApp: +91-9522220892`);
     } finally {
       setIsSubmitting(false);
     }

@@ -214,7 +214,7 @@ export default function Navbar() {
             ]}
           />
           
-          <NavLink href="/Exam-Voucher" label="Exam-Voucher" />
+          <NavLink href="#" label="Exam-Voucher" />
           <NavLink href="/study-material" label="Study Material" />
           <NavLink href="/contact" label="Contact Us" />
         </div>
@@ -396,7 +396,7 @@ export default function Navbar() {
           />
           
           <MobileNavLink href="/gallery" label="Gallery" onClick={() => setMobileMenuOpen(false)} />
-          <MobileNavLink href="/Exam-Voucher" label="Exam-Voucher" onClick={() => setMobileMenuOpen(false)} />
+          <MobileNavLink href="#" label="Exam-Voucher" onClick={() => setMobileMenuOpen(false)} />
           <MobileNavLink href="/study-material" label="Study Material" onClick={() => setMobileMenuOpen(false)} />
           <MobileNavLink href="/contact" label="Contact Us" onClick={() => setMobileMenuOpen(false)} />
           

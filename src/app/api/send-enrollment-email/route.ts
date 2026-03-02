@@ -62,8 +62,8 @@ SEND PAYMENT PROOF
 
 After payment, send screenshot to:
 
-📱 WhatsApp: +91-8225852734
-   (Click to send: https://wa.me/918225852734)
+📱 WhatsApp: +91-9522220892
+   (Click to send: https://wa.me/919522220892)
 
 📧 Email: litcindore@gmail.com
 
@@ -77,7 +77,7 @@ NEED HELP?
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📞 Call: +91-9425094250
-📱 WhatsApp: +91-8225852734
+📱 WhatsApp: +91-9522220892
 📧 Email: litcindore@gmail.com
 
 Thank you for choosing LITC Institute!
@@ -129,7 +129,7 @@ ACTION REQUIRED
 5. Provide course access credentials
 
 Payment will be received via:
-- WhatsApp: +91-8225852734
+- WhatsApp: +91-9522220892
 - Email: litcindore@gmail.com
 
 Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN')}
@@ -237,7 +237,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN')}
         upiId: 'yravi8804@axl',
         bank: 'Union Bank Of India - 0942',
         amount: `₹${finalPrice.toLocaleString('en-IN')}`,
-        whatsapp: '+91-8225852734',
+        whatsapp: '+91-9522220892',
         email: 'litcindore@gmail.com',
         phone: '+91-9425094250'
       }
@@ -253,7 +253,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN')}
         message: 'Please contact us directly',
         contact: {
           phone: '+91-9425094250',
-          whatsapp: '+91-8225852734',
+          whatsapp: '+91-9522220892',
           email: 'litcindore@gmail.com'
         }
       },

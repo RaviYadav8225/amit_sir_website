@@ -134,7 +134,7 @@ export async function POST(request: Request) {
 
               <div style="text-align: center; margin: 30px 0;">
                 <a href="tel:+919425094250" class="button">📞 Call Us</a>
-                <a href="https://wa.me/918225852734" class="button" style="background: #25D366;">💬 WhatsApp</a>
+                <a href="https://wa.me/919522220892" class="button" style="background: #25D366;">💬 WhatsApp</a>
               </div>
             </div>
 

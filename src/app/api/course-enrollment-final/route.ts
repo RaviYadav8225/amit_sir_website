@@ -71,7 +71,7 @@ export async function POST(request: Request) {
     <div class="section">
       <h3>📞 Need Help?</h3>
       <p><strong>Call:</strong> +91-9425094250</p>
-      <p><strong>WhatsApp:</strong> +91-8225852734</p>
+      <p><strong>WhatsApp:</strong> +91-9522220892</p>
       <p><strong>Email:</strong> litcindore@gmail.com</p>
     </div>
   </div>
@@ -147,7 +147,7 @@ export async function POST(request: Request) {
       </ol>
       <p><strong>Payment will be received via:</strong></p>
       <ul>
-        <li>WhatsApp: +91-8225852734</li>
+        <li>WhatsApp: +91-9522220892</li>
         <li>Email: litcindore@gmail.com</li>
       </ul>
     </div>
@@ -217,7 +217,7 @@ export async function POST(request: Request) {
         : '⚠️ Email sending in progress. You will receive confirmation details shortly.',
       errors: results.errors.length > 0 ? results.errors : undefined,
       contact: {
-        whatsapp: '+91-8225852734',
+        whatsapp: '+91-9522220892',
         phone: '+91-9425094250',
         email: 'litcindore@gmail.com'
       }
@@ -233,7 +233,7 @@ export async function POST(request: Request) {
         message: 'Unable to send email. Please contact us directly.',
         contact: {
           phone: '+91-9425094250',
-          whatsapp: '+91-8225852734',
+          whatsapp: '+91-9522220892',
           email: 'litcindore@gmail.com'
         }
       },

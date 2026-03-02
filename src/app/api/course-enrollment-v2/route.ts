@@ -37,7 +37,7 @@ Our team will contact you within 24 hours to discuss:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📤 SEND PAYMENT PROOF
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-WhatsApp: +91-8225852734
+WhatsApp: +91-9522220892
 Email: litcindore@gmail.com
 
 ⚠️ IMPORTANT: Send screenshot within 24 hours.
@@ -47,7 +47,7 @@ Confirmation in 1-2 hours after verification.
 📞 NEED HELP?
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Call: +91-9425094250
-WhatsApp: +91-8225852734
+WhatsApp: +91-9522220892
 Email: litcindore@gmail.com
 
 Thank you!
@@ -72,7 +72,7 @@ ACTION REQUIRED:
 - Send confirmation email
 - Add to WhatsApp group
 
-Contact channels: WhatsApp (8225852734) or Email (litcindore@gmail.com)
+Contact channels: WhatsApp (9522220892) or Email (litcindore@gmail.com)
     `.trim();
 
     console.log('📧 Attempting to send emails...');
@@ -112,7 +112,7 @@ Contact channels: WhatsApp (8225852734) or Email (litcindore@gmail.com)
         'Message': studentMessage,
         
         // Contact details  
-        'WhatsApp': '+91-8225852734',
+        'WhatsApp': '+91-9522220892',
         'Email Contact': 'litcindore@gmail.com',
         'Phone': '+91-9425094250'
       };
@@ -194,7 +194,7 @@ Contact channels: WhatsApp (8225852734) or Email (litcindore@gmail.com)
       enrollmentId: enrollmentData.enrollmentId,
       emailStatus: emailResults,
       contactInfo: {
-        whatsapp: '+91-8225852734',
+        whatsapp: '+91-9522220892',
         phone: '+91-9425094250',
         email: 'litcindore@gmail.com'
       },
@@ -215,7 +215,7 @@ Contact channels: WhatsApp (8225852734) or Email (litcindore@gmail.com)
         message: 'Please contact us directly to complete enrollment',
         contact: {
           phone: '+91-9425094250',
-          whatsapp: '+91-8225852734',
+          whatsapp: '+91-9522220892',
           email: 'litcindore@gmail.com'
         }
       },

@@ -97,7 +97,7 @@ export default function CampusVisitModal({ isOpen, onClose }: CampusVisitModalPr
       }
     } catch (error) {
       console.error('❌ Campus visit booking error:', error);
-      alert(`❌ Booking failed.\n\n📞 Please contact us:\nPhone: +91-9522220892\nEmail: yyradhe751@gmail.com`);
+      alert(`❌ Booking failed.\n\n📞 Please contact us:\nPhone: +91-9522220892\nEmail: litcindore@gmail.com`);
     } finally {
       setIsSubmitting(false);
     }

@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
 
     <div class="footer">
       <p style="margin: 5px 0;">Automated notification from LITC Infotech Website</p>
-      <p style="margin: 5px 0; opacity: 0.8;">📧 litcindore@gmail.com | 📱 +918225852734</p>
+      <p style="margin: 5px 0; opacity: 0.8;">📧 litcindore@gmail.com | 📱 +919522220892</p>
     </div>
   </div>
 </body>

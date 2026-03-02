@@ -44,7 +44,7 @@ export async function POST(request: Request) {
 
 <h3>📞 Need Help?</h3>
 <p>Call: <strong>+91-9425094250</strong></p>
-<p>WhatsApp: <strong>+91-8225852734</strong></p>
+<p>WhatsApp: <strong>+91-9522220892</strong></p>
 <p>Email: <strong>litcindore@gmail.com</strong></p>
 
 <p>Thank you for choosing LITC Institute! 🚀</p>
@@ -151,7 +151,7 @@ export async function POST(request: Request) {
         admin: adminResult
       },
       contact: {
-        whatsapp: '+91-8225852734',
+        whatsapp: '+91-9522220892',
         email: 'litcindore@gmail.com',
         phone: '+91-9425094250'
       }
@@ -166,7 +166,7 @@ export async function POST(request: Request) {
         details: error instanceof Error ? error.message : 'Unknown error',
         contact: {
           phone: '+91-9425094250',
-          whatsapp: '+91-8225852734',
+          whatsapp: '+91-9522220892',
           email: 'litcindore@gmail.com'
         }
       },

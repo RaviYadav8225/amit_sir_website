@@ -24,7 +24,7 @@ export const sendConsultationEmail = async (formData: any) => {
 
     // Template parameters for EmailJS
     const templateParams = {
-      to_email: 'yyradhe751@gmail.com',
+      to_email: 'litcindore@gmail.com',
       from_name: formData.fullName,
       from_email: formData.email,
       phone: formData.phone,
@@ -107,7 +107,7 @@ Please contact the student within 24 hours! 🚀
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        to: 'yyradhe751@gmail.com',
+        to: 'litcindore@gmail.com',
         subject: `🎓 New Consultation Request from ${formData.fullName}`,
         content: emailContent,
         formData: formData
@@ -134,9 +134,9 @@ export const sendStudentConfirmationEmail = async (formData: any) => {
       interested_courses: formData.interestedCourses.join(', '),
       learning_mode: formData.learningMode,
       timeline: formData.timelineToStart,
-      contact_phone: '+918225852734',
-      contact_email: 'yyradhe751@gmail.com',
-      whatsapp_link: 'https://wa.me/918225852734'
+      contact_phone: '+919522220892',
+      contact_email: 'litcindore@gmail.com',
+      whatsapp_link: 'https://wa.me/919522220892'
     };
 
     // Use a different template for student confirmation
@@ -187,7 +187,7 @@ ${formData.preferredTimeSlots.join(', ')}
 Please contact the student within 24 hours! 🚀`;
 
   // Create WhatsApp URL for your number
-  const whatsappURL = `https://wa.me/918225852734?text=${encodeURIComponent(message)}`;
+  const whatsappURL = `https://wa.me/919522220892?text=${encodeURIComponent(message)}`;
   
   console.log('💬 WhatsApp URL created:', whatsappURL);
   console.log('📝 Message content:', message);
@@ -220,7 +220,7 @@ Courses: ${formData.interestedCourses.join(', ')}
 
 Check email for full details.`;
 
-  const adminWhatsApp = `https://wa.me/918225852734?text=${encodeURIComponent(adminMessage)}`;
+  const adminWhatsApp = `https://wa.me/919522220892?text=${encodeURIComponent(adminMessage)}`;
   
   // You can integrate with WhatsApp Business API here
   // For now, we'll just prepare the URL

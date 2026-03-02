@@ -58,7 +58,7 @@ Referral: ${enrollmentData.referralSource}
    Enrollment ID: ${enrollmentData.enrollmentId}
 
 3. Ask student to send payment screenshot to:
-   WhatsApp: +91-8225852734
+   WhatsApp: +91-9522220892
    Email: litcindore@gmail.com
 
 4. After payment verification:
@@ -91,7 +91,7 @@ STEPS:
 5. Take screenshot after payment
 
 SEND PAYMENT PROOF:
-WhatsApp: +91-8225852734
+WhatsApp: +91-9522220892
 Email: litcindore@gmail.com
 
 You will receive confirmation within 2 hours.
@@ -167,7 +167,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN', { t
         'You will receive payment details via email within 30 minutes',
         'Check your email: ' + enrollmentData.email,
         'For immediate assistance, contact:',
-        '  WhatsApp: +91-8225852734',
+        '  WhatsApp: +91-9522220892',
         '  Phone: +91-9425094250',
         '  Email: litcindore@gmail.com'
       ],
@@ -178,7 +178,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN', { t
         enrollmentId: enrollmentData.enrollmentId
       },
       contact: {
-        whatsapp: '+91-8225852734',
+        whatsapp: '+91-9522220892',
         phone: '+91-9425094250',
         email: 'litcindore@gmail.com'
       }
@@ -194,7 +194,7 @@ Submitted at: ${new Date(enrollmentData.submittedAt).toLocaleString('en-IN', { t
         message: 'Please contact us directly to complete enrollment',
         contact: {
           phone: '+91-9425094250',
-          whatsapp: '+91-8225852734',
+          whatsapp: '+91-9522220892',
           email: 'litcindore@gmail.com'
         }
       },

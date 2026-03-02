@@ -96,6 +96,16 @@ const StudentCertifications = () => {
       company: "Red Hat",
       color: "from-red-700 to-red-800",
       icon: "🎩"
+    },
+    {
+      id: 10,
+      studentName: "Gagan Kushwah",
+      certification: "AWS Certified Solutions Architect - Associate",
+      issueDate: "February 27, 2026",
+      image: "/images/cert-gagan-kushwah-aws.jpg",
+      company: "AWS",
+      color: "from-orange-500 to-yellow-500",
+      icon: "🚀"
     }
   ];
 

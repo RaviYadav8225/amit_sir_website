@@ -145,9 +145,9 @@ export async function POST(request: Request) {
                     <p style="color: #1976d2; margin: 10px 0;"><strong>After payment, send screenshot via:</strong></p>
                     
                     <div style="margin: 15px 0;">
-                      <a href="https://wa.me/918225852734?text=Payment%20Done%20for%20${encodeURIComponent(enrollmentData.course?.name || '')}%20-%20Enrollment%20ID:%20${enrollmentData.enrollmentId}" 
+                      <a href="https://wa.me/919522220892?text=Payment%20Done%20for%20${encodeURIComponent(enrollmentData.course?.name || '')}%20-%20Enrollment%20ID:%20${enrollmentData.enrollmentId}" 
                          style="display: inline-block; background: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; margin: 5px; font-weight: bold;">
-                        💬 WhatsApp: 8225852734
+                        💬 WhatsApp: 9522220892
                       </a>
                     </div>
 
@@ -181,7 +181,7 @@ export async function POST(request: Request) {
                 <h3 style="color: #2196F3; margin-top: 0;">📋 Next Steps</h3>
                 <ol style="margin: 15px 0; padding-left: 20px;">
                   <li style="margin: 10px 0;"><strong>Complete Payment:</strong> Scan the UPI QR code above and complete your payment</li>
-                  <li style="margin: 10px 0;"><strong>Send Payment Proof:</strong> Take screenshot and send via WhatsApp (8225852734) or Email (litcindore@gmail.com)</li>
+                  <li style="margin: 10px 0;"><strong>Send Payment Proof:</strong> Take screenshot and send via WhatsApp (9522220892) or Email (litcindore@gmail.com)</li>
                   <li style="margin: 10px 0;"><strong>Get Confirmation:</strong> You'll receive enrollment confirmation within 2 hours after payment verification</li>
                   <li style="margin: 10px 0;"><strong>Join WhatsApp Group:</strong> Get updates, notes, and connect with batchmates</li>
                   <li style="margin: 10px 0;"><strong>Attend Orientation:</strong> Meet your trainer and learn about the course structure</li>
@@ -202,7 +202,7 @@ export async function POST(request: Request) {
                 <p style="color: #666; margin: 10px 0;">Our admission team is here to assist you</p>
                 <div>
                   <a href="tel:+919425094250" style="display: inline-block; background: #4CAF50; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; margin: 5px;">📞 Call Us</a>
-                  <a href="https://wa.me/918225852734" style="display: inline-block; background: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; margin: 5px;">💬 WhatsApp</a>
+                  <a href="https://wa.me/919522220892" style="display: inline-block; background: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; margin: 5px;">💬 WhatsApp</a>
                 </div>
               </div>
 
@@ -353,7 +353,7 @@ export async function POST(request: Request) {
               <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin: 25px 0;">
                 <h3 style="color: #1976d2; margin-top: 0;">✅ Action Items:</h3>
                 <ul style="margin: 10px 0; padding-left: 20px;">
-                  <li style="margin: 8px 0;"><strong>Wait for Payment Screenshot:</strong> Student will send payment proof via WhatsApp (8225852734) or Email (litcindore@gmail.com)</li>
+                  <li style="margin: 8px 0;"><strong>Wait for Payment Screenshot:</strong> Student will send payment proof via WhatsApp (9522220892) or Email (litcindore@gmail.com)</li>
                   <li style="margin: 8px 0;"><strong>Verify Payment:</strong> Check UPI transaction details and amount (₹${finalPrice.toLocaleString('en-IN')})</li>
                   <li style="margin: 8px 0;"><strong>Send Confirmation:</strong> After verification, send confirmation email to student</li>
                   <li style="margin: 8px 0;"><strong>Add to WhatsApp Group:</strong> Add student to batch WhatsApp group</li>
@@ -371,7 +371,7 @@ export async function POST(request: Request) {
                   <li style="margin: 8px 0;">📱 UPI ID: <strong>yravi8804@axl</strong></li>
                   <li style="margin: 8px 0;">🏦 Bank: Union Bank Of India - 0942</li>
                   <li style="margin: 8px 0;">📤 Student instructed to send payment screenshot</li>
-                  <li style="margin: 8px 0;">💬 WhatsApp: +91 8225852734</li>
+                  <li style="margin: 8px 0;">💬 WhatsApp: +91 9522220892</li>
                   <li style="margin: 8px 0;">📧 Email: litcindore@gmail.com</li>
                 </ul>
               </div>

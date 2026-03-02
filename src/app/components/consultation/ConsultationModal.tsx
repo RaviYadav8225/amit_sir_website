@@ -161,7 +161,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
       // 3. Send WhatsApp notification
       try {
-        console.log('💬 Preparing WhatsApp message for +918225852734...');
+        console.log('💬 Preparing WhatsApp message for +919522220892...');
         const whatsappResult = sendWhatsAppMessage(submissionData);
         whatsappSent = whatsappResult.success;
         console.log('✅ WhatsApp notification prepared:', whatsappResult);
@@ -208,7 +208,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
 Contact student ASAP! 🚀`;
 
-        const emailWhatsAppURL = `https://wa.me/918225852734?text=${encodeURIComponent(emailViaWhatsApp)}`;
+        const emailWhatsAppURL = `https://wa.me/919522220892?text=${encodeURIComponent(emailViaWhatsApp)}`;
         
         setTimeout(() => {
           console.log('📧💬 Opening email notification via WhatsApp...');
@@ -244,9 +244,9 @@ Contact student ASAP! 🚀`;
 💬 ${whatsappSent ? 'WhatsApp notification prepared' : 'Please WhatsApp us for immediate assistance'}
 
  Our career counselor will contact you within 24 hours
-📱 For immediate assistance: +918225852734
-💬 WhatsApp: wa.me/918225852734
-📧 Email: yyradhe751@gmail.com
+📱 For immediate assistance: +919522220892
+💬 WhatsApp: wa.me/919522220892
+📧 Email: litcindore@gmail.com
 
 Request ID: ${requestId}
 
@@ -256,7 +256,7 @@ Next Steps:
 🚀 Start your tech career transformation!`;
 
       // Enhanced success message with better email status
-      const emailStatus = emailSent ? '✅ Email sent to yyradhe751@gmail.com' : '⚠️ Email delivery in progress';
+      const emailStatus = emailSent ? '✅ Email sent to litcindore@gmail.com' : '⚠️ Email delivery in progress';
       const whatsappStatus = whatsappSent ? '✅ WhatsApp notification ready' : '⚠️ WhatsApp backup available';
       
       const enhancedMessage = `🎉 Thank you ${formData.fullName}!
@@ -267,9 +267,9 @@ Next Steps:
 💬 WhatsApp Status: ${whatsappStatus}
 
 📞 Our career counselor will contact you within 24 hours
-📱 For immediate assistance: +918225852734
-💬 WhatsApp: wa.me/918225852734
-📧 Email: yyradhe751@gmail.com
+📱 For immediate assistance: +919522220892
+💬 WhatsApp: wa.me/919522220892
+📧 Email: litcindore@gmail.com
 
 Request ID: ${requestId}
 
@@ -284,7 +284,7 @@ Next Steps:
       alert(enhancedMessage);
       
       // Force open WhatsApp with direct link
-      const directWhatsAppLink = `https://wa.me/918225852734?text=${encodeURIComponent(`Hi LITC Team! I just submitted a consultation request. My name is ${formData.fullName} and I'm interested in ${formData.interestedCourses.join(', ')}. Please contact me at ${formData.phone}.`)}`;
+      const directWhatsAppLink = `https://wa.me/919522220892?text=${encodeURIComponent(`Hi LITC Team! I just submitted a consultation request. My name is ${formData.fullName} and I'm interested in ${formData.interestedCourses.join(', ')}. Please contact me at ${formData.phone}.`)}`;
       
       console.log('🔗 Opening direct WhatsApp link:', directWhatsAppLink);
       
@@ -320,9 +320,9 @@ Next Steps:
       const errorMessage = `❌ There was an issue submitting your request online.
 
 📞 Please contact us directly:
-📱 Call: +918225852734
-📧 Email: yyradhe751@gmail.com
-💬 WhatsApp: wa.me/918225852734
+📱 Call: +919522220892
+📧 Email: litcindore@gmail.com
+💬 WhatsApp: wa.me/919522220892
 
 We're here to help and will respond immediately! 🚀
 
@@ -335,7 +335,7 @@ Indore, MP, India`;
       
       // Open WhatsApp as backup
       const backupMessage = `Hi LITC Team! I tried to submit a consultation request for ${formData.fullName} but had technical issues. Please contact me at ${formData.phone}. Interested in: ${formData.interestedCourses.join(', ')}.`;
-      window.open(`https://wa.me/918225852734?text=${encodeURIComponent(backupMessage)}`, '_blank');
+      window.open(`https://wa.me/919522220892?text=${encodeURIComponent(backupMessage)}`, '_blank');
       
     } finally {
       // Reset button state
