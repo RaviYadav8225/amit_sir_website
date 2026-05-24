@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/Exam-Voucher/layout,_N_T_/Exam-Voucher/page,_N_T_/Exam-Voucher"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/Exam-Voucher/__PAGE__",
+    "/Exam-Voucher",
+    "/_index",
+    "/_head"
+  ]
+}

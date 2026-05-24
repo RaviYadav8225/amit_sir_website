@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/devops/layout,_N_T_/devops/google-cloud-devops/layout,_N_T_/devops/google-cloud-devops/page,_N_T_/devops/google-cloud-devops"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/devops/google-cloud-devops/__PAGE__",
+    "/devops/google-cloud-devops",
+    "/devops",
+    "/_index",
+    "/_head"
+  ]
+}

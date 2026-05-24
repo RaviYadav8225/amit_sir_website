@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/docker/layout,_N_T_/docker/docker-certified-associate/layout,_N_T_/docker/docker-certified-associate/page,_N_T_/docker/docker-certified-associate"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/docker/docker-certified-associate/__PAGE__",
+    "/docker/docker-certified-associate",
+    "/docker",
+    "/_index",
+    "/_head"
+  ]
+}

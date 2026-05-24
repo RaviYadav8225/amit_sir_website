@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/devops/layout,_N_T_/devops/devops-with-aws/layout,_N_T_/devops/devops-with-aws/page,_N_T_/devops/devops-with-aws"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/devops/devops-with-aws/__PAGE__",
+    "/devops/devops-with-aws",
+    "/devops",
+    "/_index",
+    "/_head"
+  ]
+}

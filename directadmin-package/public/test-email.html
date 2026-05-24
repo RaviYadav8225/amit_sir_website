@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Test - LITC Institute</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Email System Test</h1>
+        
+        <div class="info">
+            <strong>📧 Test Purpose:</strong> This will send a test email to verify the email system is working.
+        </div>
+
+        <div class="form-group">
+            <label for="email">Enter Test Email Address:</label>
+            <input type="email" id="email" placeholder="ry162733@gmail.com" value="ry162733@gmail.com">
+        </div>
+
+        <button onclick="sendTestEmail()" id="testBtn">📨 Send Test Email</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        async function sendTestEmail() {
+            const email = document.getElementById('email').value;
+            const resultDiv = document.getElementById('result');
+            const btn = document.getElementById('testBtn');
+
+            if (!email) {
+                alert('Please enter an email address');
+                return;
+            }
+
+            // Disable button
+            btn.disabled = true;
+            btn.textContent = '⏳ Sending...';
+            resultDiv.style.display = 'none';
+
+            try {
+                const response = await fetch('/api/test-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email })
+                });
+
+                const data = await response.json();
+
+                resultDiv.style.display = 'block';
+
+                if (data.success) {
+                    resultDiv.className = 'result success';
+                    resultDiv.innerHTML = `
+                        <strong>✅ Success!</strong><br>
+                        Test email sent to: <strong>${email}</strong><br>
+                        Email ID: ${data.emailId}<br>
+                        <br>
+                        📥 Check your inbox (and spam folder) for the test email.
+                    `;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.innerHTML = `
+                        <strong>❌ Failed!</strong><br>
+                        Error: ${data.error}<br>
+                        Details: ${data.details}<br>
+                        <br>
+                        <pre style="background: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto;">${data.errorObject || 'No details available'}</pre>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `
+                    <strong>❌ Request Failed!</strong><br>
+                    Error: ${error.message}<br>
+                    <br>
+                    Please check if the server is running.
+                `;
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '📨 Send Test Email';
+            }
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('email').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendTestEmail();
+            }
+        });
+    </script>
+</body>
+</html>

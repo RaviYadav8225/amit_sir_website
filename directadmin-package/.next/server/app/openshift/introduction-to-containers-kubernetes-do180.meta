@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/openshift/layout,_N_T_/openshift/introduction-to-containers-kubernetes-do180/layout,_N_T_/openshift/introduction-to-containers-kubernetes-do180/page,_N_T_/openshift/introduction-to-containers-kubernetes-do180"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/openshift/introduction-to-containers-kubernetes-do180/__PAGE__",
+    "/openshift/introduction-to-containers-kubernetes-do180",
+    "/openshift",
+    "/_index",
+    "/_head"
+  ]
+}

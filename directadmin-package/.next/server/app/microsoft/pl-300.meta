@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/microsoft/layout,_N_T_/microsoft/pl-300/layout,_N_T_/microsoft/pl-300/page,_N_T_/microsoft/pl-300"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/microsoft/pl-300/__PAGE__",
+    "/microsoft/pl-300",
+    "/microsoft",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/cybersecurity/layout,_N_T_/cybersecurity/gcih/layout,_N_T_/cybersecurity/gcih/page,_N_T_/cybersecurity/gcih"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/cybersecurity/gcih/__PAGE__",
+    "/cybersecurity/gcih",
+    "/cybersecurity",
+    "/_index",
+    "/_head"
+  ]
+}

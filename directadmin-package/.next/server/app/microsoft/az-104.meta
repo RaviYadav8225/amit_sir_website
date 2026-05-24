@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/microsoft/layout,_N_T_/microsoft/az-104/layout,_N_T_/microsoft/az-104/page,_N_T_/microsoft/az-104"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/microsoft/az-104/__PAGE__",
+    "/microsoft/az-104",
+    "/microsoft",
+    "/_index",
+    "/_head"
+  ]
+}

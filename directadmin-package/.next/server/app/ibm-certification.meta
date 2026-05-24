@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/ibm-certification/layout,_N_T_/ibm-certification/page,_N_T_/ibm-certification"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/ibm-certification/__PAGE__",
+    "/ibm-certification",
+    "/_index",
+    "/_head"
+  ]
+}

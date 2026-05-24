@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/aws/layout,_N_T_/aws/certified-sysops-administrator-associate/layout,_N_T_/aws/certified-sysops-administrator-associate/page,_N_T_/aws/certified-sysops-administrator-associate"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/aws/certified-sysops-administrator-associate/__PAGE__",
+    "/aws/certified-sysops-administrator-associate",
+    "/aws",
+    "/_index",
+    "/_head"
+  ]
+}

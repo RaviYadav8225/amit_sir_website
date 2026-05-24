@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/devops/layout,_N_T_/devops/terraform-associate/layout,_N_T_/devops/terraform-associate/page,_N_T_/devops/terraform-associate"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/devops/terraform-associate/__PAGE__",
+    "/devops/terraform-associate",
+    "/devops",
+    "/_index",
+    "/_head"
+  ]
+}

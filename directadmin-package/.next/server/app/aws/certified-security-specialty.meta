@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/aws/layout,_N_T_/aws/certified-security-specialty/layout,_N_T_/aws/certified-security-specialty/page,_N_T_/aws/certified-security-specialty"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/aws/certified-security-specialty/__PAGE__",
+    "/aws/certified-security-specialty",
+    "/aws",
+    "/_index",
+    "/_head"
+  ]
+}

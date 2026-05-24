@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/python/layout,_N_T_/python/data-science/layout,_N_T_/python/data-science/page,_N_T_/python/data-science"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/python/data-science/__PAGE__",
+    "/python/data-science",
+    "/python",
+    "/_index",
+    "/_head"
+  ]
+}

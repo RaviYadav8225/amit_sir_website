@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/aws/layout,_N_T_/aws/certified-devops-engineer-professional/layout,_N_T_/aws/certified-devops-engineer-professional/page,_N_T_/aws/certified-devops-engineer-professional"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/aws/certified-devops-engineer-professional/__PAGE__",
+    "/aws/certified-devops-engineer-professional",
+    "/aws",
+    "/_index",
+    "/_head"
+  ]
+}

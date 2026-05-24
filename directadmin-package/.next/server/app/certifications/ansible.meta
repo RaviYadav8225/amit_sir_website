@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/certifications/layout,_N_T_/certifications/ansible/layout,_N_T_/certifications/ansible/page,_N_T_/certifications/ansible"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/certifications/ansible/__PAGE__",
+    "/certifications/ansible",
+    "/certifications",
+    "/_index",
+    "/_head"
+  ]
+}

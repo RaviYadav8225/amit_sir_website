@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/devops/layout,_N_T_/devops/gitlab-certified-associate/layout,_N_T_/devops/gitlab-certified-associate/page,_N_T_/devops/gitlab-certified-associate"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/devops/gitlab-certified-associate/__PAGE__",
+    "/devops/gitlab-certified-associate",
+    "/devops",
+    "/_index",
+    "/_head"
+  ]
+}
