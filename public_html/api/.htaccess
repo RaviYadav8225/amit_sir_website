@@ -1,0 +1,14 @@
+# API folder security
+Options -Indexes
+
+# PHP files ko direct execute karne do
+<FilesMatch "\.php$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# config.php ko direct browser access se protect karo
+<Files "config.php">
+    Order deny,allow
+    Deny from all
+</Files>

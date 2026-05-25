@@ -1,17 +1,10 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    if (!resend) {
-      return NextResponse.json(
-        { success: false, error: 'RESEND_API_KEY is not configured' },
-        { status: 503 }
-      );
-    }
-
     const enquiryData = await request.json();
     const { name, email, phone, message, course, courseDuration, coursePrice } = enquiryData;
 

@@ -147,67 +147,6 @@ const demandCourses: Course[] = [
     bgGradient: "from-red-50 to-orange-50",
     urlPath: "/cybersecurity/basic-advanced"
   }
-  ,
-  {
-    id: 7,
-    title: "DevOps with AWS + AI",
-    code: "DEV-AWS-AI",
-    icon: "🤖",
-    badge: "Industry Certified",
-    duration: "60 Days",
-    price: "₹60,000",
-    originalPrice: "₹85,000",
-    discount: "29% OFF",
-    image: "https://images.unsplash.com/photo-1526378722863-6b1b8f6f0b6b?auto=format&fit=crop&w=400&q=80",
-    features: ["CI/CD with AWS", "Infrastructure as Code", "AI/ML model deployment", "Monitoring & Observability"],
-    level: "Advanced",
-    demand: "Ultra High",
-    rating: 4.8,
-    students: "1.2K+",
-    color: "from-pink-500 to-purple-600",
-    bgGradient: "from-pink-50 to-purple-50",
-    urlPath: "/devops/devops-with-aws-ai"
-  },
-  {
-    id: 8,
-    title: "DevOps + Azure",
-    code: "DEV-AZ",
-    icon: "🔷",
-    badge: "Microsoft + Industry",
-    duration: "45 Days",
-    price: "₹45,000",
-    originalPrice: "₹65,000",
-    discount: "31% OFF",
-    image: "https://images.unsplash.com/photo-1508704019882-9f2f4a3e6d0b?auto=format&fit=crop&w=400&q=80",
-    features: ["Azure DevOps", "Pipelines & Repos", "Infrastructure with ARM/Bicep", "Monitoring with Azure Monitor"],
-    level: "Advanced",
-    demand: "Very High",
-    rating: 4.7,
-    students: "900+",
-    color: "from-blue-500 to-indigo-600",
-    bgGradient: "from-blue-50 to-indigo-50",
-    urlPath: "/devops/devops-with-azure"
-  },
-  {
-    id: 9,
-    title: "Microsoft Azure AI Engineer",
-    code: "AI-102",
-    icon: "🧠",
-    badge: "Microsoft Certified",
-    duration: "30 Days",
-    price: "₹18,000",
-    originalPrice: "₹30,000",
-    discount: "40% OFF",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80",
-    features: ["Azure Cognitive Services", "Conversational AI", "ML model deployment", "Responsible AI"],
-    level: "Intermediate",
-    demand: "High",
-    rating: 4.6,
-    students: "1.1K+",
-    color: "from-cyan-500 to-blue-600",
-    bgGradient: "from-cyan-50 to-blue-50",
-    urlPath: "/microsoft/ai-102"
-  }
 ];
 
 const FloatingCourses = memo(function FloatingCourses() {

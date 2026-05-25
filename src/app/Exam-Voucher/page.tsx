@@ -130,7 +130,7 @@ export default function ExamVoucherPage() {
       company: "PMI",
       icon: "PMILogo",
       color: "from-orange-500 to-red-600",
-      path: "/pmi"
+      path: "/certifications"
     },
     {
       id: 4,
@@ -138,7 +138,7 @@ export default function ExamVoucherPage() {
       company: "Pearson",
       icon: "PearsonLogo",
       color: "from-purple-600 to-indigo-700",
-      path: "/information-technology-specialist"
+      path: "/certifications"
     },
     {
       id: 5,
@@ -154,7 +154,7 @@ export default function ExamVoucherPage() {
       company: "Tally",
       icon: "TallyLogo",
       color: "from-red-500 to-orange-600",
-      path: "/Exam-Voucher/tally-certification"
+      path: "/certifications"
     },
     {
       id: 7,
@@ -170,7 +170,7 @@ export default function ExamVoucherPage() {
       company: "Autodesk",
       icon: "AutodeskLogo",
       color: "from-blue-500 to-cyan-600",
-      path: "/autodesk-certified-user"
+      path: "/certifications"
     },
     {
       id: 9,
@@ -178,7 +178,7 @@ export default function ExamVoucherPage() {
       company: "Unity",
       icon: "UnityLogo",
       color: "from-gray-700 to-black",
-      path: "/Exam-Voucher/unity"
+      path: "/certifications"
     },
     {
       id: 10,
@@ -186,7 +186,7 @@ export default function ExamVoucherPage() {
       company: "Adobe",
       icon: "AdobeLogo",
       color: "from-red-600 to-pink-600",
-      path: "/adobe-certified-professional"
+      path: "/certifications"
     },
     {
       id: 11,

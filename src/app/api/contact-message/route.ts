@@ -1,17 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
-    if (!resend) {
-      return NextResponse.json(
-        { success: false, error: 'RESEND_API_KEY is not configured' },
-        { status: 503 }
-      );
-    }
-
     const formData = await request.json();
     
     console.log('\n' + '━'.repeat(100));
@@ -93,7 +86,7 @@ export async function POST(request: NextRequest) {
 
     <div class="footer">
       <p style="margin: 5px 0;">Automated message from LITC Infotech Website</p>
-      <p style="margin: 5px 0; opacity: 0.8;">📧 litcindore@gmail.com | 📱 +919522220892</p>
+      <p style="margin: 5px 0; opacity: 0.8;">📧 litcindore@gmail.com | 📱 +918225852734</p>
     </div>
   </div>
 </body>

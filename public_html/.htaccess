@@ -1,0 +1,124 @@
+# =============================================
+# LITC Infotech - Apache .htaccess
+# DirectAdmin Shared Hosting ke liye
+# =============================================
+
+Options -Indexes
+Options +FollowSymLinks
+
+# =============================================
+# PHP Version (DirectAdmin mein PHP 8.1+ use karo)
+# =============================================
+AddHandler application/x-httpd-php81 .php
+
+# =============================================
+# REWRITE ENGINE
+# =============================================
+RewriteEngine On
+RewriteBase /
+
+# =============================================
+# API ROUTES -> PHP Handler
+# =============================================
+# Sab /api/* requests ko email-handler.php par bhejo
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^api/(.*)$ /api/email-handler.php [QSA,L]
+
+# =============================================
+# NEXT.JS STATIC EXPORT ROUTING
+# =============================================
+# .html extension ke bina pages serve karo
+# Example: /about -> /about/index.html
+
+# Already existing files/directories directly serve karo
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# /path ko /path/index.html se serve karo (trailingSlash = true)
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*)$ /$1/index.html [L]
+
+# /path.html exist kare to serve karo
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ /$1.html [L]
+
+# Agar kuch nahi mila to index.html se serve karo (SPA fallback)
+RewriteRule ^ /index.html [L]
+
+# =============================================
+# GZIP COMPRESSION
+# =============================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# =============================================
+# BROWSER CACHING
+# =============================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # HTML - no cache (fresh content)
+    ExpiresByType text/html                     "access plus 0 seconds"
+    
+    # CSS, JS - 1 year (Next.js adds hash to filename)
+    ExpiresByType text/css                      "access plus 1 year"
+    ExpiresByType application/javascript        "access plus 1 year"
+    
+    # Images - 6 months
+    ExpiresByType image/jpeg                    "access plus 6 months"
+    ExpiresByType image/png                     "access plus 6 months"
+    ExpiresByType image/webp                    "access plus 6 months"
+    ExpiresByType image/gif                     "access plus 6 months"
+    ExpiresByType image/svg+xml                 "access plus 6 months"
+    ExpiresByType image/x-icon                  "access plus 1 year"
+    
+    # Fonts - 1 year
+    ExpiresByType font/woff2                    "access plus 1 year"
+    ExpiresByType font/woff                     "access plus 1 year"
+    ExpiresByType application/font-woff2        "access plus 1 year"
+</IfModule>
+
+# =============================================
+# SECURITY HEADERS
+# =============================================
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Next.js static assets - long cache
+    <FilesMatch "\.(js|css|woff2|woff|eot|ttf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # HTML files - no cache
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+    </FilesMatch>
+</IfModule>
+
+# =============================================
+# MIME TYPES
+# =============================================
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType text/css .css
+    AddType font/woff2 .woff2
+    AddType image/webp .webp
+    AddType image/avif .avif
+</IfModule>
+
+# =============================================
+# ERROR PAGES (optional)
+# =============================================
+# ErrorDocument 404 /404/index.html

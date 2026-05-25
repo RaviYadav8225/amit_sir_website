@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment API Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .result {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 12px;
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .success {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid #22c55e;
+            color: #22c55e;
+        }
+        .error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid #ef4444;
+            color: #ef4444;
+        }
+        .result-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .result-content {
+            font-size: 14px;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .loading {
+            text-align: center;
+            color: #3b82f6;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            border-top-color: #3b82f6;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            margin-right: 8px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Enrollment API Test</h1>
+        <p class="subtitle">Test the course enrollment system</p>
+
+        <form id="enrollmentForm">
+            <div class="form-group">
+                <label for="name">👤 Full Name</label>
+                <input type="text" id="name" value="Test Student" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">📧 Email</label>
+                <input type="email" id="email" value="ry162733@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">📱 Phone</label>
+                <input type="tel" id="phone" value="9876543210" required>
+            </div>
+
+            <div class="form-group">
+                <label for="education">🎓 Education</label>
+                <input type="text" id="education" value="B.Tech" required>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">💼 Experience</label>
+                <select id="experience">
+                    <option value="fresher">Fresher</option>
+                    <option value="0-2">0-2 years</option>
+                    <option value="2-5">2-5 years</option>
+                    <option value="5+">5+ years</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="batchTiming">⏰ Batch Timing</label>
+                <select id="batchTiming">
+                    <option value="weekday-morning">Weekday Morning</option>
+                    <option value="weekday-evening">Weekday Evening</option>
+                    <option value="weekend">Weekend</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentPlan">💳 Payment Plan</label>
+                <select id="paymentPlan">
+                    <option value="full">Full Payment (5% off)</option>
+                    <option value="installment">Installment</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submitBtn">
+                🚀 Test Enrollment API
+            </button>
+        </form>
+
+        <div id="loading" class="loading" style="display: none;">
+            <span class="spinner"></span>
+            Sending enrollment request...
+        </div>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('enrollmentForm');
+        const resultDiv = document.getElementById('result');
+        const submitBtn = document.getElementById('submitBtn');
+        const loadingDiv = document.getElementById('loading');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            resultDiv.style.display = 'none';
+            loadingDiv.style.display = 'block';
+            submitBtn.disabled = true;
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                education: document.getElementById('education').value,
+                experience: document.getElementById('experience').value,
+                batchTiming: document.getElementById('batchTiming').value,
+                paymentPlan: document.getElementById('paymentPlan').value,
+                referralSource: 'direct',
+                course: {
+                    name: 'Test Course - RHCSA Certification',
+                    code: 'RHCSA-001',
+                    price: '₹25,000',
+                    duration: '6 weeks',
+                    level: 'Intermediate'
+                },
+                submittedAt: new Date().toISOString(),
+                enrollmentId: `ENR-${Date.now()}`
+            };
+
+            try {
+                console.log('📤 Sending enrollment:', formData);
+
+                const response = await fetch('/api/course-enrollment-final', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                console.log('📥 Response:', result);
+
+                loadingDiv.style.display = 'none';
+                resultDiv.style.display = 'block';
+
+                if (result.success) {
+                    resultDiv.className = 'result success';
+                    resultDiv.innerHTML = `
+                        <div class="result-title">✅ SUCCESS!</div>
+                        <div class="result-content">
+<strong>Enrollment ID:</strong> ${result.enrollmentId}
+
+<strong>Email Status:</strong>
+• Student: ${result.emailStatus?.student?.sent ? '✅' : '❌'} (${result.emailStatus?.student?.service || 'N/A'})
+• Admin: ${result.emailStatus?.admin?.sent ? '✅' : '❌'} (${result.emailStatus?.admin?.service || 'N/A'})
+
+<strong>Payment Info:</strong>
+• UPI ID: ${result.paymentInfo?.upiId}
+• Bank: ${result.paymentInfo?.bank}
+• Amount: ${result.paymentInfo?.amount}
+
+<strong>Contact:</strong>
+• WhatsApp: ${result.contactInfo?.whatsapp}
+• Email: ${result.contactInfo?.email}
+
+<strong>Next Steps:</strong>
+${result.instructions?.map((step, i) => `${i + 1}. ${step}`).join('\n') || 'Check email for details'}
+
+📧 <strong>CHECK YOUR EMAIL NOW!</strong>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.innerHTML = `
+                        <div class="result-title">❌ FAILED</div>
+                        <div class="result-content">
+<strong>Error:</strong> ${result.error || 'Unknown error'}
+<strong>Message:</strong> ${result.message || 'No message'}
+
+${result.contact ? `
+<strong>Contact Support:</strong>
+• Phone: ${result.contact.phone}
+• WhatsApp: ${result.contact.whatsapp}
+• Email: ${result.contact.email}
+` : ''}
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('❌ Error:', error);
+                
+                loadingDiv.style.display = 'none';
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `
+                    <div class="result-title">❌ ERROR</div>
+                    <div class="result-content">
+<strong>Network/Server Error:</strong>
+${error.message}
+
+<strong>Troubleshooting:</strong>
+1. Check if development server is running
+2. Verify API endpoint exists
+3. Check browser console for details
+4. Check network tab in DevTools
+
+<strong>Contact:</strong>
+Phone: +91-9425094250
+WhatsApp: +91-8225852734
+Email: yyradhe751@gmail.com
+                    </div>
+                `;
+            } finally {
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

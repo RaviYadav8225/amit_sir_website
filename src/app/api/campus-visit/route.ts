@@ -1,17 +1,10 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    if (!resend) {
-      return NextResponse.json(
-        { success: false, error: 'RESEND_API_KEY is not configured' },
-        { status: 503 }
-      );
-    }
-
     const visitData = await request.json();
 
     console.log('📅 Processing campus visit booking...');
@@ -141,7 +134,7 @@ export async function POST(request: Request) {
 
               <div style="text-align: center; margin: 30px 0;">
                 <a href="tel:+919425094250" class="button">📞 Call Us</a>
-                <a href="https://wa.me/919522220892" class="button" style="background: #25D366;">💬 WhatsApp</a>
+                <a href="https://wa.me/918225852734" class="button" style="background: #25D366;">💬 WhatsApp</a>
               </div>
             </div>
 
