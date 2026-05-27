@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { ConsultationFormData, POPULAR_COURSES, INDUSTRIES, BUDGET_RANGES, TIME_SLOTS } from './types';
-import { sendConsultationEmail, sendStudentConfirmationEmail, sendWhatsAppMessage } from '../../lib/emailWhatsAppService';
+import { sendConsultationEmail, sendStudentConfirmationEmail, sendWhatsAppMessage, notifyAdminWhatsApp } from '../../lib/emailWhatsAppService';
 import './modal.css';
 
 interface ConsultationModalProps {
@@ -97,7 +97,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
       console.log('🚀 Starting form submission process...');
       console.log('📋 Form Data:', submissionData);
 
-      // 1. Send email - Log complete details to server console
+      // 1. Send email or open contact drafts in static mode
       try {
         console.log('━'.repeat(80));
         console.log('📧 SENDING EMAIL TO: litcindore@gmail.com');
@@ -105,42 +105,17 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
         console.log('📱 Phone:', submissionData.phone);
         console.log('━'.repeat(80));
         
-        // Try Resend API (Professional email service - delivers to inbox)
-        const emailResponse = await fetch('/api/resend-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ formData: submissionData }),
-        });
-        
-        const emailResult = await emailResponse.json();
-        console.log('📧 Resend API Response:', emailResult);
-        console.log('💡 If successful, email will be in: litcindore@gmail.com');
-        
-        // ALWAYS call direct email service to log content in terminal
-        console.log('� Logging email content to server terminal...');
-        const directEmailResponse = await fetch('/api/send-email-direct', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ formData: submissionData }),
-        });
-        
-        const directEmailResult = await directEmailResponse.json();
-        console.log('✅ Email content logged to server console');
-        console.log('📋 Check your terminal/server window for complete email details');
-        
+        const emailResult = await sendConsultationEmail(submissionData);
+        console.log('📧 Consultation contact result:', emailResult);
+
         if (emailResult.success) {
           emailSent = true;
           console.log('✅ ✅ ✅ EMAIL SENT SUCCESSFULLY! ✅ ✅ ✅');
-          console.log('📧 Email delivered to: litcindore@gmail.com');
+          console.log('📧 Email or mail draft prepared for: litcindore@gmail.com');
           console.log('👤 Student:', submissionData.fullName);
           console.log('📱 Contact:', submissionData.phone);
         } else {
-          console.log('⚠️ FormSubmit may have issues');
-          console.log('📧 Email content is logged in SERVER TERMINAL for manual processing');
+          console.log('⚠️ Contact draft could not be prepared');
           emailSent = false;
         }
         console.log('━'.repeat(80));
@@ -219,20 +194,12 @@ Contact student ASAP! 🚀`;
         console.log('❌ Email via WhatsApp failed:', error);
       }
 
-      // 4. Fallback: Call our API endpoint
+      // 4. Static fallback: open admin WhatsApp draft
       try {
-        const response = await fetch('/api/consultation', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(submissionData),
-        });
-
-        const result = await response.json();
-        console.log('API submission result:', result);
+        const adminWhatsapp = notifyAdminWhatsApp(submissionData);
+        window.open(adminWhatsapp, '_blank', 'noopener,noreferrer');
       } catch (error) {
-        console.log('API submission failed, continuing...', error);
+        console.log('Static fallback failed, continuing...', error);
       }
 
       // Show success message

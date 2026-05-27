@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
+import { notifyAdminWhatsApp } from '../lib/emailWhatsAppService';
 
 interface Message {
   id: string;
@@ -353,32 +354,17 @@ const ChatBot = () => {
         return;
       }
 
-      // Send enquiry email to admin
-      const sendEnquiryEmail = async () => {
-        try {
-          const response = await fetch('/api/chatbot-enquiry', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              name: studentInfo?.name,
-              email: currentInput
-            })
-          });
-
-          const result = await response.json();
-          console.log('📧 Enquiry Email Result:', result);
-        } catch (error) {
-          console.error('❌ Failed to send enquiry email:', error);
-        }
-      };
-
       setTimeout(async () => {
         setStudentInfo(prev => prev ? { ...prev, email: currentInput } : { name: '', email: currentInput });
         
-        // Send enquiry email in background
-        sendEnquiryEmail();
+        // Open a WhatsApp draft for the admin instead of using a backend API
+        const adminWhatsApp = notifyAdminWhatsApp({
+          fullName: studentInfo?.name || 'Student',
+          email: currentInput,
+          phone: '',
+          interestedCourses: [],
+        } as any);
+        window.open(adminWhatsApp, '_blank', 'noopener,noreferrer');
         
         const botMessage: Message = {
           id: (Date.now() + 1).toString(),

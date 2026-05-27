@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const StudentCertifications = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [isAutoPlay, setIsAutoPlay] = useState<boolean>(true);
 
   const certifications = [
     {
@@ -103,19 +103,19 @@ const StudentCertifications = () => {
     if (!isAutoPlay) return;
 
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % certifications.length);
+      setCurrentSlide((prev: number) => (prev + 1) % certifications.length);
     }, 4000);
 
     return () => clearInterval(timer);
   }, [isAutoPlay, certifications.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % certifications.length);
+    setCurrentSlide((prev: number) => (prev + 1) % certifications.length);
     setIsAutoPlay(false);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + certifications.length) % certifications.length);
+    setCurrentSlide((prev: number) => (prev - 1 + certifications.length) % certifications.length);
     setIsAutoPlay(false);
   };
 

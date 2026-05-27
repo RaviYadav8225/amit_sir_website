@@ -94,65 +94,44 @@ Thank you! 🙏`;
     setIsSubmitting(true);
 
     try {
-      console.log('🎓 Processing enrollment...');
+      const subject = `Enrollment Request - ${courseData?.name || 'Course'}`;
+      const body = [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Phone: ${formData.phone}`,
+        `Education: ${formData.education}`,
+        `Experience: ${formData.experience}`,
+        `Batch Timing: ${formData.batchTiming}`,
+        `Payment Plan: ${formData.paymentPlan}`,
+        `Referral Source: ${formData.referralSource}`,
+        '',
+        `Course: ${courseData?.name || 'N/A'}`,
+        `Course Code: ${courseData?.code || 'N/A'}`,
+        `Duration: ${courseData?.duration || 'N/A'}`,
+        `Price: ${courseData?.price || 'N/A'}`,
+      ].join('\n');
 
-      const response = await fetch('/api/course-enrollment-final', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          course: courseData,
-          submittedAt: new Date().toISOString(),
-          enrollmentId: `ENR-${Date.now()}`
-        }),
+      const mailtoUrl = `mailto:yyradhe751@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const whatsappUrl = `https://wa.me/919225852734?text=${encodeURIComponent(body)}`;
+
+      window.open(mailtoUrl, '_blank', 'noopener,noreferrer');
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+      alert(`🎉 Your enrollment draft is ready.\n\n📧 Please send the opened email draft or WhatsApp message to confirm your enrollment.\n\n📞 Need help? Call: +91-9522220892`);
+
+      // Reset and close
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        education: '',
+        experience: 'fresher',
+        batchTiming: 'weekday-morning',
+        paymentPlan: 'full',
+        referralSource: 'google'
       });
-
-      const result = await response.json();
-
-      if (result.success) {
-        console.log('✅ Enrollment successful!');
-        alert(`🎉 Enrollment Request Received Successfully!
-
-✅ Payment Email Sent!
-
-📧 Check your email: ${formData.email}
-
-� Payment Instructions:
-1. Open the email we just sent you
-2. Scan the UPI QR code
-3. Pay ₹${courseData?.price || 'Course Fee'}
-4. Take screenshot of payment confirmation
-5. Send screenshot via:
-   📱 WhatsApp: 8225852734
-   📧 Email: yyradhe751@gmail.com
-
-⏰ Confirmation:
-You will receive enrollment confirmation within 2 hours after payment verification.
-
-📞 Need help?
-Call: +91-9522220892
-
-Thank you for choosing LITC Institute! 🎓`);
-        
-        // Reset and close
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          education: '',
-          experience: 'fresher',
-          batchTiming: 'weekday-morning',
-          paymentPlan: 'full',
-          referralSource: 'google'
-        });
-        setEnrollmentStep('options');
-        onClose();
-      } else {
-        console.error('❌ Enrollment failed:', result);
-        alert(`⚠️ Unable to process enrollment online.\n\n📞 Please contact us directly:\nPhone: +91-9522220892\nWhatsApp: +91-8225852734\nEmail: yyradhe751@gmail.com`);
-      }
+      setEnrollmentStep('options');
+      onClose();
     } catch (error) {
       console.error('❌ Enrollment error:', error);
       alert(`❌ Enrollment failed.\n\n📞 Please reach out to us:\nPhone: +91-9522220892\nWhatsApp: +91-8225852734`);

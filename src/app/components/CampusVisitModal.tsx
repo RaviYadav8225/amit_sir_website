@@ -58,43 +58,38 @@ export default function CampusVisitModal({ isOpen, onClose }: CampusVisitModalPr
     setIsSubmitting(true);
 
     try {
-      console.log('📅 Booking campus visit...');
+      const subject = `Campus Visit Booking - ${formData.visitDate}`;
+      const body = [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Phone: ${formData.phone}`,
+        `Visit Date: ${formData.visitDate}`,
+        `Time Slot: ${formData.timeSlot}`,
+        `Number of Visitors: ${formData.numberOfVisitors}`,
+        `Purpose: ${formData.purpose}`,
+        `Special Requirements: ${formData.specialRequirements}`,
+      ].join('\n');
 
-      // Send to campus visit booking API
-      const response = await fetch('/api/campus-visit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          submittedAt: new Date().toISOString(),
-          bookingId: `VISIT-${Date.now()}`
-        }),
+      const mailtoUrl = `mailto:yyradhe751@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const whatsappUrl = `https://wa.me/919522220892?text=${encodeURIComponent(body)}`;
+
+      window.open(mailtoUrl, '_blank', 'noopener,noreferrer');
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+      alert(`✅ Campus visit draft is ready.\n\n📅 Date: ${formData.visitDate}\n⏰ Time: ${formData.timeSlot}\n\nPlease send the opened email draft or WhatsApp message to confirm your visit.`);
+
+      // Reset form and close modal
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        visitDate: '',
+        timeSlot: '',
+        numberOfVisitors: '1',
+        purpose: 'course-inquiry',
+        specialRequirements: ''
       });
-
-      const result = await response.json();
-
-      if (result.success) {
-        console.log('✅ Campus visit booked successfully!');
-        alert(`✅ Campus Visit Booked Successfully!\n\n📅 Date: ${formData.visitDate}\n⏰ Time: ${formData.timeSlot}\n\n📧 Confirmation email sent to: ${formData.email}\n📱 We'll call you on: ${formData.phone}\n\n📍 Main Office: LITC Institute, P13-14, Metro Tower, Vijay Nagar, Indore\n📍 & : G5, 10/102, Shri Balaji Center, Station Road, Rau, Indore\n\n🅿️ Free parking available\n☕ Refreshments will be provided\n\nSee you soon!`);
-        
-        // Reset form and close modal
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          visitDate: '',
-          timeSlot: '',
-          numberOfVisitors: '1',
-          purpose: 'course-inquiry',
-          specialRequirements: ''
-        });
-        onClose();
-      } else {
-        console.error('❌ Booking failed:', result);
-        alert(`⚠️ Unable to book visit online.\n\n📞 Please call us directly:\n+91-9522220892\n\nWe're available Mon-Sat, 9 AM - 7 PM`);
-      }
+      onClose();
     } catch (error) {
       console.error('❌ Campus visit booking error:', error);
       alert(`❌ Booking failed.\n\n📞 Please contact us:\nPhone: +91-9522220892\nEmail: yyradhe751@gmail.com`);

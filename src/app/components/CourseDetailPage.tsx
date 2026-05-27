@@ -87,25 +87,29 @@ const CourseDetailPage = memo(function CourseDetailPage({ course }: CourseDetail
     };
 
     try {
-      const response = await fetch('/api/course-enquiry', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(enquiryData),
-      });
+      const subject = `Course Enquiry - ${course.title}`;
+      const body = [
+        `Name: ${enquiryData.name}`,
+        `Email: ${enquiryData.email}`,
+        `Phone: ${enquiryData.phone}`,
+        `Course: ${enquiryData.course}`,
+        `Duration: ${enquiryData.courseDuration}`,
+        `Price: ${enquiryData.coursePrice}`,
+        '',
+        String(enquiryData.message || '')
+      ].join('\n');
 
-      const result = await response.json();
+      const mailtoUrl = `mailto:yyradhe751@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const whatsappUrl = `https://wa.me/919522220892?text=${encodeURIComponent(body)}`;
 
-      if (response.ok) {
-        setEnquiryMessage("✅ Enquiry submitted successfully! We'll contact you soon.");
-        setTimeout(() => {
-          setShowEnquiry(false);
-          setEnquiryMessage("");
-        }, 3000);
-      } else {
-        setEnquiryMessage("❌ " + (result.error || "Failed to submit enquiry. Please try again."));
-      }
+      window.open(mailtoUrl, '_blank', 'noopener,noreferrer');
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+      setEnquiryMessage("✅ Enquiry draft is ready. Please send the opened email or WhatsApp message.");
+      setTimeout(() => {
+        setShowEnquiry(false);
+        setEnquiryMessage("");
+      }, 3000);
     } catch (error) {
       console.error('Enquiry submission error:', error);
       setEnquiryMessage("❌ Network error. Please check your connection and try again.");

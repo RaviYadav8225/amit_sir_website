@@ -33,30 +33,24 @@ export default function ContactUs() {
     setIsSubmitting(true);
     
     try {
-      console.log('📧 Sending contact form message to litcindore@gmail.com...');
-      
-      // Send to Resend API
-      const response = await fetch('/api/contact-message', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          submittedAt: new Date().toISOString(),
-          requestId: `CONTACT-${Date.now()}`
-        }),
-      });
+      const subject = `[Website Contact] ${formData.subject || formData.service}`;
+      const body = [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Phone: ${formData.phone}`,
+        `Service: ${formData.service}`,
+        `Subject: ${formData.subject}`,
+        '',
+        formData.message,
+      ].join('\n');
 
-      const result = await response.json();
-      
-      if (result.success) {
-        console.log('✅ Message sent successfully to litcindore@gmail.com');
-        alert(`✅ Thank you ${formData.name}! Your message has been sent successfully.\n\n📧 We've received your ${formData.service} inquiry and will respond within 24 hours.\n\n📱 For urgent matters, call: +91-9522220892`);
-      } else {
-        console.log('⚠️ Message delivery issue:', result);
-        alert(`⚠️ There was an issue sending your message.\n\n📞 Please call us directly: +91-9522220892\n📧 Or email: litcindore@gmail.com`);
-      }
+      const mailtoUrl = `mailto:litcindore@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const whatsappUrl = `https://wa.me/919522220892?text=${encodeURIComponent(body)}`;
+
+      window.open(mailtoUrl, '_blank', 'noopener,noreferrer');
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+      alert(`✅ Thank you ${formData.name}! Your message draft is ready.\n\n📧 Please send the opened email draft or WhatsApp message.\n\n📱 For urgent matters, call: +91-9522220892`);
       
       // Reset form
       setFormData({

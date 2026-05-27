@@ -10,13 +10,64 @@ export const initEmailJS = () => {
   emailjs.init(EMAILJS_PUBLIC_KEY);
 };
 
+const openExternalUrl = (url: string) => {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+
+  window.open(url, '_blank', 'noopener,noreferrer');
+  return true;
+};
+
+const buildMailtoUrl = (to: string, subject: string, body: string) => {
+  const params = new URLSearchParams({ subject, body });
+  return `mailto:${to}?${params.toString()}`;
+};
+
 // Send consultation email
 export const sendConsultationEmail = async (formData: any) => {
   try {
     // Check if EmailJS is properly configured
     if (EMAILJS_PUBLIC_KEY === 'your_public_key') {
-      console.log('EmailJS not configured, using API fallback');
-      return await sendEmailViaAPI(formData);
+      console.log('EmailJS not configured, using static fallback');
+
+      const emailContent = `
+🎓 New Consultation Request - LITC Infotech
+
+👤 Student Details:
+Name: ${formData.fullName}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Location: ${formData.location}
+
+💼 Professional Background:
+Current Role: ${formData.currentRole}
+Experience: ${formData.experience}
+Industry: ${formData.industry}
+
+🎯 Learning Goals:
+Interested Courses: ${formData.interestedCourses.join(', ')}
+Timeline: ${formData.timelineToStart}
+Learning Mode: ${formData.learningMode}
+
+⏰ Preferred Time Slots:
+${formData.preferredTimeSlots.join(', ')}
+
+💰 Budget Range: ${formData.budget}
+
+❓ Questions: ${formData.specificQuestions}
+
+📅 Submitted: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
+      `.trim();
+
+      openExternalUrl(buildMailtoUrl(
+        'yyradhe751@gmail.com',
+        `🎓 New Consultation Request from ${formData.fullName}`,
+        emailContent
+      ));
+      openExternalUrl(`https://wa.me/918225852734?text=${encodeURIComponent(emailContent)}`);
+
+      return { success: true, method: 'mailto-whatsapp' };
     }
 
     // Initialize EmailJS if configured
@@ -60,15 +111,8 @@ export const sendConsultationEmail = async (formData: any) => {
     return { success: true, data: response, method: 'emailjs' };
 
   } catch (error) {
-    console.error('EmailJS failed, trying API fallback:', error);
-    // Fallback to API method
-    return await sendEmailViaAPI(formData);
-  }
-};
+    console.error('EmailJS failed, using static fallback:', error);
 
-// Fallback email method using your API
-const sendEmailViaAPI = async (formData: any) => {
-  try {
     const emailContent = `
 🎓 New Consultation Request - LITC Infotech
 
@@ -96,32 +140,16 @@ ${formData.preferredTimeSlots.join(', ')}
 ❓ Questions: ${formData.specificQuestions}
 
 📅 Submitted: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
+    `.trim();
 
-Please contact the student within 24 hours! 🚀
-    `;
+    openExternalUrl(buildMailtoUrl(
+      'yyradhe751@gmail.com',
+      `🎓 New Consultation Request from ${formData.fullName}`,
+      emailContent
+    ));
+    openExternalUrl(`https://wa.me/918225852734?text=${encodeURIComponent(emailContent)}`);
 
-    // This will be sent to your API endpoint
-    const response = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        to: 'yyradhe751@gmail.com',
-        subject: `🎓 New Consultation Request from ${formData.fullName}`,
-        content: emailContent,
-        formData: formData
-      }),
-    });
-
-    if (response.ok) {
-      return { success: true, method: 'api', message: 'Email queued for sending' };
-    } else {
-      throw new Error('API email failed');
-    }
-  } catch (error) {
-    console.error('API email also failed:', error);
-    return { success: false, error, method: 'failed' };
+    return { success: true, method: 'mailto-whatsapp' };
   }
 };
 
@@ -149,6 +177,14 @@ export const sendStudentConfirmationEmail = async (formData: any) => {
     return { success: true, data: response };
   } catch (error) {
     console.error('Student confirmation email failed:', error);
+    if (typeof window !== 'undefined') {
+      openExternalUrl(buildMailtoUrl(
+        formData.email,
+        'Your consultation request at LITC Institute',
+        `Hi ${formData.fullName},\n\nThank you for reaching out to LITC Institute. Our team has received your consultation request and will connect with you soon.\n\nWhatsApp: https://wa.me/918225852734\nPhone: +91-9522220892\nEmail: yyradhe751@gmail.com`
+      ));
+    }
+
     return { success: false, error };
   }
 };
